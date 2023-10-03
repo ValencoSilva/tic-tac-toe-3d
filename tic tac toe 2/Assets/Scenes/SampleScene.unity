@@ -2670,8 +2670,9 @@ GameObject:
   - component: {fileID: 899942358}
   - component: {fileID: 899942357}
   - component: {fileID: 899942362}
+  - component: {fileID: 899942363}
   m_Layer: 0
-  m_Name: Cube 1.2
+  m_Name: Cube 1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2767,7 +2768,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &899942362
 MonoBehaviour:
@@ -2785,6 +2786,20 @@ MonoBehaviour:
   cubeB: {fileID: 57278437}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
+--- !u!114 &899942363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899942356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1359ffb724f436144a060a862bb0a25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeA: {fileID: 899942356}
+  cubeA1: {fileID: 57278437}
 --- !u!1 &910950041
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,6 +3771,7 @@ GameObject:
   - component: {fileID: 1129506232}
   - component: {fileID: 1129506231}
   - component: {fileID: 1129506236}
+  - component: {fileID: 1129506237}
   m_Layer: 0
   m_Name: Cube 1.3
   m_TagString: Untagged
@@ -3871,6 +3887,20 @@ MonoBehaviour:
   cubeB: {fileID: 303309321}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
+--- !u!114 &1129506237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129506230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1359ffb724f436144a060a862bb0a25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeA: {fileID: 1129506230}
+  cubeA1: {fileID: 303309321}
 --- !u!1 &1146845264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,6 +4889,7 @@ GameObject:
   - component: {fileID: 1400206684}
   - component: {fileID: 1400206683}
   - component: {fileID: 1400206682}
+  - component: {fileID: 1400206688}
   m_Layer: 0
   m_Name: Cube 1.4
   m_TagString: Untagged
@@ -4974,6 +5005,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1400206688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400206681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1359ffb724f436144a060a862bb0a25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeA: {fileID: 1400206681}
+  cubeA1: {fileID: 1594329731}
 --- !u!1 &1423228658
 GameObject:
   m_ObjectHideFlags: 0
@@ -7000,8 +7045,9 @@ GameObject:
   - component: {fileID: 1908899266}
   - component: {fileID: 1908899267}
   - component: {fileID: 1908899268}
+  - component: {fileID: 1908899269}
   m_Layer: 0
-  m_Name: Cube 1.1
+  m_Name: Cube 1.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7097,7 +7143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1908899266
 MonoBehaviour:
@@ -7141,6 +7187,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTurn: 0
   clickableObjects: []
+--- !u!114 &1908899269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908899260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1359ffb724f436144a060a862bb0a25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeA: {fileID: 1908899260}
+  cubeA1: {fileID: 645755291}
 --- !u!1 &1961510088
 GameObject:
   m_ObjectHideFlags: 0
