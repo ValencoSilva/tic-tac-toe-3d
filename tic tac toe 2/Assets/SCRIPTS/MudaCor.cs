@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MudaCor: MonoBehaviour
 {
+    public int contador = 0;
     public GameObject cubeA; // Reference to the first cube
     public GameObject cubeB; // Reference to the second cube
     public Material newMaterialA; // Reference to the new material for cube A
@@ -21,7 +22,7 @@ public class MudaCor: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Detect mouse click
+        if(contador ==1){
         if (Input.GetMouseButtonDown(0))
         {
             // Create a ray from the mouse cursor on screen in the direction of the camera
@@ -34,10 +35,13 @@ public class MudaCor: MonoBehaviour
                 // If Cube A is clicked
                 if (hit.collider.gameObject == cubeA)
                 {
+                    contador++;
                     ChangeCubeColors();
+                    Debug.Log(contador);
                 }
             }
         }
+    }
     }
 
     void ChangeCubeColors()
