@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 79914186}
-  cubeA1: {fileID: 1961510088}
+  cubeA1: {fileID: 136072732}
 --- !u!114 &79914189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 79914186}
-  cubeB: {fileID: 1961510088}
+  cubeB: {fileID: 136072732}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &79914190
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 96179051}
-  cubeA1: {fileID: 1271214596}
+  cubeA1: {fileID: 1885500172}
 --- !u!114 &96179054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 96179051}
-  cubeB: {fileID: 1271214596}
+  cubeB: {fileID: 1885500172}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &96179057
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 146454853}
-  cubeA1: {fileID: 1826953915}
+  cubeA1: {fileID: 1985554047}
 --- !u!114 &146454856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 146454853}
-  cubeB: {fileID: 1826953915}
+  cubeB: {fileID: 1985554047}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &146454857
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 228217832}
-  cubeA1: {fileID: 1862930800}
+  cubeA1: {fileID: 766402649}
 --- !u!114 &228217835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 228217832}
-  cubeB: {fileID: 1862930800}
+  cubeB: {fileID: 766402649}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &228217836
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 265877935}
-  cubeA1: {fileID: 930668011}
+  cubeA1: {fileID: 910950041}
 --- !u!114 &265877938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 265877935}
-  cubeB: {fileID: 930668011}
+  cubeB: {fileID: 910950041}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &265877939
@@ -1578,7 +1578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 279680984}
-  cubeA1: {fileID: 1985554047}
+  cubeA1: {fileID: 1197605844}
 --- !u!114 &279680987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 279680984}
-  cubeB: {fileID: 1985554047}
+  cubeB: {fileID: 1197605844}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &279680988
@@ -1782,7 +1782,6 @@ GameObject:
   - component: {fileID: 303309325}
   - component: {fileID: 303309324}
   - component: {fileID: 303309323}
-  - component: {fileID: 303309327}
   m_Layer: 0
   m_Name: Cube 3
   m_TagString: Untagged
@@ -1868,19 +1867,6 @@ Transform:
   m_Father: {fileID: 2109714649}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &303309327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303309321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!1 &313501980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 361120874}
-  cubeA1: {fileID: 1182846541}
+  cubeA1: {fileID: 807317682}
 --- !u!114 &361120877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 361120874}
-  cubeB: {fileID: 1182846541}
+  cubeB: {fileID: 807317682}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &361120878
@@ -2208,7 +2194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 374329865}
-  cubeA1: {fileID: 217006992}
+  cubeA1: {fileID: 57278437}
 --- !u!114 &374329868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2223,7 +2209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 374329865}
-  cubeB: {fileID: 217006992}
+  cubeB: {fileID: 57278437}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &374329869
@@ -2353,6 +2339,7 @@ GameObject:
   - component: {fileID: 398789221}
   - component: {fileID: 398789220}
   - component: {fileID: 398789219}
+  - component: {fileID: 398789225}
   m_Layer: 0
   m_Name: Cube 1.29
   m_TagString: Untagged
@@ -2388,7 +2375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 398789217}
-  cubeA1: {fileID: 1207832587}
+  cubeA1: {fileID: 1182846541}
 --- !u!114 &398789220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2403,7 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 398789217}
-  cubeB: {fileID: 1207832587}
+  cubeB: {fileID: 1182846541}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &398789221
@@ -2483,6 +2470,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398789217}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &398789225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398789217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coords: {x: 0, y: 1, z: 4}
 --- !u!1 &444567112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444567113}
   m_Layer: 0
-  m_Name: Camada3
+  m_Name: Face3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2665,7 +2665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 492432931}
-  cubeA1: {fileID: 2037206370}
+  cubeA1: {fileID: 1512896913}
 --- !u!114 &492432934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2680,7 +2680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 492432931}
-  cubeB: {fileID: 2037206370}
+  cubeB: {fileID: 1512896913}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &492432935
@@ -2770,7 +2770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 502250325}
   m_Layer: 0
-  m_Name: Camada1
+  m_Name: Face1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2845,7 +2845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 527356412}
-  cubeA1: {fileID: 1546355654}
+  cubeA1: {fileID: 1747838044}
 --- !u!114 &527356415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 527356412}
-  cubeB: {fileID: 1546355654}
+  cubeB: {fileID: 1747838044}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &527356416
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 538539225}
-  cubeA1: {fileID: 136072732}
+  cubeA1: {fileID: 808067174}
 --- !u!114 &538539228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3040,7 +3040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 538539225}
-  cubeB: {fileID: 136072732}
+  cubeB: {fileID: 808067174}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &538539229
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 539093646}
-  cubeA1: {fileID: 1263815348}
+  cubeA1: {fileID: 606646054}
 --- !u!114 &539093649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3282,7 +3282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 539093646}
-  cubeB: {fileID: 1263815348}
+  cubeB: {fileID: 606646054}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &539093650
@@ -3414,7 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 541213133}
-  cubeA1: {fileID: 833799238}
+  cubeA1: {fileID: 645755291}
 --- !u!114 &541213136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3455,7 +3455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 541213133}
-  cubeB: {fileID: 833799238}
+  cubeB: {fileID: 645755291}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &541213139
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 653165073}
-  cubeA1: {fileID: 1887498762}
+  cubeA1: {fileID: 1540780917}
 --- !u!114 &653165076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4218,7 +4218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 653165073}
-  cubeB: {fileID: 1887498762}
+  cubeB: {fileID: 1540780917}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &653165079
@@ -4445,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 681730978}
-  cubeA1: {fileID: 1595826385}
+  cubeA1: {fileID: 1031394541}
 --- !u!114 &681730981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4460,7 +4460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 681730978}
-  cubeB: {fileID: 1595826385}
+  cubeB: {fileID: 1031394541}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &681730982
@@ -4590,7 +4590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 699929234}
-  cubeA1: {fileID: 606646054}
+  cubeA1: {fileID: 1369110746}
 --- !u!114 &699929237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4605,7 +4605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 699929234}
-  cubeB: {fileID: 606646054}
+  cubeB: {fileID: 1369110746}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &699929238
@@ -4864,7 +4864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 725390395}
-  cubeA1: {fileID: 807317682}
+  cubeA1: {fileID: 1549689687}
 --- !u!114 &725390398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4879,7 +4879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 725390395}
-  cubeB: {fileID: 807317682}
+  cubeB: {fileID: 1549689687}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &725390399
@@ -5079,7 +5079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 748302269}
-  cubeA1: {fileID: 1549689687}
+  cubeA1: {fileID: 1207832587}
 --- !u!114 &748302272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 748302269}
-  cubeB: {fileID: 1549689687}
+  cubeB: {fileID: 1207832587}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &748302273
@@ -5674,6 +5674,7 @@ GameObject:
   - component: {fileID: 818419874}
   - component: {fileID: 818419873}
   - component: {fileID: 818419872}
+  - component: {fileID: 818419878}
   m_Layer: 0
   m_Name: Cube 1.31
   m_TagString: Untagged
@@ -5709,7 +5710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 818419870}
-  cubeA1: {fileID: 886008169}
+  cubeA1: {fileID: 1780323342}
 --- !u!114 &818419873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,7 +5725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 818419870}
-  cubeB: {fileID: 886008169}
+  cubeB: {fileID: 1780323342}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &818419874
@@ -5804,6 +5805,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818419870}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &818419878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818419870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coords: {x: 2, y: 0, z: 0}
 --- !u!1 &833799238
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +5965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 849700140}
-  cubeA1: {fileID: 315958848}
+  cubeA1: {fileID: 978074649}
 --- !u!114 &849700143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5966,7 +5980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 849700140}
-  cubeB: {fileID: 315958848}
+  cubeB: {fileID: 978074649}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &849700144
@@ -6290,7 +6304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 889087102}
-  cubeA1: {fileID: 1512896913}
+  cubeA1: {fileID: 217006992}
 --- !u!114 &889087105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6305,7 +6319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 889087102}
-  cubeB: {fileID: 1512896913}
+  cubeB: {fileID: 217006992}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &889087106
@@ -6513,7 +6527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 899942356}
-  cubeB: {fileID: 57278437}
+  cubeB: {fileID: 2037206370}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &899942363
@@ -6529,7 +6543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 899942356}
-  cubeA1: {fileID: 57278437}
+  cubeA1: {fileID: 2037206370}
 --- !u!1 &905460672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 979922623}
-  cubeA1: {fileID: 1831304059}
+  cubeA1: {fileID: 1862824565}
 --- !u!114 &979922626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7296,7 +7310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 979922623}
-  cubeB: {fileID: 1831304059}
+  cubeB: {fileID: 1862824565}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &979922627
@@ -7426,7 +7440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 985781498}
-  cubeA1: {fileID: 1780323342}
+  cubeA1: {fileID: 1862930800}
 --- !u!114 &985781501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7441,7 +7455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 985781498}
-  cubeB: {fileID: 1780323342}
+  cubeB: {fileID: 1862930800}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &985781502
@@ -7705,7 +7719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 989955032}
-  cubeA1: {fileID: 1432114668}
+  cubeA1: {fileID: 1279949792}
 --- !u!114 &989955035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7746,7 +7760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 989955032}
-  cubeB: {fileID: 1432114668}
+  cubeB: {fileID: 1279949792}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &989955038
@@ -8253,7 +8267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1129506230}
-  cubeB: {fileID: 303309321}
+  cubeB: {fileID: 1263815348}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1129506237
@@ -8269,7 +8283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1129506230}
-  cubeA1: {fileID: 303309321}
+  cubeA1: {fileID: 1263815348}
 --- !u!1 &1143819703
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,7 +8336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1143819703}
-  cubeA1: {fileID: 571113617}
+  cubeA1: {fileID: 645383460}
 --- !u!114 &1143819706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8363,7 +8377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1143819703}
-  cubeB: {fileID: 571113617}
+  cubeB: {fileID: 645383460}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1143819709
@@ -8810,7 +8824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1184609474}
-  cubeA1: {fileID: 2058866891}
+  cubeA1: {fileID: 986661434}
 --- !u!114 &1184609477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8825,7 +8839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1184609474}
-  cubeB: {fileID: 2058866891}
+  cubeB: {fileID: 986661434}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1184609478
@@ -8955,7 +8969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1185246958}
-  cubeA1: {fileID: 808067174}
+  cubeA1: {fileID: 1594329731}
 --- !u!114 &1185246961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8970,7 +8984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1185246958}
-  cubeB: {fileID: 808067174}
+  cubeB: {fileID: 1594329731}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1185246962
@@ -9197,7 +9211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1198742174}
-  cubeA1: {fileID: 1031394541}
+  cubeA1: {fileID: 1811747373}
 --- !u!114 &1198742177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9212,7 +9226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1198742174}
-  cubeB: {fileID: 1031394541}
+  cubeB: {fileID: 1811747373}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1198742178
@@ -9439,7 +9453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1216298068}
-  cubeA1: {fileID: 1811747373}
+  cubeA1: {fileID: 1423228658}
 --- !u!114 &1216298071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9454,7 +9468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1216298068}
-  cubeB: {fileID: 1811747373}
+  cubeB: {fileID: 1423228658}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1216298072
@@ -9551,6 +9565,7 @@ GameObject:
   - component: {fileID: 1216500915}
   - component: {fileID: 1216500914}
   - component: {fileID: 1216500913}
+  - component: {fileID: 1216500921}
   m_Layer: 0
   m_Name: Cube 1.30
   m_TagString: Untagged
@@ -9586,7 +9601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1216500911}
-  cubeA1: {fileID: 51095849}
+  cubeA1: {fileID: 937872095}
 --- !u!114 &1216500914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9627,7 +9642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1216500911}
-  cubeB: {fileID: 51095849}
+  cubeB: {fileID: 937872095}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1216500917
@@ -9707,6 +9722,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216500911}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1216500921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216500911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coords: {x: -4, y: 1, z: 4}
 --- !u!1 &1231387718
 GameObject:
   m_ObjectHideFlags: 0
@@ -9759,7 +9787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1231387718}
-  cubeA1: {fileID: 1279949792}
+  cubeA1: {fileID: 927817079}
 --- !u!114 &1231387721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9800,7 +9828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1231387718}
-  cubeB: {fileID: 1279949792}
+  cubeB: {fileID: 927817079}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1231387724
@@ -9932,7 +9960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1255189297}
-  cubeA1: {fileID: 1010033014}
+  cubeA1: {fileID: 863663697}
 --- !u!114 &1255189300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9973,7 +10001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1255189297}
-  cubeB: {fileID: 1010033014}
+  cubeB: {fileID: 863663697}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1255189303
@@ -10065,7 +10093,6 @@ GameObject:
   - component: {fileID: 1263815353}
   - component: {fileID: 1263815352}
   - component: {fileID: 1263815351}
-  - component: {fileID: 1263815350}
   m_Layer: 0
   m_Name: Cube 7
   m_TagString: Untagged
@@ -10088,19 +10115,6 @@ Transform:
   m_Father: {fileID: 18320894}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1263815350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263815348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1263815351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10477,7 +10491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1276094873}
-  cubeA1: {fileID: 658916129}
+  cubeA1: {fileID: 922025690}
 --- !u!114 &1276094876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10492,7 +10506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1276094873}
-  cubeB: {fileID: 658916129}
+  cubeB: {fileID: 922025690}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1276094877
@@ -10754,7 +10768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1299642125}
-  cubeA1: {fileID: 910950041}
+  cubeA1: {fileID: 2058866891}
 --- !u!114 &1299642128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10769,7 +10783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1299642125}
-  cubeB: {fileID: 910950041}
+  cubeB: {fileID: 2058866891}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1299642129
@@ -10934,7 +10948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1326466358}
-  cubeA1: {fileID: 978074649}
+  cubeA1: {fileID: 658916129}
 --- !u!114 &1326466361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10949,7 +10963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1326466358}
-  cubeB: {fileID: 978074649}
+  cubeB: {fileID: 658916129}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1326466362
@@ -11081,7 +11095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1334347716}
-  cubeA1: {fileID: 645383460}
+  cubeA1: {fileID: 1271214596}
 --- !u!114 &1334347719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11122,7 +11136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1334347716}
-  cubeB: {fileID: 645383460}
+  cubeB: {fileID: 1271214596}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1334347722
@@ -11554,7 +11568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1395101388}
-  cubeA1: {fileID: 54921948}
+  cubeA1: {fileID: 788934035}
 --- !u!114 &1395101391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11569,7 +11583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1395101388}
-  cubeB: {fileID: 54921948}
+  cubeB: {fileID: 788934035}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1395101392
@@ -11685,7 +11699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1400206681}
-  cubeB: {fileID: 1594329731}
+  cubeB: {fileID: 1961510088}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1400206683
@@ -11793,7 +11807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1400206681}
-  cubeA1: {fileID: 1594329731}
+  cubeA1: {fileID: 1961510088}
 --- !u!1 &1422972934
 GameObject:
   m_ObjectHideFlags: 0
@@ -11936,7 +11950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1428215662}
   m_Layer: 0
-  m_Name: Camada4
+  m_Name: Face4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12205,7 +12219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1484721422}
-  cubeA1: {fileID: 538873456}
+  cubeA1: {fileID: 54921948}
 --- !u!114 &1484721425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12220,7 +12234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1484721422}
-  cubeB: {fileID: 538873456}
+  cubeB: {fileID: 54921948}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1484721426
@@ -12350,7 +12364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1490984143}
-  cubeA1: {fileID: 282449795}
+  cubeA1: {fileID: 1661721725}
 --- !u!114 &1490984146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12365,7 +12379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1490984143}
-  cubeB: {fileID: 282449795}
+  cubeB: {fileID: 1661721725}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1490984147
@@ -12542,6 +12556,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512896913}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1540166550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540166552}
+  - component: {fileID: 1540166551}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1540166551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed5741d317e69e4aa7812b1729ae590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1540166552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4713154, y: -0.9220009, z: -4.681549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540780917
 GameObject:
   m_ObjectHideFlags: 0
@@ -12883,7 +12941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1559732886}
-  cubeA1: {fileID: 922025690}
+  cubeA1: {fileID: 315958848}
 --- !u!114 &1559732889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12898,7 +12956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1559732886}
-  cubeB: {fileID: 922025690}
+  cubeB: {fileID: 315958848}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1559732890
@@ -13030,7 +13088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1574689791}
-  cubeA1: {fileID: 937872095}
+  cubeA1: {fileID: 1887498762}
 --- !u!114 &1574689794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13071,7 +13129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1574689791}
-  cubeB: {fileID: 937872095}
+  cubeB: {fileID: 1887498762}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1574689797
@@ -13201,7 +13259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1574918414}
-  cubeA1: {fileID: 766402649}
+  cubeA1: {fileID: 886008169}
 --- !u!114 &1574918417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13216,7 +13274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1574918414}
-  cubeB: {fileID: 766402649}
+  cubeB: {fileID: 886008169}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1574918418
@@ -13308,7 +13366,6 @@ GameObject:
   - component: {fileID: 1594329736}
   - component: {fileID: 1594329735}
   - component: {fileID: 1594329734}
-  - component: {fileID: 1594329733}
   m_Layer: 0
   m_Name: Cube 4
   m_TagString: Untagged
@@ -13331,19 +13388,6 @@ Transform:
   m_Father: {fileID: 2109714649}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594329733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594329731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1594329734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13589,7 +13633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1623423137}
-  cubeA1: {fileID: 1661721725}
+  cubeA1: {fileID: 1831304059}
 --- !u!114 &1623423140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13604,7 +13648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1623423137}
-  cubeB: {fileID: 1661721725}
+  cubeB: {fileID: 1831304059}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1623423141
@@ -13694,7 +13738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628503458}
   m_Layer: 0
-  m_Name: Camada2
+  m_Name: Face2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14103,7 +14147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1724917176}
-  cubeA1: {fileID: 927817079}
+  cubeA1: {fileID: 16963834}
 --- !u!114 &1724917179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14144,7 +14188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1724917176}
-  cubeB: {fileID: 927817079}
+  cubeB: {fileID: 16963834}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1724917182
@@ -14274,7 +14318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1745497931}
-  cubeA1: {fileID: 1724220673}
+  cubeA1: {fileID: 1476359005}
 --- !u!114 &1745497934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14289,7 +14333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1745497931}
-  cubeB: {fileID: 1724220673}
+  cubeB: {fileID: 1476359005}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1745497935
@@ -14481,6 +14525,7 @@ GameObject:
   - component: {fileID: 1750396954}
   - component: {fileID: 1750396953}
   - component: {fileID: 1750396952}
+  - component: {fileID: 1750396958}
   m_Layer: 0
   m_Name: Cube 1.32
   m_TagString: Untagged
@@ -14516,7 +14561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1750396950}
-  cubeA1: {fileID: 1197605844}
+  cubeA1: {fileID: 466590379}
 --- !u!114 &1750396953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14531,7 +14576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1750396950}
-  cubeB: {fileID: 1197605844}
+  cubeB: {fileID: 466590379}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1750396954
@@ -14611,6 +14656,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750396950}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1750396958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750396950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coords: {x: 3, y: 0, z: 0}
 --- !u!1 &1774582272
 GameObject:
   m_ObjectHideFlags: 0
@@ -14661,7 +14719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1774582272}
-  cubeA1: {fileID: 1423228658}
+  cubeA1: {fileID: 1595826385}
 --- !u!114 &1774582275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14676,7 +14734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1774582272}
-  cubeB: {fileID: 1423228658}
+  cubeB: {fileID: 1595826385}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1774582276
@@ -14975,7 +15033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1801230552}
-  cubeA1: {fileID: 1885500172}
+  cubeA1: {fileID: 571113617}
 --- !u!114 &1801230555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15016,7 +15074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1801230552}
-  cubeB: {fileID: 1885500172}
+  cubeB: {fileID: 571113617}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1801230558
@@ -15108,7 +15166,6 @@ GameObject:
   - component: {fileID: 1811747378}
   - component: {fileID: 1811747377}
   - component: {fileID: 1811747376}
-  - component: {fileID: 1811747375}
   m_Layer: 0
   m_Name: Cube 15
   m_TagString: Untagged
@@ -15131,19 +15188,6 @@ Transform:
   m_Father: {fileID: 1322053977}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1811747375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811747373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1811747376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15219,7 +15263,6 @@ GameObject:
   - component: {fileID: 1826953920}
   - component: {fileID: 1826953919}
   - component: {fileID: 1826953918}
-  - component: {fileID: 1826953917}
   m_Layer: 0
   m_Name: Cube 12
   m_TagString: Untagged
@@ -15242,19 +15285,6 @@ Transform:
   m_Father: {fileID: 1176163621}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1826953917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826953915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1826953918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15479,7 +15509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1831759769}
-  cubeA1: {fileID: 1369110746}
+  cubeA1: {fileID: 303309321}
 --- !u!114 &1831759772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15494,7 +15524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1831759769}
-  cubeB: {fileID: 1369110746}
+  cubeB: {fileID: 303309321}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1831759773
@@ -15683,7 +15713,6 @@ GameObject:
   - component: {fileID: 1862930805}
   - component: {fileID: 1862930804}
   - component: {fileID: 1862930803}
-  - component: {fileID: 1862930802}
   m_Layer: 0
   m_Name: Cube 11
   m_TagString: Untagged
@@ -15706,19 +15735,6 @@ Transform:
   m_Father: {fileID: 1176163621}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1862930802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862930800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1862930803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16026,7 +16042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1892711731}
-  cubeA1: {fileID: 1862824565}
+  cubeA1: {fileID: 282449795}
 --- !u!114 &1892711734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16041,7 +16057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1892711731}
-  cubeB: {fileID: 1862824565}
+  cubeB: {fileID: 282449795}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1892711735
@@ -16251,7 +16267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1908899260}
-  cubeB: {fileID: 645755291}
+  cubeB: {fileID: 1010033014}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1908899267
@@ -16293,7 +16309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1908899260}
-  cubeA1: {fileID: 645755291}
+  cubeA1: {fileID: 1010033014}
 --- !u!1 &1927249205
 GameObject:
   m_ObjectHideFlags: 0
@@ -16346,7 +16362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1927249205}
-  cubeA1: {fileID: 16963834}
+  cubeA1: {fileID: 1432114668}
 --- !u!114 &1927249208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16387,7 +16403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1927249205}
-  cubeB: {fileID: 16963834}
+  cubeB: {fileID: 1432114668}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1927249211
@@ -16552,7 +16568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1938877133}
-  cubeA1: {fileID: 1476359005}
+  cubeA1: {fileID: 1546355654}
 --- !u!114 &1938877136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16567,7 +16583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1938877133}
-  cubeB: {fileID: 1476359005}
+  cubeB: {fileID: 1546355654}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1938877137
@@ -16699,7 +16715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1941039095}
-  cubeA1: {fileID: 1540780917}
+  cubeA1: {fileID: 51095849}
 --- !u!114 &1941039098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16740,7 +16756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1941039095}
-  cubeB: {fileID: 1540780917}
+  cubeB: {fileID: 51095849}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1941039101
@@ -16832,7 +16848,6 @@ GameObject:
   - component: {fileID: 1961510093}
   - component: {fileID: 1961510092}
   - component: {fileID: 1961510091}
-  - component: {fileID: 1961510090}
   m_Layer: 0
   m_Name: Cube 8
   m_TagString: Untagged
@@ -16855,19 +16870,6 @@ Transform:
   m_Father: {fileID: 18320894}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1961510090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961510088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1961510091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17078,7 +17080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1993314534}
-  cubeA1: {fileID: 986661434}
+  cubeA1: {fileID: 930668011}
 --- !u!114 &1993314537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17093,7 +17095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 1993314534}
-  cubeB: {fileID: 986661434}
+  cubeB: {fileID: 930668011}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &1993314538
@@ -17223,7 +17225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2027803772}
-  cubeA1: {fileID: 570236660}
+  cubeA1: {fileID: 538873456}
 --- !u!114 &2027803775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17238,7 +17240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 2027803772}
-  cubeB: {fileID: 570236660}
+  cubeB: {fileID: 538873456}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &2027803776
@@ -17415,7 +17417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037206370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -1.5, z: 0}
+  m_LocalPosition: {x: -2.19, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17667,7 +17669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2081567874}
-  cubeA1: {fileID: 466590379}
+  cubeA1: {fileID: 1826953915}
 --- !u!114 &2081567877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17682,7 +17684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 2081567874}
-  cubeB: {fileID: 466590379}
+  cubeB: {fileID: 1826953915}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &2081567878
@@ -17882,7 +17884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2112111118}
-  cubeA1: {fileID: 1747838044}
+  cubeA1: {fileID: 1724220673}
 --- !u!114 &2112111121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17897,7 +17899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 2112111118}
-  cubeB: {fileID: 1747838044}
+  cubeB: {fileID: 1724220673}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &2112111122
@@ -18027,7 +18029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2120382466}
-  cubeA1: {fileID: 788934035}
+  cubeA1: {fileID: 570236660}
 --- !u!114 &2120382469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18042,7 +18044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 2120382466}
-  cubeB: {fileID: 788934035}
+  cubeB: {fileID: 570236660}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &2120382470
@@ -18174,7 +18176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2122188093}
-  cubeA1: {fileID: 863663697}
+  cubeA1: {fileID: 833799238}
 --- !u!114 &2122188096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18215,7 +18217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   cubeA: {fileID: 2122188093}
-  cubeB: {fileID: 863663697}
+  cubeB: {fileID: 833799238}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
 --- !u!114 &2122188099
