@@ -2,43 +2,38 @@ using UnityEngine;
 
 public class Vitoria : MonoBehaviour
 {
-    public bool CheckForVictory(SpriteRenderer spriteToCheck)
+    public GameObject[,,] gameBoard; // The 4x4x4 game board
+
+    public Material player1Material;
+    public Material player2Material;
+
+    void Start()
     {
-        SpriteRenderer[,,] allSprites = new SpriteRenderer[4, 4, 4];
-        
-        SpriteCoordinates[] spriteCoords = FindObjectsOfType<SpriteCoordinates>();
+        // Initialize your gameBoard here or via the Inspector
+    }
 
-        // Fill the array
-        foreach (SpriteCoordinates sCoord in spriteCoords)
+    public bool CheckForHorizontalVictory()
+    {
+        for (int y = 0; y < 4; y++) // Each horizontal layer
         {
-            Vector3Int coord = sCoord.coords;
-            allSprites[coord.x, coord.y, coord.z] = sCoord.GetComponent<SpriteRenderer>();
-        }
-        
-        // Check rows, columns, depths, and diagonals - example for rows:
-        for (int z = 0; z < 4; z++)
-        {
-            for (int y = 0; y < 4; y++)
+            for (int z = 0; z < 4; z++) // Each row in a layer
             {
-                int matchCount = 0;
-                for (int x = 0; x < 4; x++)
+                if (IsRowSame(gameBoard[0, y, z], gameBoard[1, y, z], gameBoard[2, y, z], gameBoard[3, y, z]))
                 {
-                    if (allSprites[x, y, z] && allSprites[x, y, z].sprite == spriteToCheck.sprite)
-                    {
-                        matchCount++;
-                    }
-                }
-
-                if (matchCount == 4) 
-                {
-                    Debug.Log("Win");
-                    return true;
+                    return true; // Victory found in this row
                 }
             }
         }
+        return false; // No victory found
+    }
 
-        // Similar checks for columns, depths, and diagonals can be added...
+    bool IsRowSame(GameObject a, GameObject b, GameObject c, GameObject d)
+    {
+        Material matA = a.GetComponent<Renderer>().material;
+        Material matB = b.GetComponent<Renderer>().material;
+        Material matC = c.GetComponent<Renderer>().material;
+        Material matD = d.GetComponent<Renderer>().material;
 
-        return false;
+        return matA == matB && matB == matC && matC == matD;
     }
 }

@@ -12630,6 +12630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed5741d317e69e4aa7812b1729ae590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Material: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
+  player2Material: {fileID: 2100000, guid: f7bc81f9bddb01a478411212fd660ead, type: 2}
 --- !u!4 &1540166552
 Transform:
   m_ObjectHideFlags: 0
