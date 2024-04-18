@@ -12612,7 +12612,6 @@ GameObject:
   - component: {fileID: 1540166552}
   - component: {fileID: 1540166551}
   - component: {fileID: 1540166553}
-  - component: {fileID: 1540166554}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12627,13 +12626,77 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540166550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ed5741d317e69e4aa7812b1729ae590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Material: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
-  player2Material: {fileID: 2100000, guid: f7bc81f9bddb01a478411212fd660ead, type: 2}
+  objects:
+  - {fileID: 1182846541}
+  - {fileID: 937872095}
+  - {fileID: 1780323342}
+  - {fileID: 466590379}
+  - {fileID: 2058866891}
+  - {fileID: 1432114668}
+  - {fileID: 1031394541}
+  - {fileID: 1661721725}
+  - {fileID: 217006992}
+  - {fileID: 833799238}
+  - {fileID: 1369110746}
+  - {fileID: 808067174}
+  - {fileID: 57278437}
+  - {fileID: 645755291}
+  - {fileID: 303309321}
+  - {fileID: 1594329731}
+  - {fileID: 930668011}
+  - {fileID: 927817079}
+  - {fileID: 1423228658}
+  - {fileID: 1862824565}
+  - {fileID: 1549689687}
+  - {fileID: 1540780917}
+  - {fileID: 766402649}
+  - {fileID: 1985554047}
+  - {fileID: 1512896913}
+  - {fileID: 863663697}
+  - {fileID: 606646054}
+  - {fileID: 136072732}
+  - {fileID: 2037206370}
+  - {fileID: 1010033014}
+  - {fileID: 1263815348}
+  - {fileID: 1961510088}
+  - {fileID: 1546355654}
+  - {fileID: 1885500172}
+  - {fileID: 315958848}
+  - {fileID: 54921948}
+  - {fileID: 1747838044}
+  - {fileID: 571113617}
+  - {fileID: 978074649}
+  - {fileID: 788934035}
+  - {fileID: 910950041}
+  - {fileID: 16963834}
+  - {fileID: 1595826385}
+  - {fileID: 282449795}
+  - {fileID: 807317682}
+  - {fileID: 1887498762}
+  - {fileID: 1862930800}
+  - {fileID: 1826953915}
+  - {fileID: 1476359005}
+  - {fileID: 1271214596}
+  - {fileID: 922025690}
+  - {fileID: 538873456}
+  - {fileID: 1724220673}
+  - {fileID: 645383460}
+  - {fileID: 658916129}
+  - {fileID: 570236660}
+  - {fileID: 1207832587}
+  - {fileID: 51095849}
+  - {fileID: 886008169}
+  - {fileID: 1197605844}
+  - {fileID: 986661434}
+  - {fileID: 1279949792}
+  - {fileID: 1811747373}
+  - {fileID: 1831304059}
+  excludeColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1540166552
 Transform:
   m_ObjectHideFlags: 0
@@ -12661,34 +12724,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c471e52ccaa6b42b7f794bb3d1d671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToCheck:
+  cubes:
+  - {fileID: 1182846541}
+  - {fileID: 937872095}
+  - {fileID: 1780323342}
+  - {fileID: 466590379}
+  - {fileID: 2058866891}
+  - {fileID: 1432114668}
+  - {fileID: 1031394541}
+  - {fileID: 1661721725}
+  - {fileID: 217006992}
+  - {fileID: 833799238}
+  - {fileID: 1369110746}
+  - {fileID: 808067174}
   - {fileID: 57278437}
   - {fileID: 645755291}
   - {fileID: 303309321}
   - {fileID: 1594329731}
+  - {fileID: 930668011}
+  - {fileID: 927817079}
+  - {fileID: 1423228658}
+  - {fileID: 1862824565}
+  - {fileID: 1549689687}
+  - {fileID: 1540780917}
+  - {fileID: 766402649}
+  - {fileID: 1985554047}
+  - {fileID: 1512896913}
+  - {fileID: 863663697}
+  - {fileID: 606646054}
+  - {fileID: 136072732}
+  - {fileID: 2037206370}
+  - {fileID: 1010033014}
+  - {fileID: 1263815348}
+  - {fileID: 1961510088}
+  - {fileID: 1546355654}
+  - {fileID: 1885500172}
+  - {fileID: 315958848}
+  - {fileID: 54921948}
+  - {fileID: 1747838044}
+  - {fileID: 571113617}
+  - {fileID: 978074649}
+  - {fileID: 788934035}
+  - {fileID: 910950041}
+  - {fileID: 16963834}
+  - {fileID: 1595826385}
+  - {fileID: 282449795}
+  - {fileID: 807317682}
+  - {fileID: 1887498762}
+  - {fileID: 1862930800}
+  - {fileID: 1826953915}
+  - {fileID: 1476359005}
+  - {fileID: 1271214596}
+  - {fileID: 922025690}
+  - {fileID: 538873456}
+  - {fileID: 1724220673}
+  - {fileID: 645383460}
+  - {fileID: 658916129}
+  - {fileID: 570236660}
+  - {fileID: 1207832587}
+  - {fileID: 51095849}
+  - {fileID: 886008169}
+  - {fileID: 1197605844}
+  - {fileID: 986661434}
+  - {fileID: 1279949792}
+  - {fileID: 1811747373}
+  - {fileID: 1831304059}
   excludeColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1540166554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540166550}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8f6591c536f12c4ebf37dc336e122f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToCheck:
-  - {fileID: 57278437}
-  - {fileID: 645755291}
-  - {fileID: 303309321}
-  - {fileID: 1594329731}
-  excludeColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
 --- !u!1 &1540780917
 GameObject:
   m_ObjectHideFlags: 0

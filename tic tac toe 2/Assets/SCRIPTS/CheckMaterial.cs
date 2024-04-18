@@ -4,57 +4,102 @@ using UnityEngine;
 
 public class CheckMaterial : MonoBehaviour
 {
-       [SerializeField]
-    private GameObject[] objectsToCheck;
-    // Public variable to set the excluded color in the Unity Inspector
-    public Color excludeColor = Color.red; // Example: Exclude red materials
+    public GameObject[] cubes; // Should be an array of 64 GameObjects (4x4x4)
+    public Color excludeColor = Color.red;
 
-    public bool CheckIfMaterialColorsAreTheSame(GameObject[] objectsToCheck)
+
+    private void Update()
     {
-        if (objectsToCheck.Length < 2)
+        if (cubes.Length != 64)
         {
-            Debug.LogError("Need at least two objects to compare materials.");
-            return false;
+            Debug.LogError("Incorrect number of game objects. There should be exactly 64 objects.");
+            return;
         }
 
+        CheckAllWinningConditions();
+    }
 
-        // Get the first object's material color.
-        Color firstObjectColor = objectsToCheck[0].GetComponent<Renderer>().material.color;
-        if (firstObjectColor == excludeColor)
+    private void CheckAllWinningConditions()
+    {
+        // Check all horizontal lines in each layer
+        for (int layer = 0; layer < 4; layer++)
         {
-            Debug.Log("Branco");
-            return false;
-        }
-
-        for (int i = 1; i < objectsToCheck.Length; i++)
-        {
-            Color currentColor = objectsToCheck[i].GetComponent<Renderer>().material.color;
-
-            // If any material's color doesn't match the first object's material color, return false.
-            if (currentColor != firstObjectColor)
+            for (int row = 0; row < 4; row++)
             {
-                return false;
+                if (AreColorsSame(layer * 16 + row * 4, layer * 16 + row * 4 + 1, layer * 16 + row * 4 + 2, layer * 16 + row * 4 + 3))
+                {
+                    Debug.Log($"Winning condition met at layer {layer + 1}, row {row + 1} (horizontal).");
+                }
             }
-    
         }
 
-        // All materials' colors match.
+        // Check all vertical lines in each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            for (int col = 0; col < 4; col++)
+            {
+                if (AreColorsSame(layer * 16 + col, layer * 16 + col + 4, layer * 16 + col + 8, layer * 16 + col + 12))
+                {
+                    Debug.Log($"Winning condition met at layer {layer + 1}, column {col + 1} (vertical).");
+                }
+            }
+        }
 
+        // Check 2D diagonals within each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            if (AreColorsSame(layer * 16, layer * 16 + 5, layer * 16 + 10, layer * 16 + 15))
+            {
+                Debug.Log($"Winning condition met at layer {layer + 1} on major diagonal.");
+            }
+            if (AreColorsSame(layer * 16 + 3, layer * 16 + 6, layer * 16 + 9, layer * 16 + 12))
+            {
+                Debug.Log($"Winning condition met at layer {layer + 1} on minor diagonal.");
+            }
+        }
+
+        // Check vertical lines through all layers
+        for (int index = 0; index < 16; index++)
+        {
+            if (AreColorsSame(index, index + 16, index + 32, index + 48))
+            {
+                Debug.Log($"Winning condition met through all layers at position {index % 4 + 1}, {index / 4 + 1} (vertical through layers).");
+            }
+        }
+
+        // Check 3D diagonals
+        if (AreColorsSame(0, 21, 42, 63))
+        {
+            Debug.Log("Winning condition met on 3D diagonal from top-left-front to bottom-right-back.");
+        }
+        if (AreColorsSame(3, 22, 41, 60))
+        {
+            Debug.Log("Winning condition met on 3D diagonal from top-right-front to bottom-left-back.");
+        }
+        if (AreColorsSame(12, 25, 38, 51))
+        {
+            Debug.Log("Winning condition met on 3D diagonal from top-left-back to bottom-right-front.");
+        }
+        if (AreColorsSame(15, 26, 37, 48))
+        {
+            Debug.Log("Winning condition met on 3D diagonal from top-right-back to bottom-left-front.");
+        }
+    }
+
+    // Check if specified GameObjects have the same material color
+    private bool AreColorsSame(params int[] indices)
+    {
+        Color firstColor = cubes[indices[0]].GetComponent<Renderer>().material.color;
+        if (firstColor == excludeColor)
+        {
+            return false;
+        }
+
+        for (int i = 1; i < indices.Length; i++)
+        {
+            if (cubes[indices[i]].GetComponent<Renderer>().material.color != firstColor)
+                return false;
+        }
         return true;
     }
-
-    void Update()
-    {
-        bool result = CheckIfMaterialColorsAreTheSame(objectsToCheck);
-
-        if(result)
-        {
-            Debug.Log("All objects have the same material color.");
-        }
-        else
-        {
-            Debug.Log("Not all objects have the same material color.");
-        }
-    }
 }
-

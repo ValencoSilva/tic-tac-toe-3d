@@ -1,39 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Vitoria : MonoBehaviour
 {
-    public GameObject[,,] gameBoard; // The 4x4x4 game board
+    public GameObject[] objects; // Assign this array in the inspector with your 64 objects
+    public Color excludeColor = Color.red;
 
-    public Material player1Material;
-    public Material player2Material;
-
-    void Start()
+    private void Update()
     {
-        // Initialize your gameBoard here or via the Inspector
-    }
-
-    public bool CheckForHorizontalVictory()
-    {
-        for (int y = 0; y < 4; y++) // Each horizontal layer
+        // Check if Object 1, Object 2, Object 3, Object 4 have the same material color
+        if (AreColorsSame(0, 1, 2, 3))
         {
-            for (int z = 0; z < 4; z++) // Each row in a layer
-            {
-                if (IsRowSame(gameBoard[0, y, z], gameBoard[1, y, z], gameBoard[2, y, z], gameBoard[3, y, z]))
-                {
-                    return true; // Victory found in this row
-                }
-            }
+            Debug.Log("Objects 1, 2, 3, and 4 have the same color.");
         }
-        return false; // No victory found
+        else
+        {
+           // Debug.Log("Objects 1, 2, 3, and 4 do not have the same color.");
+        }
+        
+
+        // Check if Object 1, Object 5, Object 9, and Object 13 have the same material color
+        if (AreColorsSame(0, 4, 8, 12))
+        {
+            Debug.Log("Objects 1, 5, 9, and 13 have the same color.");
+        }
+        else
+        {
+          //  Debug.Log("Objects 1, 5, 9, and 13 do not have the same color.");
+        }
     }
 
-    bool IsRowSame(GameObject a, GameObject b, GameObject c, GameObject d)
+    // Method to check if the colors of the specified indices are the same
+    bool AreColorsSame(params int[] indices)
     {
-        Material matA = a.GetComponent<Renderer>().material;
-        Material matB = b.GetComponent<Renderer>().material;
-        Material matC = c.GetComponent<Renderer>().material;
-        Material matD = d.GetComponent<Renderer>().material;
+        if (indices.Length < 2)
+            return true; // Only one or no object, trivially true
 
-        return matA == matB && matB == matC && matC == matD;
+        Color firstColor = objects[indices[0]].GetComponent<Renderer>().material.color;
+        
+        if (firstColor == excludeColor)
+        {
+            return false;
+        }
+
+        for (int i = 1; i < indices.Length; i++)
+        {
+            Color currentColor = objects[indices[i]].GetComponent<Renderer>().material.color;
+            if (currentColor != firstColor)
+                return false; // Colors don't match
+        }
+
+        return true; // All colors matched
     }
 }
