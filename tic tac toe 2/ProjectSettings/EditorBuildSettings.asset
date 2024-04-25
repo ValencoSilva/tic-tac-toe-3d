@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: b969d364fe94cf149ae8b8cee2393878
+  - enabled: 1
+    path: Assets/Scenes/SeletorPlayersIA.unity
+    guid: 857a52b3b3a4daa4ebf511055784c590
   m_configObjects: {}

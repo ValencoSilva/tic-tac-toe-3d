@@ -571,9 +571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b802b4bca23741b648399ad1eec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  twoPlayers: SeletorDificuldade2Players
-  threePlayers: SeletorDificuldade3Players
-  fourPlayers: SeletorDificuldade4Players
+  twoPlayers: 2 Players Local
+  threePlayers: 3 Players Local
+  fourPlayers: 4 Players Local
   Voltar: MenuPrincipal
 --- !u!4 &1020057019
 Transform:
