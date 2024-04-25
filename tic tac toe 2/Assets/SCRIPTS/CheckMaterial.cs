@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheckMaterial : MonoBehaviour
 {
     public GameObject[] cubes; // Should be an array of 64 GameObjects (4x4x4)
-    public Color excludeColor = Color.red;
+    public Color excludeColor = Color.white;
 
 
     private void Update()
@@ -19,8 +19,9 @@ public class CheckMaterial : MonoBehaviour
         CheckAllWinningConditions();
     }
 
-    private void CheckAllWinningConditions()
+    public bool CheckAllWinningConditions()
     {
+        bool winDetected = false;
         // Check all horizontal lines in each layer
         for (int layer = 0; layer < 4; layer++)
         {
@@ -29,6 +30,7 @@ public class CheckMaterial : MonoBehaviour
                 if (AreColorsSame(layer * 16 + row * 4, layer * 16 + row * 4 + 1, layer * 16 + row * 4 + 2, layer * 16 + row * 4 + 3))
                 {
                     Debug.Log($"Winning condition met at layer {layer + 1}, row {row + 1} (horizontal).");
+                    winDetected = true;
                 }
             }
         }
@@ -41,6 +43,7 @@ public class CheckMaterial : MonoBehaviour
                 if (AreColorsSame(layer * 16 + col, layer * 16 + col + 4, layer * 16 + col + 8, layer * 16 + col + 12))
                 {
                     Debug.Log($"Winning condition met at layer {layer + 1}, column {col + 1} (vertical).");
+                    winDetected = true;
                 }
             }
         }
@@ -51,10 +54,12 @@ public class CheckMaterial : MonoBehaviour
             if (AreColorsSame(layer * 16, layer * 16 + 5, layer * 16 + 10, layer * 16 + 15))
             {
                 Debug.Log($"Winning condition met at layer {layer + 1} on major diagonal.");
+                winDetected = true;
             }
             if (AreColorsSame(layer * 16 + 3, layer * 16 + 6, layer * 16 + 9, layer * 16 + 12))
             {
                 Debug.Log($"Winning condition met at layer {layer + 1} on minor diagonal.");
+                winDetected = true;
             }
         }
 
@@ -64,6 +69,7 @@ public class CheckMaterial : MonoBehaviour
             if (AreColorsSame(index, index + 16, index + 32, index + 48))
             {
                 Debug.Log($"Winning condition met through all layers at position {index % 4 + 1}, {index / 4 + 1} (vertical through layers).");
+                winDetected = true;
             }
         }
 
@@ -71,19 +77,24 @@ public class CheckMaterial : MonoBehaviour
         if (AreColorsSame(0, 21, 42, 63))
         {
             Debug.Log("Winning condition met on 3D diagonal from top-left-front to bottom-right-back.");
+            winDetected = true;
         }
         if (AreColorsSame(3, 22, 41, 60))
         {
             Debug.Log("Winning condition met on 3D diagonal from top-right-front to bottom-left-back.");
+            winDetected = true;
         }
         if (AreColorsSame(12, 25, 38, 51))
         {
             Debug.Log("Winning condition met on 3D diagonal from top-left-back to bottom-right-front.");
+            winDetected = true;
         }
         if (AreColorsSame(15, 26, 37, 48))
         {
             Debug.Log("Winning condition met on 3D diagonal from top-right-back to bottom-left-front.");
+            winDetected = true;
         }
+        return winDetected;
     }
 
     // Check if specified GameObjects have the same material color

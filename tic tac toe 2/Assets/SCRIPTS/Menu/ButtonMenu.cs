@@ -3,23 +3,36 @@ using UnityEngine.SceneManagement; // Required for managing scenes
 
 public class ButtonMenu : MonoBehaviour
 {
-    public string sceneNameToLoadJogar;
-    public string sceneNameToLoadJogarIA;
+    public string MenuJogarIA;
+    public string MenuMultiplayerLocal;
+    public string MenuOpcoes;
+    public string MenuMultiplayerOnline;
        // Specify the name of the scene to load in the Inspector
 
-    public void OnButtonPressedJogarIA()
+    public void JogarIA()
     {
-        SceneManager.LoadScene(sceneNameToLoadJogarIA);
+        SceneManager.LoadScene(MenuJogarIA);
     }
 
-     public void OnButtonPressedJogar()
+     public void MultiplayerLocal()
     {
-        SceneManager.LoadScene(sceneNameToLoadJogar);
+        SceneManager.LoadScene(MenuMultiplayerLocal);
     }
 
-    public void OnButtonPressedMenu()
+    public void MultiplayerOnline()
+    {
+        SceneManager.LoadScene(MenuMultiplayerOnline);
+    }
+
+    public void Opcoes()
+    {
+        SceneManager.LoadScene(MenuOpcoes);
+    }
+
+    public void Sair()
     {
     
         Debug.Log("saiu do jogo!");
+        Application.Quit();
     }
 }

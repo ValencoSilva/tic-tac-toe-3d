@@ -6,15 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/MenuPrincipal.unity
     guid: 68aec5308708d6f438467bb144a836b6
   - enabled: 1
-    path: Assets/Scenes/SinglePlayer.unity
+    path: Assets/Scenes/Multiplayer Local.unity
+    guid: d7c303a02a725254cb68db84efb01866
+  - enabled: 1
+    path: Assets/Scenes/SeletorDificuldade2Players.unity
+    guid: 8b6043a2d62524f4cbdbc679a8f8d5d3
+  - enabled: 1
+    path: Assets/Scenes/SeletorDificuldade3Players.unity
+    guid: 555e24cd67732464e835cf8ba0320927
+  - enabled: 1
+    path: Assets/Scenes/SeletorDificuldade4Players.unity
     guid: 02ef225dab8c0604e9ecd7011e495b1b
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Hard Mode.unity
+    guid: e2018e759eeedb546a89e23cce0f6aeb
   - enabled: 1
-    path: Assets/Scenes/Multiplayer.unity
-    guid: d7c303a02a725254cb68db84efb01866
+    path: Assets/Scenes/Opcoes.unity
+    guid: 87a42889b6919154b8a0d6b762318e51
+  - enabled: 1
+    path: Assets/Scenes/2 Players Easy Mode.unity
+    guid: f2da9e194ffe1e04f9533a0803b9afb2
+  - enabled: 1
+    path: Assets/Scenes/3 Players Easy Mode.unity
+    guid: 2b6a603d9afb63540a0359dd7570c61a
+  - enabled: 1
+    path: Assets/Scenes/4 Players Easy Mode.unity
+    guid: 2bb4115c5c28b8244babf6d73a5f0c71
+  - enabled: 1
+    path: Assets/Scenes/2 Players Local.unity
+    guid: 6fcaef5f75568e74fab6131bf005ea03
+  - enabled: 1
+    path: Assets/Scenes/3 Players Local.unity
+    guid: de01b69446d7e1542b457c2a1177f542
+  - enabled: 1
+    path: Assets/Scenes/4 Players Local.unity
+    guid: cd82e8568bfe71c44838ba756e4d301e
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: b969d364fe94cf149ae8b8cee2393878
   m_configObjects: {}

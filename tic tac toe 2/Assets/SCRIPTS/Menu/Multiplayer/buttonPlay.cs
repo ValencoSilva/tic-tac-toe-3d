@@ -4,23 +4,29 @@ using UnityEngine.SceneManagement; // Required for managing scenes
 
 public class buttonPlay : MonoBehaviour
 {
-    public string sceneNameToLoad2;
-    public string sceneNameToLoad3;
-    //public string sceneNameToLoad4;
+    public string twoPlayers;
+    public string threePlayers;
+    public string fourPlayers;
+    public string Voltar;
        
-    public void OnButtonPressed2()
+    public void ontwoPlayers()
     {
-        SceneManager.LoadScene(sceneNameToLoad2);
+        SceneManager.LoadScene(twoPlayers);
     }
 
-     public void OnButtonPressed3()
+    public void onThreePlayers()
     {
-        SceneManager.LoadScene(sceneNameToLoad3);
+        SceneManager.LoadScene(threePlayers);
     }
 
-    //public void OnButtonPressed4()
-    //{
-    
-     //   SceneManager.LoadScene(sceneNameToLoad4);
-    //}
+    public void onFourPlayers()
+    {
+        SceneManager.LoadScene(fourPlayers);
+    }
+    public void onVoltar()
+    {
+        SceneManager.LoadScene(Voltar);
+    }
+
+
 }

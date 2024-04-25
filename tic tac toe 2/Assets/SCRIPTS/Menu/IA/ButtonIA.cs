@@ -3,24 +3,30 @@ using UnityEngine.SceneManagement; // Required for managing scenes
 
 public class ButtonIA : MonoBehaviour
 {
-    public string sceneNameToLoadFacil;
-    public string sceneNameToLoadMedio;
-    public string sceneNameToLoadDificil;
+    public string Facil;
+    public string Medio;
+    public string Dificil;
+    public string Voltar;
        // Specify the name of the scene to load in the Inspector
 
-    public void OnButtonPressedFacil()
+    public void onFacil()
     {
-        SceneManager.LoadScene(sceneNameToLoadFacil);
+        SceneManager.LoadScene(Facil);
     }
 
-     public void OnButtonPressedMedio()
+     public void onMedio()
     {
-        SceneManager.LoadScene(sceneNameToLoadMedio);
+        SceneManager.LoadScene(Medio);
     }
 
-    public void OnButtonPressedDificil()
+    public void onDificil()
     {
     
-        SceneManager.LoadScene(sceneNameToLoadDificil);
+        SceneManager.LoadScene(Dificil);
+    }
+    public void onVoltar()
+    {
+    
+        SceneManager.LoadScene(Voltar);
     }
 }

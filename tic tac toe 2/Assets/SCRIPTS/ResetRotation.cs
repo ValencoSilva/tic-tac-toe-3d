@@ -24,7 +24,7 @@ public class ResetRotation : MonoBehaviour
         transform.rotation = Quaternion.Slerp(startRotation, Quaternion.identity, time);
         time += Time.deltaTime;
         rb.angularVelocity = Vector3.forward * 0f;
-        Debug.Log("aa");
+        Debug.Log("Posicao do Cubo Resetada");
     }
     void Teste()
     {
