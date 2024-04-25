@@ -55,12 +55,21 @@ public class VictoryCheck : MonoBehaviour
             CheckCondition(15 + col, 26 + col, 37 + col, 48 + col, "2D minor diagonal through layers from back to front"); 
         }
 
+        CheckCondition(0, 17, 34, 51, "diagonal marcos"); 
+        CheckCondition(4, 21, 38, 55, "diagonal marcos"); 
+        CheckCondition(8, 25, 42, 59, "diagonal marcos"); 
+        CheckCondition(12, 29, 46, 63, "diagonal marcos"); 
+        
+        
+
         // Check 3D diagonals
         CheckCondition(0, 21, 42, 63, "3D diagonal from top-left-front to bottom-right-back"); 
         CheckCondition(3, 22, 41, 60, "3D diagonal from top-right-front to bottom-left-back"); 
         CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front"); 
         CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front"); 
+
     }
+
 
     public void CheckCondition(int a, int b, int c, int d, string description)
     {
