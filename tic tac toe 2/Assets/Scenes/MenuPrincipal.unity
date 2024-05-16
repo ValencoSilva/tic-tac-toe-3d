@@ -1363,8 +1363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuJogarIA: SeletorPlayersIA
   MenuMultiplayerLocal: Multiplayer Local
-  MenuOpcoes: Opcoes
-  MenuMultiplayerOnline: 2 Players Online
+  MenuOpcoes: 
+  MenuMultiplayerOnline: 
 --- !u!4 &1319178324
 Transform:
   m_ObjectHideFlags: 0

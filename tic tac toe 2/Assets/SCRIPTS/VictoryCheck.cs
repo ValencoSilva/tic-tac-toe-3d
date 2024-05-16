@@ -7,6 +7,13 @@ public class VictoryCheck : MonoBehaviour
     public Color ignoreColor = Color.white; // Set this to the color you want to ignore
     public bool winDetected = false;
     public string FinalScene;
+    public Winner winner = Winner.None; // Track the winner
+    public enum Winner {None,Human,AI}
+    [SerializeField] private GameObject painelVitoria;
+    [SerializeField] private GameObject painelDerrota;
+    [SerializeField] private GameObject painelEmpate;
+    
+
     
 
     private void Update()
@@ -21,18 +28,21 @@ public class VictoryCheck : MonoBehaviour
         // Check for a win or a draw after each move
         if (winDetected == true)
         {
-            Debug.Log("Game Over: Win Detected!");
-            SceneManager.LoadScene(FinalScene);
+            Debug.Log("Game Over: " + winner.ToString() + " Wins!");
+
+            //SceneManager.LoadScene(FinalScene);
             
             // Handle win (disable further moves, show win message, etc.)
         }
         else if (IsDraw())
         {
+            painelEmpate.SetActive(true);
             Debug.Log("Game Over: It's a Draw!");
             // Handle draw (disable further moves, show draw message, etc.)
         }
     }
     
+
     public void CheckAllWinningConditions()
     {
         // Similar loop structure as previously explained
@@ -76,12 +86,24 @@ public class VictoryCheck : MonoBehaviour
         int nearWins = AreColorsAlmostSame(a, b, c, d);
         if (nearWins == 4)
         {
-            Debug.Log($"Winning condition met on {description}.");
-            winDetected = true;
+            if (cubes[a].GetComponent<Renderer>().material.color == Color.red)
+            {
+                Debug.Log("Winning condition met for Human.");
+                winner = Winner.Human;
+                winDetected = true;
+                painelVitoria.SetActive(true);
+            }
+            else if (cubes[a].GetComponent<Renderer>().material.color == Color.blue)
+            {
+                Debug.Log("Winning condition met for AI.");
+                winner = Winner.AI;
+                winDetected = true;
+                painelDerrota.SetActive(true);
+            }
         }
         else if (nearWins == 3)
         {            
-            Debug.Log($"Close to winning on {description}.");
+           // Debug.Log($"Close to winning on {description}.");
         }
     }
 

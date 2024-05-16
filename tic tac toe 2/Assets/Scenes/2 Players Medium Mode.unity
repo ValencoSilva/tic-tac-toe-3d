@@ -740,8 +740,6 @@ GameObject:
   - component: {fileID: 96179058}
   - component: {fileID: 96179057}
   - component: {fileID: 96179056}
-  - component: {fileID: 96179055}
-  - component: {fileID: 96179054}
   - component: {fileID: 96179053}
   m_Layer: 0
   m_Name: Quadrado 35
@@ -779,32 +777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 96179051}
   cubeA1: {fileID: 315958848}
---- !u!114 &96179054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96179051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &96179055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96179051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &96179056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2339,7 +2311,6 @@ GameObject:
   - component: {fileID: 398789221}
   - component: {fileID: 398789220}
   - component: {fileID: 398789219}
-  - component: {fileID: 398789225}
   m_Layer: 0
   m_Name: Quadrado 1
   m_TagString: Untagged
@@ -2470,19 +2441,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398789217}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &398789225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398789217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coords: {x: 0, y: 1, z: 4}
 --- !u!1 &444567112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,8 +3334,6 @@ GameObject:
   - component: {fileID: 541213140}
   - component: {fileID: 541213139}
   - component: {fileID: 541213138}
-  - component: {fileID: 541213137}
-  - component: {fileID: 541213136}
   - component: {fileID: 541213135}
   m_Layer: 0
   m_Name: Quadrado 14
@@ -3415,32 +3371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 541213133}
   cubeA1: {fileID: 645755291}
---- !u!114 &541213136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541213133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &541213137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541213133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &541213138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4139,8 +4069,6 @@ GameObject:
   - component: {fileID: 653165080}
   - component: {fileID: 653165079}
   - component: {fileID: 653165078}
-  - component: {fileID: 653165077}
-  - component: {fileID: 653165076}
   - component: {fileID: 653165075}
   m_Layer: 0
   m_Name: Quadrado 22
@@ -4178,32 +4106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 653165073}
   cubeA1: {fileID: 1540780917}
---- !u!114 &653165076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653165073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &653165077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653165073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &653165078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4713,8 +4615,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4772,7 +4674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 1, y: 1.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5674,7 +5576,6 @@ GameObject:
   - component: {fileID: 818419874}
   - component: {fileID: 818419873}
   - component: {fileID: 818419872}
-  - component: {fileID: 818419878}
   m_Layer: 0
   m_Name: Quadrado 3
   m_TagString: Untagged
@@ -5805,19 +5706,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818419870}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &818419878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818419870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coords: {x: 2, y: 0, z: 0}
 --- !u!1 &833799238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7681,8 +7569,6 @@ GameObject:
   - component: {fileID: 989955039}
   - component: {fileID: 989955038}
   - component: {fileID: 989955037}
-  - component: {fileID: 989955036}
-  - component: {fileID: 989955035}
   - component: {fileID: 989955034}
   m_Layer: 0
   m_Name: Quadrado 63
@@ -7720,32 +7606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 989955032}
   cubeA1: {fileID: 1811747373}
---- !u!114 &989955035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989955032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &989955036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989955032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &989955037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8298,8 +8158,6 @@ GameObject:
   - component: {fileID: 1143819710}
   - component: {fileID: 1143819709}
   - component: {fileID: 1143819708}
-  - component: {fileID: 1143819707}
-  - component: {fileID: 1143819706}
   - component: {fileID: 1143819705}
   m_Layer: 0
   m_Name: Quadrado 55
@@ -8337,32 +8195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1143819703}
   cubeA1: {fileID: 658916129}
---- !u!114 &1143819706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143819703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1143819707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143819703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1143819708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,7 +8301,6 @@ GameObject:
   - component: {fileID: 1146845268}
   - component: {fileID: 1146845267}
   - component: {fileID: 1146845266}
-  - component: {fileID: 1146845265}
   - component: {fileID: 1146845271}
   - component: {fileID: 1146845270}
   - component: {fileID: 1146845272}
@@ -8480,19 +8311,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1146845265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146845264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.2
 --- !u!65 &1146845266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8504,8 +8322,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.7194805, y: 6.1438227, z: 7.175082}
-  m_Center: {x: 0.8096161, y: 0.7624297, z: -0.8788748}
+  m_Size: {x: 7.3999996, y: 7.3999996, z: 7.4}
+  m_Center: {x: 1, y: 1.4, z: 1}
 --- !u!23 &1146845267
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8565,7 +8383,7 @@ Transform:
   m_GameObject: {fileID: 1146845264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.12, y: -0.24, z: 2.24}
-  m_LocalScale: {x: 0.98304254, y: 0.98304254, z: 0.98304254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1422972935}
@@ -9606,10 +9424,7 @@ GameObject:
   - component: {fileID: 1216500918}
   - component: {fileID: 1216500917}
   - component: {fileID: 1216500916}
-  - component: {fileID: 1216500915}
-  - component: {fileID: 1216500914}
   - component: {fileID: 1216500913}
-  - component: {fileID: 1216500921}
   m_Layer: 0
   m_Name: Quadrado 2
   m_TagString: Untagged
@@ -9646,32 +9461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1216500911}
   cubeA1: {fileID: 937872095}
---- !u!114 &1216500914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216500911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1216500915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216500911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1216500916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9766,19 +9555,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216500911}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1216500921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216500911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coords: {x: -4, y: 1, z: 4}
 --- !u!1 &1231387718
 GameObject:
   m_ObjectHideFlags: 0
@@ -9793,8 +9569,6 @@ GameObject:
   - component: {fileID: 1231387725}
   - component: {fileID: 1231387724}
   - component: {fileID: 1231387723}
-  - component: {fileID: 1231387722}
-  - component: {fileID: 1231387721}
   - component: {fileID: 1231387720}
   m_Layer: 0
   m_Name: Quadrado 18
@@ -9832,32 +9606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1231387718}
   cubeA1: {fileID: 927817079}
---- !u!114 &1231387721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231387718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1231387722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231387718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1231387723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9966,8 +9714,6 @@ GameObject:
   - component: {fileID: 1255189304}
   - component: {fileID: 1255189303}
   - component: {fileID: 1255189302}
-  - component: {fileID: 1255189301}
-  - component: {fileID: 1255189300}
   - component: {fileID: 1255189299}
   m_Layer: 0
   m_Name: Quadrado 26
@@ -10005,32 +9751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1255189297}
   cubeA1: {fileID: 863663697}
---- !u!114 &1255189300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255189297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1255189301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255189297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1255189302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10319,172 +10039,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271214596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1271604979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1271604981}
-  - component: {fileID: 1271604982}
-  - component: {fileID: 1271604983}
-  - component: {fileID: 1271604984}
-  m_Layer: 0
-  m_Name: Ia
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1271604981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271604979}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8776944, y: 2.8484936, z: -7.064816}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1271604982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271604979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1271604983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271604979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects:
-  - {fileID: 899942356}
-  - {fileID: 1908899260}
-  - {fileID: 1129506230}
-  - {fileID: 1400206681}
-  - {fileID: 492432931}
-  - {fileID: 1255189297}
-  - {fileID: 539093646}
-  - {fileID: 79914186}
-  - {fileID: 725390395}
-  - {fileID: 653165073}
-  - {fileID: 228217832}
-  - {fileID: 146454853}
-  - {fileID: 1993314534}
-  - {fileID: 1231387718}
-  - {fileID: 1216298068}
-  - {fileID: 979922623}
-  - {fileID: 374329865}
-  - {fileID: 541213133}
-  - {fileID: 1831759769}
-  - {fileID: 1185246958}
-  - {fileID: 889087102}
-  - {fileID: 2122188093}
-  - {fileID: 699929234}
-  - {fileID: 538539225}
-  - {fileID: 1299642125}
-  - {fileID: 1927249205}
-  - {fileID: 681730978}
-  - {fileID: 1490984143}
-  - {fileID: 398789217}
-  - {fileID: 1216500911}
-  - {fileID: 818419870}
-  - {fileID: 1750396950}
-  - {fileID: 1184609474}
-  - {fileID: 989955032}
-  - {fileID: 1198742174}
-  - {fileID: 1623423137}
-  - {fileID: 748302269}
-  - {fileID: 1941039095}
-  - {fileID: 1574918414}
-  - {fileID: 279680984}
-  - {fileID: 2112111118}
-  - {fileID: 1143819703}
-  - {fileID: 1326466358}
-  - {fileID: 2120382466}
-  - {fileID: 1745497931}
-  - {fileID: 1334347716}
-  - {fileID: 1276094873}
-  - {fileID: 2027803772}
-  - {fileID: 361120874}
-  - {fileID: 1574689791}
-  - {fileID: 985781498}
-  - {fileID: 2081567874}
-  - {fileID: 265877935}
-  - {fileID: 1724917176}
-  - {fileID: 1774582272}
-  - {fileID: 1892711731}
-  - {fileID: 527356412}
-  - {fileID: 1801230552}
-  - {fileID: 849700140}
-  - {fileID: 1395101388}
-  - {fileID: 1938877133}
-  - {fileID: 96179051}
-  - {fileID: 1559732886}
-  - {fileID: 1484721422}
---- !u!23 &1271604984
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271604979}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1276094873
 GameObject:
   m_ObjectHideFlags: 0
@@ -11101,8 +10655,6 @@ GameObject:
   - component: {fileID: 1334347723}
   - component: {fileID: 1334347722}
   - component: {fileID: 1334347721}
-  - component: {fileID: 1334347720}
-  - component: {fileID: 1334347719}
   - component: {fileID: 1334347718}
   m_Layer: 0
   m_Name: Quadrado 51
@@ -11140,32 +10692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1334347716}
   cubeA1: {fileID: 922025690}
---- !u!114 &1334347719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334347716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1334347720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334347716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1334347721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11556,7 +11082,7 @@ RectTransform:
   m_Children:
   - {fileID: 1720301004}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12610,8 +12136,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540166552}
-  - component: {fileID: 1540166551}
+  - component: {fileID: 1540166554}
   - component: {fileID: 1540166553}
+  - component: {fileID: 1540166555}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12619,84 +12146,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1540166551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540166550}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ed5741d317e69e4aa7812b1729ae590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 1182846541}
-  - {fileID: 937872095}
-  - {fileID: 1780323342}
-  - {fileID: 466590379}
-  - {fileID: 2058866891}
-  - {fileID: 1432114668}
-  - {fileID: 1031394541}
-  - {fileID: 1661721725}
-  - {fileID: 217006992}
-  - {fileID: 833799238}
-  - {fileID: 1369110746}
-  - {fileID: 808067174}
-  - {fileID: 57278437}
-  - {fileID: 645755291}
-  - {fileID: 303309321}
-  - {fileID: 1594329731}
-  - {fileID: 930668011}
-  - {fileID: 927817079}
-  - {fileID: 1423228658}
-  - {fileID: 1862824565}
-  - {fileID: 1549689687}
-  - {fileID: 1540780917}
-  - {fileID: 766402649}
-  - {fileID: 1985554047}
-  - {fileID: 1512896913}
-  - {fileID: 863663697}
-  - {fileID: 606646054}
-  - {fileID: 136072732}
-  - {fileID: 2037206370}
-  - {fileID: 1010033014}
-  - {fileID: 1263815348}
-  - {fileID: 1961510088}
-  - {fileID: 1546355654}
-  - {fileID: 1885500172}
-  - {fileID: 315958848}
-  - {fileID: 54921948}
-  - {fileID: 1747838044}
-  - {fileID: 571113617}
-  - {fileID: 978074649}
-  - {fileID: 788934035}
-  - {fileID: 910950041}
-  - {fileID: 16963834}
-  - {fileID: 1595826385}
-  - {fileID: 282449795}
-  - {fileID: 807317682}
-  - {fileID: 1887498762}
-  - {fileID: 1862930800}
-  - {fileID: 1826953915}
-  - {fileID: 1476359005}
-  - {fileID: 1271214596}
-  - {fileID: 922025690}
-  - {fileID: 538873456}
-  - {fileID: 1724220673}
-  - {fileID: 645383460}
-  - {fileID: 658916129}
-  - {fileID: 570236660}
-  - {fileID: 1207832587}
-  - {fileID: 51095849}
-  - {fileID: 886008169}
-  - {fileID: 1197605844}
-  - {fileID: 986661434}
-  - {fileID: 1279949792}
-  - {fileID: 1811747373}
-  - {fileID: 1831304059}
-  excludeColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1540166552
 Transform:
   m_ObjectHideFlags: 0
@@ -12710,7 +12159,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1540166553
 MonoBehaviour:
@@ -12721,7 +12170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540166550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c471e52ccaa6b42b7f794bb3d1d671, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a5a4ae8b4a469a47ae792ef619bd92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cubes:
@@ -12789,7 +12238,165 @@ MonoBehaviour:
   - {fileID: 1279949792}
   - {fileID: 1811747373}
   - {fileID: 1831304059}
-  excludeColor: {r: 1, g: 1, b: 1, a: 1}
+  ignoreColor: {r: 1, g: 1, b: 1, a: 1}
+  winDetected: 0
+  FinalScene: FinalScene
+--- !u!114 &1540166554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c572776dca823214abb6ec2ec2d8ced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTurn: 0
+  clickableObjects:
+  - {fileID: 398789217}
+  - {fileID: 1216500911}
+  - {fileID: 818419870}
+  - {fileID: 1750396950}
+  - {fileID: 1299642125}
+  - {fileID: 1927249205}
+  - {fileID: 681730978}
+  - {fileID: 1490984143}
+  - {fileID: 889087102}
+  - {fileID: 2122188093}
+  - {fileID: 699929234}
+  - {fileID: 538539225}
+  - {fileID: 374329865}
+  - {fileID: 541213133}
+  - {fileID: 1831759769}
+  - {fileID: 1185246958}
+  - {fileID: 1993314534}
+  - {fileID: 1231387718}
+  - {fileID: 1216298068}
+  - {fileID: 979922623}
+  - {fileID: 725390395}
+  - {fileID: 653165073}
+  - {fileID: 228217832}
+  - {fileID: 146454853}
+  - {fileID: 492432931}
+  - {fileID: 1255189297}
+  - {fileID: 539093646}
+  - {fileID: 79914186}
+  - {fileID: 899942356}
+  - {fileID: 1908899260}
+  - {fileID: 1129506230}
+  - {fileID: 1400206681}
+  - {fileID: 1484721422}
+  - {fileID: 1559732886}
+  - {fileID: 96179051}
+  - {fileID: 1938877133}
+  - {fileID: 1395101388}
+  - {fileID: 849700140}
+  - {fileID: 1801230552}
+  - {fileID: 527356412}
+  - {fileID: 1892711731}
+  - {fileID: 1774582272}
+  - {fileID: 1724917176}
+  - {fileID: 265877935}
+  - {fileID: 2081567874}
+  - {fileID: 985781498}
+  - {fileID: 1574689791}
+  - {fileID: 361120874}
+  - {fileID: 2027803772}
+  - {fileID: 1276094873}
+  - {fileID: 1334347716}
+  - {fileID: 1745497931}
+  - {fileID: 2120382466}
+  - {fileID: 1326466358}
+  - {fileID: 1143819703}
+  - {fileID: 2112111118}
+  - {fileID: 279680984}
+  - {fileID: 1574918414}
+  - {fileID: 1941039095}
+  - {fileID: 748302269}
+  - {fileID: 1623423137}
+  - {fileID: 1198742174}
+  - {fileID: 989955032}
+  - {fileID: 1184609474}
+--- !u!114 &1540166555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b29362604f3b24194bbbcdaef79e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTurn: 0
+  clickableObjects:
+  - {fileID: 398789217}
+  - {fileID: 1216500911}
+  - {fileID: 818419870}
+  - {fileID: 1750396950}
+  - {fileID: 1299642125}
+  - {fileID: 1927249205}
+  - {fileID: 681730978}
+  - {fileID: 1490984143}
+  - {fileID: 889087102}
+  - {fileID: 2122188093}
+  - {fileID: 699929234}
+  - {fileID: 538539225}
+  - {fileID: 374329865}
+  - {fileID: 541213133}
+  - {fileID: 1831759769}
+  - {fileID: 1185246958}
+  - {fileID: 1993314534}
+  - {fileID: 1231387718}
+  - {fileID: 1216298068}
+  - {fileID: 979922623}
+  - {fileID: 725390395}
+  - {fileID: 653165073}
+  - {fileID: 228217832}
+  - {fileID: 146454853}
+  - {fileID: 492432931}
+  - {fileID: 1255189297}
+  - {fileID: 539093646}
+  - {fileID: 79914186}
+  - {fileID: 899942356}
+  - {fileID: 1908899260}
+  - {fileID: 1129506230}
+  - {fileID: 1400206681}
+  - {fileID: 1484721422}
+  - {fileID: 1559732886}
+  - {fileID: 96179051}
+  - {fileID: 1938877133}
+  - {fileID: 1395101388}
+  - {fileID: 849700140}
+  - {fileID: 1801230552}
+  - {fileID: 527356412}
+  - {fileID: 1892711731}
+  - {fileID: 1774582272}
+  - {fileID: 1724917176}
+  - {fileID: 265877935}
+  - {fileID: 2081567874}
+  - {fileID: 985781498}
+  - {fileID: 1574689791}
+  - {fileID: 361120874}
+  - {fileID: 2027803772}
+  - {fileID: 1276094873}
+  - {fileID: 1334347716}
+  - {fileID: 1745497931}
+  - {fileID: 2120382466}
+  - {fileID: 1326466358}
+  - {fileID: 1143819703}
+  - {fileID: 2112111118}
+  - {fileID: 279680984}
+  - {fileID: 1574918414}
+  - {fileID: 1941039095}
+  - {fileID: 748302269}
+  - {fileID: 1623423137}
+  - {fileID: 1198742174}
+  - {fileID: 989955032}
+  - {fileID: 1184609474}
 --- !u!1 &1540780917
 GameObject:
   m_ObjectHideFlags: 0
@@ -13240,8 +12847,6 @@ GameObject:
   - component: {fileID: 1574689798}
   - component: {fileID: 1574689797}
   - component: {fileID: 1574689796}
-  - component: {fileID: 1574689795}
-  - component: {fileID: 1574689794}
   - component: {fileID: 1574689793}
   m_Layer: 0
   m_Name: Quadrado 47
@@ -13279,32 +12884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1574689791}
   cubeA1: {fileID: 1862930800}
---- !u!114 &1574689794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574689791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1574689795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574689791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1574689796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14151,7 +13730,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702433940
 GameObject:
@@ -14432,8 +14011,6 @@ GameObject:
   - component: {fileID: 1724917183}
   - component: {fileID: 1724917182}
   - component: {fileID: 1724917181}
-  - component: {fileID: 1724917180}
-  - component: {fileID: 1724917179}
   - component: {fileID: 1724917178}
   m_Layer: 0
   m_Name: Quadrado 43
@@ -14471,32 +14048,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1724917176}
   cubeA1: {fileID: 1595826385}
---- !u!114 &1724917179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724917176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1724917180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724917176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1724917181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14848,7 +14399,6 @@ GameObject:
   - component: {fileID: 1750396954}
   - component: {fileID: 1750396953}
   - component: {fileID: 1750396952}
-  - component: {fileID: 1750396958}
   m_Layer: 0
   m_Name: Quadrado 4
   m_TagString: Untagged
@@ -14979,19 +14529,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750396950}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1750396958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750396950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2522ab4c988d044992ce04dc8f251f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coords: {x: 3, y: 0, z: 0}
 --- !u!1 &1774582272
 GameObject:
   m_ObjectHideFlags: 0
@@ -15318,8 +14855,6 @@ GameObject:
   - component: {fileID: 1801230559}
   - component: {fileID: 1801230558}
   - component: {fileID: 1801230557}
-  - component: {fileID: 1801230556}
-  - component: {fileID: 1801230555}
   - component: {fileID: 1801230554}
   m_Layer: 0
   m_Name: Quadrado 39
@@ -15357,32 +14892,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1801230552}
   cubeA1: {fileID: 978074649}
---- !u!114 &1801230555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801230552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1801230556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801230552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1801230557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15683,7 +15192,6 @@ GameObject:
   - component: {fileID: 1831304064}
   - component: {fileID: 1831304063}
   - component: {fileID: 1831304062}
-  - component: {fileID: 1831304061}
   m_Layer: 0
   m_Name: Cube 64
   m_TagString: Untagged
@@ -15706,19 +15214,6 @@ Transform:
   m_Father: {fileID: 1933838531}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1831304061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831304059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf38e611763ea44f8885101cda52fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 0.4
 --- !u!65 &1831304062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16474,8 +15969,6 @@ GameObject:
   - component: {fileID: 1908899262}
   - component: {fileID: 1908899261}
   - component: {fileID: 1908899266}
-  - component: {fileID: 1908899267}
-  - component: {fileID: 1908899268}
   - component: {fileID: 1908899269}
   m_Layer: 0
   m_Name: Quadrado 30
@@ -16593,32 +16086,6 @@ MonoBehaviour:
   cubeB: {fileID: 1010033014}
   newMaterialA: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
   newMaterialB: {fileID: 2100000, guid: 05e162ef524b09e419c2d0847c5004eb, type: 2}
---- !u!114 &1908899267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908899260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1908899268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908899260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
 --- !u!114 &1908899269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16647,8 +16114,6 @@ GameObject:
   - component: {fileID: 1927249212}
   - component: {fileID: 1927249211}
   - component: {fileID: 1927249210}
-  - component: {fileID: 1927249209}
-  - component: {fileID: 1927249208}
   - component: {fileID: 1927249207}
   m_Layer: 0
   m_Name: Quadrado 6
@@ -16686,32 +16151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1927249205}
   cubeA1: {fileID: 1432114668}
---- !u!114 &1927249208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927249205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1927249209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927249205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1927249210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17000,8 +16439,6 @@ GameObject:
   - component: {fileID: 1941039102}
   - component: {fileID: 1941039101}
   - component: {fileID: 1941039100}
-  - component: {fileID: 1941039099}
-  - component: {fileID: 1941039098}
   - component: {fileID: 1941039097}
   m_Layer: 0
   m_Name: Quadrado 59
@@ -17039,32 +16476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 1941039095}
   cubeA1: {fileID: 886008169}
---- !u!114 &1941039098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941039095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &1941039099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941039095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1941039100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17740,7 +17151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037206370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1900003, y: -1.5000002, z: 0}
+  m_LocalPosition: {x: -2, y: -1.5000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18461,8 +17872,6 @@ GameObject:
   - component: {fileID: 2122188100}
   - component: {fileID: 2122188099}
   - component: {fileID: 2122188098}
-  - component: {fileID: 2122188097}
-  - component: {fileID: 2122188096}
   - component: {fileID: 2122188095}
   m_Layer: 0
   m_Name: Quadrado 10
@@ -18500,32 +17909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeA: {fileID: 2122188093}
   cubeA1: {fileID: 833799238}
---- !u!114 &2122188096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122188093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1e1acb39167594c96fb57b44016c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTurn: 0
-  clickableObjects: []
---- !u!114 &2122188097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122188093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9520327e531ba14fb5e66fa283f1b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2122188098
 MonoBehaviour:
   m_ObjectHideFlags: 0
