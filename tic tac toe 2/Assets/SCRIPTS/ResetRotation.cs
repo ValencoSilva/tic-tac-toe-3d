@@ -26,8 +26,4 @@ public class ResetRotation : MonoBehaviour
         rb.angularVelocity = Vector3.forward * 0f;
         Debug.Log("Posicao do Cubo Resetada");
     }
-    void Teste()
-    {
-
-    }
 }

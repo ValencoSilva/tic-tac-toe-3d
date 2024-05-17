@@ -8,6 +8,7 @@ public class FinalMenu : MonoBehaviour
     [SerializeField] private GameObject painelVitoria;
     [SerializeField] private GameObject painelDerrota;
     [SerializeField] private GameObject painelEmpate;
+    [SerializeField] private GameObject Sinalizacao;
        // Specify the name of the scene to load in the Inspector
 
     public void onJogarNovamente()
@@ -19,6 +20,7 @@ public class FinalMenu : MonoBehaviour
         painelVitoria.SetActive(false);
         painelEmpate.SetActive(false);
         painelDerrota.SetActive(false);
+        Sinalizacao.SetActive(true);
     }
     public void onRevanche()
     {

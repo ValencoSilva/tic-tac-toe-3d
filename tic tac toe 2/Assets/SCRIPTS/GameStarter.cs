@@ -8,20 +8,23 @@ public class GameStarter : MonoBehaviour
     [SerializeField] private GameObject Quadrados;
     [SerializeField] private GameObject Cubos;
     [SerializeField] private GameObject resetButton;
+    [SerializeField] private GameObject Sinalizacao;
 
     public void StartAsPlayer()
     {
         Quadrados.SetActive(true);
         Cubos.SetActive(true);
+        Sinalizacao.SetActive(true);
         resetButton.SetActive(true);
         gameManager.currentTurn = HardMode.PlayerType.Human;
-        painelGameStarter.SetActive(false); // Assuming your game scene is named "GameScene"
+        painelGameStarter.SetActive(false); 
     }
 
     public void StartAsAI()
     {
         Quadrados.SetActive(true);
         Cubos.SetActive(true);
+        Sinalizacao.SetActive(true);
         resetButton.SetActive(true);
         gameManager.currentTurn = HardMode.PlayerType.AI;
         painelGameStarter.SetActive(false);
