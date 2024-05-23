@@ -16,12 +16,18 @@ public class HardMode : MonoBehaviour
 
     private void Update()
     {
-        CheckForObjectClick();
 
-        if (currentTurn == PlayerType.AI && !isProcessingAI)
-        {
+    if (currentTurn == PlayerType.Human && !ScriptA.IsGameOver())
+    {
+        CheckForObjectClick();
+    }
+    
+
+    // Only start the coroutine if it's the AI's turn and the AI is not already processing
+    if (currentTurn == PlayerType.AI && !isProcessingAI && !ScriptA.IsGameOver())
+    {
         StartCoroutine(AIDelayedTurn());
-        }
+    }
     }
 
 
@@ -30,19 +36,39 @@ public class HardMode : MonoBehaviour
     IEnumerator AIDelayedTurn()
     {
     isProcessingAI = true;
-    yield return new WaitForSeconds(1.0f);  // Delay AI turn by 1 second, adjust as needed
+    yield return new WaitForSeconds(1.0f);  // Delay AI turn by 1 second
+
+    // Check if the game is over before making a move
+    if (ScriptA.IsGameOver())
+    {
+        isProcessingAI = false;
+        Debug.Log("Game over. No AI moves allowed.");
+        yield break;  // Exit the coroutine early if the game is over
+    }
 
     // Now perform the AI's turn
     AI_HardTurn();
+
+    // Check if the game ended after AI's decision
+    if (ScriptA.IsGameOver())
+    {
+        isProcessingAI = false;
+        Debug.Log("Game over after AI decision. No further moves allowed.");
+        yield break;
+    }
+
     isProcessingAI = false;
     }
 
 
+
+
     void CheckForObjectClick()
     {
+        ScriptA.CheckAllWinningConditions();
         if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
         {
-            Debug.Log("Game over. No more moves allowed.");
+            //Debug.Log("Game over. No more moves allowed.");
             return;  // Exit the method to prevent further interaction
         }
 
@@ -60,8 +86,8 @@ public class HardMode : MonoBehaviour
                     {
                         obj.GetComponent<Renderer>().material.color = Color.red; // Human's color
                         ChangeTurn();
-                        ScriptA.CheckAllWinningConditions();
                         break;
+                        ScriptA.CheckAllWinningConditions();
                     }
                 }
             }
@@ -70,12 +96,20 @@ public class HardMode : MonoBehaviour
 
     void AI_HardTurn()
     {
-        ScriptA.CheckAllWinningConditions();
+        
+        if (ScriptA.IsGameOver())
+        {
+        Debug.Log("Game over. Exiting AI turn.");
+        return;  // Do not proceed if the game is over
+        }
+
         if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
         {
-        Debug.Log("Game over. No AI moves allowed.");
+        //Debug.Log("Game over. No AI moves allowed.");
         return;  // Exit the method to prevent further AI interaction
         }
+
+        ScriptA.CheckAllWinningConditions();
         int bestScore = int.MinValue;
         GameObject bestMove = null;
 
@@ -86,7 +120,7 @@ public class HardMode : MonoBehaviour
                 spot.GetComponent<Renderer>().material.color = Color.blue; // AI's color
                 int score = EvaluateBoard();
                 spot.GetComponent<Renderer>().material.color = Color.white; // Undo move
-                Debug.Log(score);
+                //Debug.Log(score);
 
                 if (score > bestScore)
                 {
@@ -100,6 +134,7 @@ public class HardMode : MonoBehaviour
         {
             bestMove.GetComponent<Renderer>().material.color = Color.blue;
             ChangeTurn();
+            ScriptA.CheckAllWinningConditions();
         }
     }
 
@@ -169,6 +204,8 @@ public class HardMode : MonoBehaviour
 
     void ChangeTurn()
     {
-        currentTurn = currentTurn == PlayerType.Human ? PlayerType.AI : PlayerType.Human;
+        ScriptA.CheckAllWinningConditions();
+        currentTurn = currentTurn == PlayerType.Human ? PlayerType.AI : PlayerType.Human; 
+        ScriptA.CheckAllWinningConditions();    
     }
 }

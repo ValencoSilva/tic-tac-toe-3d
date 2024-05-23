@@ -12,6 +12,7 @@ public class VictoryCheck : MonoBehaviour
     [SerializeField] private GameObject painelVitoria;
     [SerializeField] private GameObject painelDerrota;
     [SerializeField] private GameObject painelEmpate;
+    [SerializeField] private GameObject Sinalizacao;
     
 
     
@@ -24,11 +25,11 @@ public class VictoryCheck : MonoBehaviour
             return;
         }
 
-        CheckAllWinningConditions();
+        //CheckAllWinningConditions();
         // Check for a win or a draw after each move
         if (winDetected == true)
         {
-            Debug.Log("Game Over: " + winner.ToString() + " Wins!");
+            //Debug.Log("Game Over: " + winner.ToString() + " Wins!");
 
             //SceneManager.LoadScene(FinalScene);
             
@@ -41,6 +42,19 @@ public class VictoryCheck : MonoBehaviour
             // Handle draw (disable further moves, show draw message, etc.)
         }
     }
+
+
+    public bool UpdateAndCheckGameEnd()
+    {
+    CheckAllWinningConditions();
+    return (winner != Winner.None || IsDraw());
+    }
+
+    public bool IsGameOver()
+    {
+    return winDetected || IsDraw();
+    }
+
     
 
     public void CheckAllWinningConditions()
@@ -50,7 +64,7 @@ public class VictoryCheck : MonoBehaviour
         {
             // Only check valid starting positions for each type of line
             if (i % 4 < 1) CheckCondition(i, i + 1, i + 2, i + 3, "horizontal line"); 
-            if (i % 16 < 4) CheckCondition(i, i + 4, i + 8, i + 12, "vertical line"); 
+            if (i % 16 < 4) CheckCondition(i, i + 4, i + 8, i + 12, "vertical line");
             if (i % 16 == 0) CheckCondition(i, i + 5, i + 10, i + 15, "major diagonal"); 
             if (i % 16 == 3) CheckCondition(i, i + 3, i + 6, i + 9, "minor diagonal"); 
             if (i < 16) CheckCondition(i, i + 16, i + 32, i + 48, "vertical through layers"); 
@@ -77,7 +91,6 @@ public class VictoryCheck : MonoBehaviour
         CheckCondition(3, 22, 41, 60, "3D diagonal from top-right-front to bottom-left-back"); 
         CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front"); 
         CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front"); 
-
     }
 
 
@@ -88,24 +101,32 @@ public class VictoryCheck : MonoBehaviour
         {
             if (cubes[a].GetComponent<Renderer>().material.color == Color.red)
             {
-                Debug.Log("Winning condition met for Human.");
+                Debug.Log($"Winning condition met for Human on {description}.");
                 winner = Winner.Human;
                 winDetected = true;
                 painelVitoria.SetActive(true);
+                Sinalizacao.SetActive(false);
             }
             else if (cubes[a].GetComponent<Renderer>().material.color == Color.blue)
             {
-                Debug.Log("Winning condition met for AI.");
+                Debug.Log($"Winning condition met for AI on {description}.");
                 winner = Winner.AI;
                 winDetected = true;
                 painelDerrota.SetActive(true);
+                Sinalizacao.SetActive(false);
             }
         }
         else if (nearWins == 3)
         {            
-           // Debug.Log($"Close to winning on {description}.");
+            //Debug.Log($"Close to winning on {description}.");
         }
     }
+
+    
+
+    
+
+
 
     // Modified to ignore specific color (white in this case)
     private int AreColorsAlmostSame(int a, int b, int c, int d)
