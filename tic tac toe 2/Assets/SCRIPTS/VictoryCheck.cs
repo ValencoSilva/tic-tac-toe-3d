@@ -75,14 +75,17 @@ public class VictoryCheck : MonoBehaviour
             CheckCondition(col, 20 + col, 40 + col, 60 + col, "2D major diagonal through layers from front to back"); 
             CheckCondition(12 + col, 24 + col, 36 + col, 48 + col, "2D major diagonal through layers from back to front"); 
 
-            CheckCondition(3 + col, 18 + col, 33 + col, 48 + col, "2D minor diagonal through layers from front to back"); 
-            CheckCondition(15 + col, 26 + col, 37 + col, 48 + col, "2D minor diagonal through layers from back to front"); 
         }
 
         CheckCondition(0, 17, 34, 51, "diagonal marcos"); 
         CheckCondition(4, 21, 38, 55, "diagonal marcos"); 
         CheckCondition(8, 25, 42, 59, "diagonal marcos"); 
         CheckCondition(12, 29, 46, 63, "diagonal marcos"); 
+        CheckCondition(3, 18, 33, 48, "diagonal marcos invertida"); 
+        CheckCondition(7, 22, 37, 52, "diagonal marcos invertida"); 
+        CheckCondition(11, 26, 41, 56, "diagonal marcos invertida"); 
+        CheckCondition(15, 30, 45, 60, "diagonal marcos invertida"); 
+
         
         
 
@@ -99,6 +102,10 @@ public class VictoryCheck : MonoBehaviour
         int nearWins = AreColorsAlmostSame(a, b, c, d);
         if (nearWins == 4)
         {
+            Debug.Log(a);
+            Debug.Log(b);
+            Debug.Log(c);
+            Debug.Log(d);
             if (cubes[a].GetComponent<Renderer>().material.color == Color.red)
             {
                 Debug.Log($"Winning condition met for Human on {description}.");

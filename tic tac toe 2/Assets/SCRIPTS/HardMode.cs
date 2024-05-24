@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class HardMode : MonoBehaviour
 {
@@ -7,6 +10,10 @@ public class HardMode : MonoBehaviour
     public PlayerType currentTurn = PlayerType.Human;
     public VictoryCheck ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
+
+    public Text logText; // Reference to the UI text element to display the log
+    private List<string> moveLog = new List<string>(); // List to store the log of moves
+    [SerializeField] private GameObject panelLog;
 
     public void Start()
     {
@@ -16,7 +23,7 @@ public class HardMode : MonoBehaviour
 
     private void Update()
     {
-
+    //ScriptA.CheckAllWinningConditions();
     if (currentTurn == PlayerType.Human && !ScriptA.IsGameOver())
     {
         CheckForObjectClick();
@@ -36,7 +43,7 @@ public class HardMode : MonoBehaviour
     IEnumerator AIDelayedTurn()
     {
     isProcessingAI = true;
-    yield return new WaitForSeconds(1.0f);  // Delay AI turn by 1 second
+    yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1 second
 
     // Check if the game is over before making a move
     if (ScriptA.IsGameOver())
@@ -85,6 +92,7 @@ public class HardMode : MonoBehaviour
                     if (hit.transform.gameObject == obj && obj.GetComponent<Renderer>().material.color == Color.white)
                     {
                         obj.GetComponent<Renderer>().material.color = Color.red; // Human's color
+                        LogMove(currentTurn, obj);
                         ChangeTurn();
                         break;
                         ScriptA.CheckAllWinningConditions();
@@ -102,6 +110,13 @@ public class HardMode : MonoBehaviour
         Debug.Log("Game over. Exiting AI turn.");
         return;  // Do not proceed if the game is over
         }
+
+        if (IsFirstMove())
+        {
+        PlayStrategicMove();
+        return;
+        }
+
 
         if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
         {
@@ -133,10 +148,59 @@ public class HardMode : MonoBehaviour
         if (bestMove != null && ScriptA.winner == VictoryCheck.Winner.None)
         {
             bestMove.GetComponent<Renderer>().material.color = Color.blue;
+            LogMove(currentTurn, bestMove);
             ChangeTurn();
             ScriptA.CheckAllWinningConditions();
         }
     }
+
+    bool IsFirstMove()
+    {
+    // Checks if all cubes are white, meaning no moves have been made
+    return clickableObjects.All(obj => obj.GetComponent<Renderer>().material.color == Color.white);
+    }
+
+    void PlayRandomMove()
+    {
+        List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
+        if (availableSpots.Count > 0)
+        {
+            GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
+            randomSpot.GetComponent<Renderer>().material.color = Color.blue;
+            LogMove(currentTurn, randomSpot); // Log the AI's random move
+        }
+    }
+
+int[] strategicPositions = { 21, 22, 25, 26, 37, 38, 41, 42 }; // Example positions, choose based on your game's strategy
+
+    void PlayStrategicMove()
+    {
+    List<GameObject> strategicSpots = new List<GameObject>();
+    // Fill the list only with strategic positions that are still available (assumed color white is available)
+    foreach (int pos in strategicPositions)
+    {
+        if (clickableObjects[pos].GetComponent<Renderer>().material.color == Color.white)
+        {
+            strategicSpots.Add(clickableObjects[pos]);
+        }
+    }
+
+    if (strategicSpots.Count > 0)
+    {
+        // Select a random strategic spot from those available
+        GameObject strategicSpot = strategicSpots[Random.Range(0, strategicSpots.Count)];
+        strategicSpot.GetComponent<Renderer>().material.color = Color.blue;  // AI's color
+        LogMove(currentTurn, strategicSpot);
+        ChangeTurn();
+    }
+    else
+    {
+        // Fallback to random move if no strategic spots are available
+        PlayRandomMove();
+    }
+    }
+
+
 
     int EvaluateBoard()
     {
@@ -156,9 +220,6 @@ public class HardMode : MonoBehaviour
         {
            score += EvaluateLine(col, 20 + col, 40 + col, 60 + col); 
            score += EvaluateLine(12 + col, 24 + col, 36 + col, 48 + col); 
-
-           score += EvaluateLine(3 + col, 18 + col, 33 + col, 48 + col); 
-           score += EvaluateLine(15 + col, 26 + col, 37 + col, 48 + col); 
         }
 
     // Diagonal checks across layers
@@ -166,6 +227,10 @@ public class HardMode : MonoBehaviour
     score += EvaluateLine(4, 21, 38, 55);
     score += EvaluateLine(8, 25, 42, 59);
     score += EvaluateLine(12, 29, 46, 63);
+    score += EvaluateLine(3, 18, 33, 48);
+    score += EvaluateLine(7, 22, 37, 52);
+    score += EvaluateLine(11, 26, 41, 56);
+    score += EvaluateLine(15, 30, 45, 60);
 
     // Check 3D diagonals
     score += EvaluateLine(0, 21, 42, 63);
@@ -173,6 +238,7 @@ public class HardMode : MonoBehaviour
     score += EvaluateLine(12, 25, 38, 51);
     score += EvaluateLine(15, 26, 37, 48);
 
+    Debug.Log(score);
     return score;
     }
 
@@ -191,12 +257,12 @@ public class HardMode : MonoBehaviour
     }
 
     if (aiCount > 0 && humanCount > 0) return 0; // Mixed line, no potential
-    if (aiCount == 4) return 100; // AI wins
-    if (humanCount == 4) return -100; // Human wins
+    if (aiCount == 4) return 1000; // AI wins
+    if (humanCount == 4) return -900; // Human wins
     if (aiCount == 3) return 50; // AI is one move away from winning
-    if (humanCount == 3) return -50; // Human is one move away from winning
+    if (humanCount == 3) return -70; // Human is one move away from winning
     if (aiCount == 2) return 10; // Two in a line for AI
-    if (humanCount == 2) return -10; // Two in a line for Human
+    if (humanCount == 2) return -11; // Two in a line for Human
 
     return 0;
     }
@@ -207,5 +273,22 @@ public class HardMode : MonoBehaviour
         ScriptA.CheckAllWinningConditions();
         currentTurn = currentTurn == PlayerType.Human ? PlayerType.AI : PlayerType.Human; 
         ScriptA.CheckAllWinningConditions();    
+    }
+
+    void LogMove(PlayerType player, GameObject obj)
+    {
+        string position = System.Array.IndexOf(clickableObjects, obj).ToString();
+        moveLog.Add($"{player} moved to position {position}");
+    }
+
+    public void DisplayLog()
+    {
+        logText.text = string.Join("\n", moveLog);
+        panelLog.SetActive(true);
+    }
+
+    public void OnSairLog()
+    {
+        panelLog.SetActive(false);
     }
 }

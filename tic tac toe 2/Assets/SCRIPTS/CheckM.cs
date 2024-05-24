@@ -4,7 +4,14 @@ public class CheckM : MonoBehaviour
 {
     public GameObject[] cubes; // Should be an array of 64 GameObjects (4x4x4)
     public Color ignoreColor = Color.white; // Set this to the color you want to ignore
-    
+    public bool winDetected = false;
+    public string FinalScene;
+    public Winner winner = Winner.None; // Track the winner
+    public enum Winner { None, Human, AI }
+    [SerializeField] private GameObject painelVitoria;
+    [SerializeField] private GameObject painelDerrota;
+    [SerializeField] private GameObject painelEmpate;
+    [SerializeField] private GameObject Sinalizacao;
 
     private void Update()
     {
@@ -15,36 +22,108 @@ public class CheckM : MonoBehaviour
         }
 
         CheckAllWinningConditions();
-    }
-    
-    public bool CheckAllWinningConditions()
-    {
-        bool winDetected = false;
-        // Similar loop structure as previously explained
-        for (int i = 0; i < 64; i++)
+
+        if (winDetected)
         {
-            // Only check valid starting positions for each type of line
-            if (i % 4 < 1) CheckCondition(i, i + 1, i + 2, i + 3, "horizontal line"); winDetected = true; 
-            if (i % 16 < 4) CheckCondition(i, i + 4, i + 8, i + 12, "vertical line"); winDetected = true;
-            if (i % 16 == 0) CheckCondition(i, i + 5, i + 10, i + 15, "major diagonal"); winDetected = true;
-            if (i % 16 == 3) CheckCondition(i, i + 3, i + 6, i + 9, "minor diagonal"); winDetected = true;
-            if (i < 16) CheckCondition(i, i + 16, i + 32, i + 48, "vertical through layers"); winDetected = true;
+            if (winner == Winner.Human)
+            {
+                painelVitoria.SetActive(true);
+            }
+            else if (winner == Winner.AI)
+            {
+                painelDerrota.SetActive(true);
+            }
         }
+        else if (IsDraw())
+        {
+            painelEmpate.SetActive(true);
+        }
+    }
+
+    public bool UpdateAndCheckGameEnd()
+    {
+        CheckAllWinningConditions();
+        return (winner != Winner.None || IsDraw());
+    }
+
+    public bool IsGameOver()
+    {
+        return winDetected || IsDraw();
+    }
+
+    public void CheckAllWinningConditions()
+    {
+        // Horizontal lines within each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            for (int row = 0; row < 4; row++)
+            {
+                int start = layer * 16 + row * 4;
+                CheckCondition(start, start + 1, start + 2, start + 3, "horizontal line");
+            }
+        }
+
+        // Vertical lines within each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            for (int col = 0; col < 4; col++)
+            {
+                int start = layer * 16 + col;
+                CheckCondition(start, start + 4, start + 8, start + 12, "vertical line");
+            }
+        }
+
+        // Major diagonals within each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            int start = layer * 16;
+            CheckCondition(start, start + 5, start + 10, start + 15, "major diagonal");
+        }
+
+        // Minor diagonals within each layer
+        for (int layer = 0; layer < 4; layer++)
+        {
+            int start = layer * 16 + 3;
+            CheckCondition(start, start + 3, start + 6, start + 9, "minor diagonal");
+        }
+
+        // Vertical lines through layers
+        for (int row = 0; row < 4; row++)
+        {
+            for (int col = 0; col < 4; col++)
+            {
+                int start = row * 4 + col;
+                CheckCondition(start, start + 16, start + 32, start + 48, "vertical through layers");
+            }
+        }
+
+        // 2D Major Diagonals through Layers (Aligned)
         for (int col = 0; col < 4; col++)
         {
-            CheckCondition(col, 20 + col, 40 + col, 60 + col, "2D major diagonal through layers from front to back"); winDetected = true;
-            CheckCondition(12 + col, 24 + col, 36 + col, 48 + col, "2D major diagonal through layers from back to front"); winDetected = true;
-
-            CheckCondition(3 + col, 18 + col, 33 + col, 48 + col, "2D minor diagonal through layers from front to back"); winDetected = true;
-            CheckCondition(15 + col, 26 + col, 37 + col, 48 + col, "2D minor diagonal through layers from back to front"); winDetected = true;
+            CheckCondition(col, 20 + col, 40 + col, 60 + col, "2D major diagonal through layers from front to back");
         }
 
-        // Check 3D diagonals
-        CheckCondition(0, 21, 42, 63, "3D diagonal from top-left-front to bottom-right-back"); winDetected = true;
-        CheckCondition(3, 22, 41, 60, "3D diagonal from top-right-front to bottom-left-back"); winDetected = true;
-        CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front"); winDetected = true;
-        CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front"); winDetected = true;
-        return winDetected;
+        for (int col = 0; col < 4; col++)
+        {
+            CheckCondition(12 + col, 24 + col, 36 + col, 48 + col, "2D major diagonal through layers from back to front");
+        }
+
+        // 2D Minor Diagonals through Layers (Aligned)
+        for (int row = 0; row < 4; row++)
+        {
+            CheckCondition(3 + row * 16, 18 + row * 4, 33 + row, 48 + row, "2D minor diagonal through layers from front to back");
+        }
+
+        for (int row = 0; row < 4; row++)
+        {
+            CheckCondition(15 - row * 16, 26 - row * 4, 37 - row, 48 + row, "2D minor diagonal through layers from back to front");
+        }
+
+        // 3D diagonals through the entire grid
+        CheckCondition(0, 21, 42, 63, "3D diagonal from top-left-front to bottom-right-back");
+        CheckCondition(3, 22, 41, 60, "3D diagonal from top-right-front to bottom-left-back");
+        CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front");
+        CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front");
     }
 
     public void CheckCondition(int a, int b, int c, int d, string description)
@@ -52,18 +131,24 @@ public class CheckM : MonoBehaviour
         int nearWins = AreColorsAlmostSame(a, b, c, d);
         if (nearWins == 4)
         {
-            Debug.Log($"Winning condition met on {description}.");
-        }
-        else if (nearWins == 3)
-        {            
-            Debug.Log($"Close to winning on {description}.");
+            if (cubes[a].GetComponent<Renderer>().material.color == Color.red)
+            {
+                Debug.Log($"Winning condition met for Human on {description}.");
+                winner = Winner.Human;
+                winDetected = true;
+            }
+            else if (cubes[a].GetComponent<Renderer>().material.color == Color.blue)
+            {
+                Debug.Log($"Winning condition met for AI on {description}.");
+                winner = Winner.AI;
+                winDetected = true;
+            }
         }
     }
 
-    // Modified to ignore specific color (white in this case)
     private int AreColorsAlmostSame(int a, int b, int c, int d)
     {
-        int[] indices = {a, b, c, d};
+        int[] indices = { a, b, c, d };
         Color firstColor = GetNonIgnoredColor(indices);
         if (firstColor == Color.clear) return 0; // No valid color found
 
@@ -73,16 +158,11 @@ public class CheckM : MonoBehaviour
             Color currentColor = cubes[index].GetComponent<Renderer>().material.color;
             if (currentColor != ignoreColor && currentColor == firstColor)
                 matchCount++;
-            if (currentColor == ignoreColor)
-            {
-
-            }
         }
 
         return matchCount;
     }
 
-    // Helper method to find the first non-ignored color
     private Color GetNonIgnoredColor(int[] indices)
     {
         foreach (int index in indices)
@@ -92,5 +172,19 @@ public class CheckM : MonoBehaviour
                 return color;
         }
         return Color.clear; // Return clear if all colors are ignored
+    }
+
+    public bool IsDraw()
+    {
+        if (winDetected) return false;
+
+        foreach (GameObject cube in cubes)
+        {
+            if (cube.GetComponent<Renderer>().material.color == Color.white) // Assuming white is the unoccupied color
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

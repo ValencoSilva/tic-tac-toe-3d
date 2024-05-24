@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - UI GAME
-  - 
+  - jogo da velha
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1992561769
+    locked: 0
+  - name: jogod davelha
+    uniqueID: 2237621085
     locked: 0
