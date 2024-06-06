@@ -8,7 +8,11 @@ public class VictoryCheck : MonoBehaviour
     public bool winDetected = false;
     public string FinalScene;
     public Winner winner = Winner.None; // Track the winner
-    public enum Winner {None,Human,AI}
+    public enum Winner {None,Human,AI,AI2,AI3}
+    public Color humanColor = Color.yellow;
+    public Color aiColor = new Color(0.5f, 0f, 0.5f);
+    public Color ai2Color = Color.red;
+    public Color ai3Color = Color.red;
     [SerializeField] private GameObject painelVitoria;
     [SerializeField] private GameObject painelDerrota;
     [SerializeField] private GameObject painelEmpate;
@@ -37,8 +41,8 @@ public class VictoryCheck : MonoBehaviour
         }
         else if (IsDraw())
         {
-            painelEmpate.SetActive(true);
-            Debug.Log("Game Over: It's a Draw!");
+            //painelEmpate.SetActive(true);
+            //Debug.Log("Game Over: It's a Draw!");
             // Handle draw (disable further moves, show draw message, etc.)
         }
     }
@@ -94,6 +98,8 @@ public class VictoryCheck : MonoBehaviour
         CheckCondition(3, 22, 41, 60, "3D diagonal from top-right-front to bottom-left-back"); 
         CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front"); 
         CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front"); 
+
+        CheckForDraw();
     }
 
 
@@ -102,11 +108,11 @@ public class VictoryCheck : MonoBehaviour
         int nearWins = AreColorsAlmostSame(a, b, c, d);
         if (nearWins == 4)
         {
-            Debug.Log(a);
-            Debug.Log(b);
-            Debug.Log(c);
-            Debug.Log(d);
-            if (cubes[a].GetComponent<Renderer>().material.color == Color.red)
+           // Debug.Log(a);
+            //Debug.Log(b);
+            //Debug.Log(c);
+           // Debug.Log(d);
+            if (cubes[a].GetComponent<Renderer>().material.color == humanColor)
             {
                 Debug.Log($"Winning condition met for Human on {description}.");
                 winner = Winner.Human;
@@ -114,10 +120,28 @@ public class VictoryCheck : MonoBehaviour
                 painelVitoria.SetActive(true);
                 Sinalizacao.SetActive(false);
             }
-            else if (cubes[a].GetComponent<Renderer>().material.color == Color.blue)
+            else if (cubes[a].GetComponent<Renderer>().material.color == aiColor)
             {
                 Debug.Log($"Winning condition met for AI on {description}.");
                 winner = Winner.AI;
+                winDetected = true;
+                painelDerrota.SetActive(true);
+                Sinalizacao.SetActive(false);
+            }
+
+            else if (cubes[a].GetComponent<Renderer>().material.color == ai2Color)
+            {
+                Debug.Log($"Winning condition met for AI2 on {description}.");
+                winner = Winner.AI2;
+                winDetected = true;
+                painelDerrota.SetActive(true);
+                Sinalizacao.SetActive(false);
+            }
+
+            else if (cubes[a].GetComponent<Renderer>().material.color == ai3Color)
+            {
+                Debug.Log($"Winning condition met for AI3 on {description}.");
+                winner = Winner.AI3;
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
@@ -169,6 +193,16 @@ public class VictoryCheck : MonoBehaviour
         return Color.clear; // Return clear if all colors are ignored
     }
 
+    public void CheckForDraw()
+    {
+        if (IsDraw())
+        {
+            Debug.Log("Deu Velha.");
+            painelEmpate.SetActive(true);
+            Sinalizacao.SetActive(false);
+        }
+    }
+
     public bool IsDraw()
     {
     // First, check if there's a win, if there's a win, it's not a draw
@@ -184,6 +218,7 @@ public class VictoryCheck : MonoBehaviour
             return false;
         }
     }
+
 
     // If all cubes are occupied and there's no win, it's a draw
     return true;

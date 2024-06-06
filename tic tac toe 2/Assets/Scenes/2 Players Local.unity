@@ -12245,6 +12245,11 @@ MonoBehaviour:
   ignoreColor: {r: 1, g: 1, b: 1, a: 1}
   winDetected: 0
   FinalScene: FinalScene
+  winner: 0
+  painelVitoria: {fileID: 0}
+  painelDerrota: {fileID: 0}
+  painelEmpate: {fileID: 0}
+  Sinalizacao: {fileID: 0}
 --- !u!114 &1540166554
 MonoBehaviour:
   m_ObjectHideFlags: 0

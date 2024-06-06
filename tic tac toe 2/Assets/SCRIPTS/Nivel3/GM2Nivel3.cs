@@ -4,7 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class HardMode : MonoBehaviour
+public class GM2Nivel3 : MonoBehaviour
 {
     public enum PlayerType { Human, AI }
     public PlayerType currentTurn = PlayerType.Human;
@@ -18,6 +18,7 @@ public class HardMode : MonoBehaviour
 
     public Text logText; // Reference to the UI text element to display the log
     private List<string> moveLog = new List<string>(); // List to store the log of moves
+    
     [SerializeField] private GameObject panelLog;
 
     public void Start()

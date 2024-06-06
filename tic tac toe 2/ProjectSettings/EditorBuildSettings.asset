@@ -18,23 +18,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/MenuLocal.unity
     guid: bedafdae36b8d8b4cb9724ac980a389b
   - enabled: 1
-    path: Assets/Scenes/Hard Mode.unity
-    guid: e2018e759eeedb546a89e23cce0f6aeb
+    path: Assets/Scenes/IAGames/Nivel1/2Easy.unity
+    guid: 43ebcb846d0b72f45949ef0b290faf9a
   - enabled: 1
-    path: Assets/Scenes/2 Players Easy Mode.unity
-    guid: f2da9e194ffe1e04f9533a0803b9afb2
+    path: Assets/Scenes/IAGames/Nivel1/3Easy.unity
+    guid: 6842108eb2988d4418459452bc3160bb
   - enabled: 1
-    path: Assets/Scenes/2 Players Medium Mode.unity
-    guid: 8a6521eb3dd9aef47a02c2fe406b99ff
+    path: Assets/Scenes/IAGames/Nivel1/4Easy.unity
+    guid: 082499780fd11c64bb83b5450dc90ebb
   - enabled: 1
-    path: Assets/Scenes/IAGames/2Hard.unity
+    path: Assets/Scenes/IAGames/Nivel2/2Medium.unity
+    guid: 98ac99b8b31703740bc2f01323547789
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel2/3Medium.unity
+    guid: 9abd742200f66064a8cadc99c8342ef7
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel2/4Medium.unity
+    guid: 960fdd01e6a19a04588f0c2a96ddf155
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel3/2Hard.unity
     guid: a07bba51c6eb40b45862855ab1a5029b
   - enabled: 1
-    path: Assets/Scenes/3 Players Easy Mode.unity
-    guid: 2b6a603d9afb63540a0359dd7570c61a
-  - enabled: 1
-    path: Assets/Scenes/4 Players Easy Mode.unity
-    guid: 2bb4115c5c28b8244babf6d73a5f0c71
+    path: Assets/Scenes/IAGames/Nivel3/3Hard.unity
+    guid: 3afa533768c704341a9d834977c413f7
   - enabled: 1
     path: Assets/Scenes/2 Players Local.unity
     guid: 6fcaef5f75568e74fab6131bf005ea03

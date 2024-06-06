@@ -41,7 +41,7 @@ public class FinalMenu : MonoBehaviour
     
     public void onOlharEmpate()
     {
-        painelDerrota.SetActive(false);
+        painelEmpate.SetActive(false);
         Sinalizacao.SetActive(true);
         Tabuleiro.SetActive(true);
         Cubo.SetActive(true);
