@@ -42,12 +42,15 @@ EditorBuildSettings:
     path: Assets/Scenes/IAGames/Nivel3/3Hard.unity
     guid: 3afa533768c704341a9d834977c413f7
   - enabled: 1
-    path: Assets/Scenes/2 Players Local.unity
-    guid: 6fcaef5f75568e74fab6131bf005ea03
+    path: Assets/Scenes/IAGames/Nivel3/4Hard.unity
+    guid: 4056bb33c0082554d8e789ae08b97236
   - enabled: 1
-    path: Assets/Scenes/3 Players Local.unity
-    guid: de01b69446d7e1542b457c2a1177f542
+    path: Assets/Scenes/Local/2Local.unity
+    guid: 46eb52f316e38f94ea8ea89af791a919
   - enabled: 1
-    path: Assets/Scenes/4 Players Local.unity
-    guid: cd82e8568bfe71c44838ba756e4d301e
+    path: Assets/Scenes/Local/3Local.unity
+    guid: 2ecfa5c0cde32b449a29fdfaf6690266
+  - enabled: 1
+    path: Assets/Scenes/Local/4Local.unity
+    guid: 7e380c9483e4543499a2046cb7bc3d2a
   m_configObjects: {}

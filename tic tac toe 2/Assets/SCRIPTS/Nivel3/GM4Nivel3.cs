@@ -60,6 +60,7 @@ public class GM4Nivel3 : MonoBehaviour
 
     IEnumerator AIDelayedTurn()
     {
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     isProcessingAI = true;
     yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1 second
@@ -84,6 +85,7 @@ public class GM4Nivel3 : MonoBehaviour
     }
 
     isProcessingAI = false;
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     }
 
@@ -92,6 +94,7 @@ public class GM4Nivel3 : MonoBehaviour
 
     IEnumerator AIDelayedTurn2()
     {
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     isProcessingAI2 = true;
     yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1 second
@@ -116,6 +119,7 @@ public class GM4Nivel3 : MonoBehaviour
     }
 
     isProcessingAI2 = false;
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     }
 
@@ -124,6 +128,7 @@ public class GM4Nivel3 : MonoBehaviour
 
     IEnumerator AIDelayedTurn3()
     {
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     isProcessingAI3 = true;
     yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1 second
@@ -148,6 +153,7 @@ public class GM4Nivel3 : MonoBehaviour
     }
 
     isProcessingAI3 = false;
+    ScriptA.IsDraw();
     ScriptA.CheckForDraw();
     }
 
@@ -156,6 +162,7 @@ public class GM4Nivel3 : MonoBehaviour
 
     void CheckForObjectClick()
     {
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
 
         ScriptA.CheckAllWinningConditions();
@@ -187,11 +194,13 @@ public class GM4Nivel3 : MonoBehaviour
                 }
             }
         }
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
     }
 
     void AI_HardTurn()
     {
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
         
         if (ScriptA.IsGameOver())
@@ -214,6 +223,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
         ScriptA.CheckAllWinningConditions();
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
         int bestScore = int.MinValue;
         GameObject bestMove = null;
@@ -240,6 +250,7 @@ public class GM4Nivel3 : MonoBehaviour
             bestMove.GetComponent<Renderer>().material.color = ScriptA.aiColor;
             LogMove(currentTurn, bestMove);
             ChangeTurn();
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             ScriptA.CheckAllWinningConditions();
         }
@@ -268,6 +279,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
         ScriptA.CheckAllWinningConditions();
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
         int bestScore2 = int.MinValue;
         GameObject bestMove2 = null;
@@ -294,6 +306,7 @@ public class GM4Nivel3 : MonoBehaviour
             bestMove2.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
             LogMove(currentTurn, bestMove2);
             ChangeTurn();
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             ScriptA.CheckAllWinningConditions();
         }
@@ -323,6 +336,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
         ScriptA.CheckAllWinningConditions();
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
         int bestScore3 = int.MinValue;
         GameObject bestMove3 = null;
@@ -350,8 +364,10 @@ public class GM4Nivel3 : MonoBehaviour
             LogMove(currentTurn, bestMove3);
             ChangeTurn();
             ScriptA.CheckAllWinningConditions();
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
         }
+        ScriptA.CheckForDraw();
     }
 
 
@@ -741,12 +757,14 @@ int[] strategicPositions3 = { 21, 22, 25, 26, 37, 38, 41, 42 }; // Example posit
 
     void ChangeTurn()
     {
+        ScriptA.IsDraw();
         ScriptA.CheckForDraw();
         ScriptA.CheckAllWinningConditions();
         if (currentTurn == PlayerType.Human)
         {
             currentTurn = PlayerType.AI;
             Debug.Log("It's the AI's turn now!");
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             Debug.Log(ScriptA.IsDraw());
         }
@@ -754,6 +772,7 @@ int[] strategicPositions3 = { 21, 22, 25, 26, 37, 38, 41, 42 }; // Example posit
         {
             currentTurn = PlayerType.AI2;
             Debug.Log("It's the AI2's turn now!");
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             Debug.Log(ScriptA.IsDraw());
         }
@@ -761,6 +780,7 @@ int[] strategicPositions3 = { 21, 22, 25, 26, 37, 38, 41, 42 }; // Example posit
         {
             currentTurn = PlayerType.AI3;
             Debug.Log("It's the AI3's turn now!");
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             Debug.Log(ScriptA.IsDraw());
         }
@@ -769,9 +789,11 @@ int[] strategicPositions3 = { 21, 22, 25, 26, 37, 38, 41, 42 }; // Example posit
         {
             currentTurn = PlayerType.Human;
             Debug.Log("It's the Human's turn now!");
+            ScriptA.IsDraw();
             ScriptA.CheckForDraw();
             Debug.Log(ScriptA.IsDraw());
         }
+        ScriptA.IsDraw();
         ScriptA.CheckAllWinningConditions();  
         ScriptA.CheckForDraw();
     }

@@ -14,9 +14,16 @@ public class VictoryCheck : MonoBehaviour
     public Color ai2Color = Color.red;
     public Color ai3Color = Color.red;
     [SerializeField] private GameObject painelVitoria;
+    [SerializeField] private GameObject painelVitoriaPlayer2;
+    [SerializeField] private GameObject painelVitoriaPlayer3;
+    [SerializeField] private GameObject painelVitoriaPlayer4;
     [SerializeField] private GameObject painelDerrota;
+    [SerializeField] private GameObject painelDerrotaAI2;
+    [SerializeField] private GameObject painelDerrotaAI3;
     [SerializeField] private GameObject painelEmpate;
     [SerializeField] private GameObject Sinalizacao;
+    [SerializeField] private GameObject painelContagem;
+    int i = 0;
     
 
     
@@ -29,22 +36,45 @@ public class VictoryCheck : MonoBehaviour
             return;
         }
 
+        if (i == 0 && AllCubesFilled())
+        {
+            IsDraw();
+            CheckForDraw();
+            Debug.Log("upd teste");
+            painelContagem.SetActive(false);
+            i += 1;
+        }
+
+        //Debug.Log(IsDraw());
+
         //CheckAllWinningConditions();
         // Check for a win or a draw after each move
-        if (winDetected == true)
-        {
+       // if (winDetected == true)
+       // {
             //Debug.Log("Game Over: " + winner.ToString() + " Wins!");
 
             //SceneManager.LoadScene(FinalScene);
             
             // Handle win (disable further moves, show win message, etc.)
-        }
-        else if (IsDraw())
-        {
+       /// }
+        //else if (IsDraw())
+        //{
             //painelEmpate.SetActive(true);
             //Debug.Log("Game Over: It's a Draw!");
             // Handle draw (disable further moves, show draw message, etc.)
+      // }
+    }
+
+    public bool AllCubesFilled()
+    {
+        foreach (GameObject cube in cubes)
+        {
+            if (cube.GetComponent<Renderer>().material.color == Color.white)
+            {
+                return false;
+            }
         }
+        return true;
     }
 
 
@@ -99,6 +129,14 @@ public class VictoryCheck : MonoBehaviour
         CheckCondition(12, 25, 38, 51, "3D diagonal from top-left-back to bottom-right-front"); 
         CheckCondition(15, 26, 37, 48, "3D diagonal from top-right-back to bottom-left-front"); 
 
+        if (IsDraw() && winner == Winner.None)
+        {
+            Debug.Log($"Game Over: It's a Draw!");
+            painelEmpate.SetActive(true);
+            Sinalizacao.SetActive(false);
+        }
+
+        IsDraw();
         CheckForDraw();
     }
 
@@ -119,6 +157,7 @@ public class VictoryCheck : MonoBehaviour
                 winDetected = true;
                 painelVitoria.SetActive(true);
                 Sinalizacao.SetActive(false);
+                painelContagem.SetActive(false);
             }
             else if (cubes[a].GetComponent<Renderer>().material.color == aiColor)
             {
@@ -127,6 +166,7 @@ public class VictoryCheck : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                painelContagem.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai2Color)
@@ -136,6 +176,7 @@ public class VictoryCheck : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                painelContagem.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai3Color)
@@ -145,6 +186,7 @@ public class VictoryCheck : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                painelContagem.SetActive(false);
             }
         }
         else if (nearWins == 3)
@@ -177,6 +219,7 @@ public class VictoryCheck : MonoBehaviour
 
             }
         }
+        IsDraw();
 
         return matchCount;
     }
@@ -195,9 +238,13 @@ public class VictoryCheck : MonoBehaviour
 
     public void CheckForDraw()
     {
+        //Debug.Log("checkfordraw  usado");
+        Debug.Log(IsDraw());
         if (IsDraw())
         {
             Debug.Log("Deu Velha.");
+            winner = Winner.None;
+            winDetected = true;
             painelEmpate.SetActive(true);
             Sinalizacao.SetActive(false);
         }
@@ -205,23 +252,30 @@ public class VictoryCheck : MonoBehaviour
 
     public bool IsDraw()
     {
+        //Debug.Log(winDetected);
+        //Debug.Log("isdraw usado");
     // First, check if there's a win, if there's a win, it's not a draw
     if (winDetected == true)
+    {
         return false;
+    }
 
     // Check if all spots are filled
     foreach (GameObject cube in cubes)
     {
         if (cube.GetComponent<Renderer>().material.color == Color.white)  // Assuming white is the unoccupied color
         {
+            //Debug.Log("teste");
             // If any cube is still unoccupied, it's not a draw
             return false;
         }
     }
 
+    //Debug.Log("teste2");
+    return true;
+
 
     // If all cubes are occupied and there's no win, it's a draw
-    return true;
     }
 
 }
