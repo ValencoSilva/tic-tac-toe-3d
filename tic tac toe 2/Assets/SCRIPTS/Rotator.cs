@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed = 100f;
+    [SerializeField] float rotationSpeed = 10f;
     bool dragging = false;
     Rigidbody rb;
 

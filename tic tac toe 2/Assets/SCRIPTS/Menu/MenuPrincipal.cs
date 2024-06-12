@@ -5,6 +5,8 @@ public class MenuPrincipal : MonoBehaviour
 {
     public string MenuModos;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject painelCreditos;
+    [SerializeField] private GameObject Cubo;
 
     public void OnJogar()
     {
@@ -14,6 +16,23 @@ public class MenuPrincipal : MonoBehaviour
     public void Opcoes()
     {
         painelOpcoes.SetActive(true);
+    }
+
+    public void Creditos()
+    {
+        painelCreditos.SetActive(true);
+        Cubo.SetActive(false);
+    }
+
+    public void VoltarOpcoes()
+    {
+        painelOpcoes.SetActive(false);
+    }
+
+    public void VoltarCreditos()
+    {
+        painelCreditos.SetActive(false);
+        Cubo.SetActive(true);
     }
 
     public void Sair()
