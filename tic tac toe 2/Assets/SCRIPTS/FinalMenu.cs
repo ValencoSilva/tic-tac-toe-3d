@@ -5,12 +5,17 @@ public class FinalMenu : MonoBehaviour
 {
     public string MenuPrincipal;
     public string Revanche;
-    [SerializeField] private GameObject painelVitoria;
-    [SerializeField] private GameObject painelDerrota;
+    [SerializeField] private GameObject painelVitoria1;
+    [SerializeField] private GameObject painelVitoria2;
+    [SerializeField] private GameObject painelVitoria3;
+    [SerializeField] private GameObject painelVitoria4;
     [SerializeField] private GameObject painelEmpate;
-    [SerializeField] private GameObject botaoVoltarD;
+    [SerializeField] private GameObject painelNomeJogadores;
+    [SerializeField] private GameObject botaoVoltarV1;
     [SerializeField] private GameObject botaoVoltarE;
-    [SerializeField] private GameObject botaoVoltarV;
+    [SerializeField] private GameObject botaoVoltarV2;
+    [SerializeField] private GameObject botaoVoltarV3;
+    [SerializeField] private GameObject botaoVoltarV4;
     [SerializeField] private GameObject Sinalizacao;
     [SerializeField] private GameObject Tabuleiro;
     [SerializeField] private GameObject Cubo;
@@ -20,23 +25,46 @@ public class FinalMenu : MonoBehaviour
     {
         SceneManager.LoadScene(MenuPrincipal);
     }
-    
-    public void onOlharDerrota()
+
+    public void onOK()
     {
-        painelDerrota.SetActive(false);
+        painelNomeJogadores.SetActive(false);
+    }
+    
+    public void onOlharWin2()
+    {
+        painelVitoria2.SetActive(false);
         Sinalizacao.SetActive(true);
         Tabuleiro.SetActive(true);
         Cubo.SetActive(true);
-        botaoVoltarD.SetActive(true);
+        botaoVoltarV2.SetActive(true);
     }
 
-    public void onOlharVitoria()
+    public void onOlharWin1()
     {
-        painelVitoria.SetActive(false);
+        painelVitoria1.SetActive(false);
         Sinalizacao.SetActive(true);
         Tabuleiro.SetActive(true);
         Cubo.SetActive(true);
-        botaoVoltarV.SetActive(true);
+        botaoVoltarV1.SetActive(true);
+    }
+
+    public void onOlharWin3()
+    {
+        painelVitoria3.SetActive(false);
+        Sinalizacao.SetActive(true);
+        Tabuleiro.SetActive(true);
+        Cubo.SetActive(true);
+        botaoVoltarV3.SetActive(true);
+    }
+
+    public void onOlharWin4()
+    {
+        painelVitoria4.SetActive(false);
+        Sinalizacao.SetActive(true);
+        Tabuleiro.SetActive(true);
+        Cubo.SetActive(true);
+        botaoVoltarV4.SetActive(true);
     }
     
     public void onOlharEmpate()
@@ -53,19 +81,35 @@ public class FinalMenu : MonoBehaviour
         SceneManager.LoadScene(Revanche);
     }
 
-    public void onVoltarDerrota()
+    public void onVoltarWin2()
     {
-        botaoVoltarD.SetActive(false);
-        painelDerrota.SetActive(true);
+        botaoVoltarV2.SetActive(false);
+        painelVitoria2.SetActive(true);
         Sinalizacao.SetActive(false);
     }
 
-    public void onVoltarVitoria()
+    public void onVoltarWin1()
     {
-        botaoVoltarV.SetActive(false);
-        painelVitoria.SetActive(true);
+        botaoVoltarV1.SetActive(false);
+        painelVitoria1.SetActive(true);
         Sinalizacao.SetActive(false);
     }
+
+    public void onVoltarWin3()
+    {
+        botaoVoltarV3.SetActive(false);
+        painelVitoria3.SetActive(true);
+        Sinalizacao.SetActive(false);
+    }
+
+    public void onVoltarWin4()
+    {
+        botaoVoltarV4.SetActive(false);
+        painelVitoria4.SetActive(true);
+        Sinalizacao.SetActive(false);
+    }
+
+
     public void onVoltarEmpate()
     {
         botaoVoltarE.SetActive(false);

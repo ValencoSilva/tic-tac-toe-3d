@@ -20,6 +20,16 @@ public class GM3Local : MonoBehaviour
     [SerializeField] private Image turnIndicatorImage; // Optional image to display the player's turn
     [SerializeField] private Text timerText; // Text to display the remaining time
     [SerializeField] private Text lastMoveText; // Text to display the last move made
+    [SerializeField] private InputField player1Input; // Input field for player 1's name
+    [SerializeField] private InputField player2Input; // Input field for player 2's name
+    [SerializeField] private InputField player3Input; // Input field for player 3's name
+
+    public Text gameStarterPlayer1Name;
+    public Text gameStarterPlayer2Name;
+    public Text gameStarterPlayer3Name;
+    public Text VictoryPlayer1;
+    public Text VictoryPlayer2;
+    public Text VictoryPlayer3;
 
 
 
@@ -32,14 +42,27 @@ public class GM3Local : MonoBehaviour
     private float turnDuration = 20f; // Duration of each turn in seconds
     private float remainingTime;
 
+    private string player1Name = "Jogador 1"; // Default name for player 1
+    private string player2Name = "Jogador 2"; // Default name for player 2
+    private string player3Name = "Jogador 3"; // Default name for player 3
+
     public void Start()
     {
         ScriptA = GameObject.FindObjectOfType<VictoryCheck>();
         UpdateTurnIndicator();
     }
 
+    public void SetPlayerNames()
+    {
+        player1Name = player1Input.text != "" ? player1Input.text : "Jogador 1";
+        player2Name = player2Input.text != "" ? player2Input.text : "Jogador 2";
+        player3Name = player3Input.text != "" ? player3Input.text : "Jogador 3";
+    }
+
     private void Update()
     {
+        SetPlayerNames();
+        UpdatePlayerNameDisplay();
         if(!ScriptA.IsGameOver())
         {
             remainingTime -= Time.deltaTime;
@@ -77,24 +100,46 @@ public class GM3Local : MonoBehaviour
         switch (currentTurn)
         {
             case PlayerType.Human:
-                turnIndicatorText.text = "Player 1's Turn";
+                turnIndicatorText.text = $"Turno de {player1Name}";
                 turnIndicatorText.color = ScriptA.humanColor;
                 break;
             case PlayerType.Human2:
-                turnIndicatorText.text = "Player 2's Turn";
+                turnIndicatorText.text = $"Turno de {player2Name}";
                 turnIndicatorText.color = ScriptA.aiColor;
                 break;
             case PlayerType.Human3:
-                turnIndicatorText.text = "Player 3's Turn";
+                turnIndicatorText.text = $"Turno de {player3Name}";
                 turnIndicatorText.color = ScriptA.ai2Color;
                 break;
         }
     }
 
+    void UpdatePlayerNameDisplay()
+    {
+        gameStarterPlayer1Name.text = $"{player1Name}";
+        gameStarterPlayer2Name.text = $"{player2Name}";
+        gameStarterPlayer3Name.text = $"{player3Name}";
+        VictoryPlayer1.text = $"Parabéns {player1Name}, você venceu";
+        VictoryPlayer2.text = $"Parabéns {player2Name}, você venceu";
+        VictoryPlayer3.text = $"Parabéns {player3Name}, você venceu";
+    }
+
     void UpdateLastMoveText(PlayerType player, GameObject obj)
     {
         string position = (System.Array.IndexOf(clickableObjects, obj)+1).ToString();
-        lastMoveText.text = $"{player} moved to position {position}";
+
+        switch (currentTurn)
+        {
+            case PlayerType.Human:
+                lastMoveText.text = $"{player1Name} moveu para a posição {position}";
+                break;
+            case PlayerType.Human2:
+                lastMoveText.text = $"{player2Name} moveu para a posição {position}";
+                break;
+            case PlayerType.Human3:
+                lastMoveText.text = $"{player3Name} moveu para a posição {position}";
+                break;
+        }
     }
 
    
@@ -221,7 +266,19 @@ public class GM3Local : MonoBehaviour
     void LogMove(PlayerType player, GameObject obj)
     {
         string position = System.Array.IndexOf(clickableObjects, obj).ToString();
-        moveLog.Add($"{player} moved to position {position}");
+
+        switch (currentTurn)
+        {
+            case PlayerType.Human:
+                moveLog.Add($"{player1Name} moveu para a posição {position}");
+                break;
+            case PlayerType.Human2:
+                moveLog.Add($"{player2Name} moveu para a posição {position}");
+                break;
+            case PlayerType.Human3:
+                moveLog.Add($"{player3Name} moveu para a posição {position}");
+                break;
+        }
     }
 
     public void DisplayLog()

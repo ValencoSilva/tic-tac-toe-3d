@@ -14,9 +14,6 @@ public class VictoryCheck : MonoBehaviour
     public Color ai2Color = Color.red;
     public Color ai3Color = Color.red;
     [SerializeField] private GameObject painelVitoria;
-    [SerializeField] private GameObject painelVitoriaPlayer2;
-    [SerializeField] private GameObject painelVitoriaPlayer3;
-    [SerializeField] private GameObject painelVitoriaPlayer4;
     [SerializeField] private GameObject painelDerrota;
     [SerializeField] private GameObject painelDerrotaAI2;
     [SerializeField] private GameObject painelDerrotaAI3;
@@ -174,7 +171,7 @@ public class VictoryCheck : MonoBehaviour
                 Debug.Log($"Winning condition met for AI2 on {description}.");
                 winner = Winner.AI2;
                 winDetected = true;
-                painelDerrota.SetActive(true);
+                painelDerrotaAI2.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
             }
@@ -184,7 +181,7 @@ public class VictoryCheck : MonoBehaviour
                 Debug.Log($"Winning condition met for AI3 on {description}.");
                 winner = Winner.AI3;
                 winDetected = true;
-                painelDerrota.SetActive(true);
+                painelDerrotaAI3.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
             }
