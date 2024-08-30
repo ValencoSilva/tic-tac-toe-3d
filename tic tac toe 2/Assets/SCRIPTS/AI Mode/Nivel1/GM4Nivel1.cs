@@ -4,11 +4,11 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class GM2Nivel1 : MonoBehaviour
+public class GM4Nivel1 : MonoBehaviour
 {
-    public enum PlayerType { Human, AI }
+    public enum PlayerType { Human, AI, AI2, AI3 }
     public PlayerType currentTurn = PlayerType.Human;
-    public VictoryCheck ScriptA;
+    public VictoryCheckAI ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject Quadrados;
@@ -20,10 +20,12 @@ public class GM2Nivel1 : MonoBehaviour
     private List<string> moveLog = new List<string>(); // List to store the log of moves
     [SerializeField] private GameObject panelLog;
     private bool isProcessingAI = false;
+    private bool isProcessingAI2 = false;
+    private bool isProcessingAI3 = false;
 
     public void Start()
     {
-        ScriptA = GameObject.FindObjectOfType<VictoryCheck>();
+        ScriptA = GameObject.FindObjectOfType<VictoryCheckAI>();
     }
 
     private void Update()
@@ -36,6 +38,16 @@ public class GM2Nivel1 : MonoBehaviour
         if (currentTurn == PlayerType.AI && !isProcessingAI && !ScriptA.IsGameOver())
         {
             StartCoroutine(AIDelayedTurn());
+        }
+
+        if (currentTurn == PlayerType.AI2 && !isProcessingAI2 && !ScriptA.IsGameOver())
+        {
+            StartCoroutine(AIDelayedTurn2());
+        }
+
+        if (currentTurn == PlayerType.AI3 && !isProcessingAI3 && !ScriptA.IsGameOver())
+        {
+            StartCoroutine(AIDelayedTurn3());
         }
     }
 
@@ -56,10 +68,44 @@ public class GM2Nivel1 : MonoBehaviour
         isProcessingAI = false;
     }
 
+    IEnumerator AIDelayedTurn2()
+    {
+        isProcessingAI2 = true;
+        yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1.5 seconds
+
+        if (ScriptA.IsGameOver())
+        {
+            isProcessingAI = false;
+            Debug.Log("Game over. No AI moves allowed.");
+            yield break;  // Exit the coroutine early if the game is over
+        }
+
+        AI_EasyTurn2();
+
+        isProcessingAI2 = false;
+    }
+
+    IEnumerator AIDelayedTurn3()
+    {
+        isProcessingAI3 = true;
+        yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1.5 seconds
+
+        if (ScriptA.IsGameOver())
+        {
+            isProcessingAI = false;
+            Debug.Log("Game over. No AI moves allowed.");
+            yield break;  // Exit the coroutine early if the game is over
+        }
+
+        AI_EasyTurn3();
+
+        isProcessingAI3 = false;
+    }
+
     void CheckForObjectClick()
     {
         ScriptA.CheckAllWinningConditions();
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further interaction
         }
@@ -99,10 +145,53 @@ public class GM2Nivel1 : MonoBehaviour
         }
     }
 
+    void AI_EasyTurn2()
+    {
+        List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
+        if (availableSpots.Count > 0)
+        {
+            GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
+            randomSpot.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
+            LogMove(currentTurn, randomSpot);
+            ChangeTurn();
+        }
+    }
+
+    void AI_EasyTurn3()
+    {
+        List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
+        if (availableSpots.Count > 0)
+        {
+            GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
+            randomSpot.GetComponent<Renderer>().material.color = ScriptA.ai3Color;
+            LogMove(currentTurn, randomSpot);
+            ChangeTurn();
+        }
+    }
+
     void ChangeTurn()
     {
         ScriptA.CheckAllWinningConditions();
-        currentTurn = currentTurn == PlayerType.Human ? PlayerType.AI : PlayerType.Human;
+        if (currentTurn == PlayerType.Human)
+        {
+            currentTurn = PlayerType.AI;
+            Debug.Log("It's the AI's turn now!");
+        }
+        else if (currentTurn == PlayerType.AI)
+        {
+            currentTurn = PlayerType.AI2;
+            Debug.Log("It's the AI2's turn now!");
+        }
+        else if (currentTurn == PlayerType.AI2)
+        {
+            currentTurn = PlayerType.AI3;
+            Debug.Log("It's the AI3's turn now!");
+        }
+        else if (currentTurn == PlayerType.AI3)
+        {
+            currentTurn = PlayerType.Human;
+            Debug.Log("It's the Human's turn now!");
+        }
         ScriptA.CheckAllWinningConditions();
     }
 
@@ -141,6 +230,26 @@ public class GM2Nivel1 : MonoBehaviour
         Sinalizacao.SetActive(true);
         resetButton.SetActive(true);
         currentTurn = PlayerType.AI;
+        painelGameStarter.SetActive(false);
+    }
+
+    public void StartAsAI2()
+    {
+        Quadrados.SetActive(true);
+        Cubos.SetActive(true);
+        Sinalizacao.SetActive(true);
+        resetButton.SetActive(true);
+        currentTurn = PlayerType.AI2;
+        painelGameStarter.SetActive(false);
+    }
+
+    public void StartAsAI3()
+    {
+        Quadrados.SetActive(true);
+        Cubos.SetActive(true);
+        Sinalizacao.SetActive(true);
+        resetButton.SetActive(true);
+        currentTurn = PlayerType.AI3;
         painelGameStarter.SetActive(false);
     }
 }

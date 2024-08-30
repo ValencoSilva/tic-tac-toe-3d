@@ -1246,8 +1246,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onJogarNovamente
         m_Mode: 1
         m_Arguments:
@@ -1783,8 +1783,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onRevanche
         m_Mode: 1
         m_Arguments:
@@ -2270,7 +2270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -672.58514, y: -0.5410156}
+  m_AnchoredPosition: {x: -672.5852, y: -0.5410156}
   m_SizeDelta: {x: -1437.458, y: -57.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249675215
@@ -3621,8 +3621,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onVoltarEmpate
         m_Mode: 1
         m_Arguments:
@@ -3935,8 +3935,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onSair
         m_Mode: 1
         m_Arguments:
@@ -4640,8 +4640,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onJogarNovamente
         m_Mode: 1
         m_Arguments:
@@ -5113,7 +5113,7 @@ RectTransform:
   m_Children:
   - {fileID: 392571084}
   m_Father: {fileID: 1391855582}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6981,9 +6981,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
-        m_MethodName: onVoltarWin2
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
+        m_MethodName: onVoltarDerrota
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9948,8 +9948,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onSair
         m_Mode: 1
         m_Arguments:
@@ -10711,9 +10711,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
-        m_MethodName: onVoltarWin1
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
+        m_MethodName: onVoltarVitoria
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12422,8 +12422,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onSair
         m_Mode: 1
         m_Arguments:
@@ -12738,8 +12738,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onRevanche
         m_Mode: 1
         m_Arguments:
@@ -12858,7 +12858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -674.99774, y: -0.00018310547}
+  m_AnchoredPosition: {x: -674.9978, y: -0.00018310547}
   m_SizeDelta: {x: -1350.0045, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093194171
@@ -14937,8 +14937,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onOlharDerrota
         m_Mode: 1
         m_Arguments:
@@ -15296,8 +15296,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onOlharEmpate
         m_Mode: 1
         m_Arguments:
@@ -15575,8 +15575,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onJogarNovamente
         m_Mode: 1
         m_Arguments:
@@ -17223,18 +17223,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386435202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904178078}
   m_Father: {fileID: 1391855582}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 338, y: -224}
+  m_AnchoredPosition: {x: 338, y: -223.99997}
   m_SizeDelta: {x: -829.0423, y: -490.9411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386435204
@@ -17455,8 +17455,8 @@ RectTransform:
   - {fileID: 1388564479}
   - {fileID: 1412080157}
   - {fileID: 1459510689}
-  - {fileID: 1386435203}
   - {fileID: 517200664}
+  - {fileID: 1386435203}
   - {fileID: 1819811849}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -18907,9 +18907,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540166552}
-  - component: {fileID: 1540166553}
-  - component: {fileID: 1540166557}
   - component: {fileID: 1540166558}
+  - component: {fileID: 1540166560}
+  - component: {fileID: 1540166559}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -18932,126 +18932,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1540166553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540166550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5a4ae8b4a469a47ae792ef619bd92d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubes:
-  - {fileID: 1182846541}
-  - {fileID: 937872095}
-  - {fileID: 1780323342}
-  - {fileID: 466590379}
-  - {fileID: 2058866891}
-  - {fileID: 1432114668}
-  - {fileID: 1031394541}
-  - {fileID: 1661721725}
-  - {fileID: 217006992}
-  - {fileID: 833799238}
-  - {fileID: 1369110746}
-  - {fileID: 808067174}
-  - {fileID: 57278437}
-  - {fileID: 645755291}
-  - {fileID: 303309321}
-  - {fileID: 1594329731}
-  - {fileID: 930668011}
-  - {fileID: 927817079}
-  - {fileID: 1423228658}
-  - {fileID: 1862824565}
-  - {fileID: 1549689687}
-  - {fileID: 1540780917}
-  - {fileID: 766402649}
-  - {fileID: 1985554047}
-  - {fileID: 1512896913}
-  - {fileID: 863663697}
-  - {fileID: 606646054}
-  - {fileID: 136072732}
-  - {fileID: 2037206370}
-  - {fileID: 1010033014}
-  - {fileID: 1263815348}
-  - {fileID: 1961510088}
-  - {fileID: 1546355654}
-  - {fileID: 1885500172}
-  - {fileID: 315958848}
-  - {fileID: 54921948}
-  - {fileID: 1747838044}
-  - {fileID: 571113617}
-  - {fileID: 978074649}
-  - {fileID: 788934035}
-  - {fileID: 910950041}
-  - {fileID: 16963834}
-  - {fileID: 1595826385}
-  - {fileID: 282449795}
-  - {fileID: 807317682}
-  - {fileID: 1887498762}
-  - {fileID: 1862930800}
-  - {fileID: 1826953915}
-  - {fileID: 1476359005}
-  - {fileID: 1271214596}
-  - {fileID: 922025690}
-  - {fileID: 538873456}
-  - {fileID: 1724220673}
-  - {fileID: 645383460}
-  - {fileID: 658916129}
-  - {fileID: 570236660}
-  - {fileID: 1207832587}
-  - {fileID: 51095849}
-  - {fileID: 886008169}
-  - {fileID: 1197605844}
-  - {fileID: 986661434}
-  - {fileID: 1279949792}
-  - {fileID: 1811747373}
-  - {fileID: 1831304059}
-  ignoreColor: {r: 1, g: 1, b: 1, a: 1}
-  winDetected: 0
-  FinalScene: FinalScene
-  winner: 0
-  humanColor: {r: 1, g: 0.7294118, b: 0, a: 1}
-  aiColor: {r: 0.20784315, g: 0, b: 0.4431373, a: 1}
-  ai2Color: {r: 1, g: 0, b: 0, a: 1}
-  ai3Color: {r: 1, g: 0, b: 0, a: 1}
-  painelVitoria: {fileID: 1388564478}
-  painelDerrota: {fileID: 1206093059}
-  painelDerrotaAI2: {fileID: 0}
-  painelDerrotaAI3: {fileID: 0}
-  painelEmpate: {fileID: 1282041656}
-  Sinalizacao: {fileID: 1412080156}
-  painelContagem: {fileID: 0}
---- !u!114 &1540166557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540166550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa098557f5788a842a120476b263d64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuPrincipal: MenuPrincipal
-  Revanche: 2Easy
-  painelVitoria1: {fileID: 1388564478}
-  painelVitoria2: {fileID: 1206093059}
-  painelVitoria3: {fileID: 0}
-  painelVitoria4: {fileID: 0}
-  painelEmpate: {fileID: 1282041656}
-  painelNomeJogadores: {fileID: 0}
-  botaoVoltarV1: {fileID: 1386435202}
-  botaoVoltarE: {fileID: 517200663}
-  botaoVoltarV2: {fileID: 1459510688}
-  botaoVoltarV3: {fileID: 0}
-  botaoVoltarV4: {fileID: 0}
-  Sinalizacao: {fileID: 1412080156}
-  Tabuleiro: {fileID: 1780126655}
-  Cubo: {fileID: 1146845264}
 --- !u!114 &1540166558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19065,7 +18945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTurn: 0
-  ScriptA: {fileID: 1540166553}
+  ScriptA: {fileID: 1540166560}
   clickableObjects:
   - {fileID: 398789217}
   - {fileID: 1216500911}
@@ -19138,6 +19018,119 @@ MonoBehaviour:
   Sinalizacao: {fileID: 1412080156}
   logText: {fileID: 1542702616}
   panelLog: {fileID: 1819811848}
+--- !u!114 &1540166559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a7fb46b4e1d248825d0d04ce3bb1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuPrincipal: MenuPrincipal
+  Revanche: 2Easy
+  painelVitoria: {fileID: 1388564478}
+  painelEmpate: {fileID: 1282041656}
+  painelDerrota: {fileID: 1206093059}
+  painelNomeJogadores: {fileID: 0}
+  botaoVoltarV: {fileID: 1386435202}
+  botaoVoltarE: {fileID: 517200663}
+  botaoVoltarD: {fileID: 1459510688}
+  Sinalizacao: {fileID: 1412080156}
+  Tabuleiro: {fileID: 1780126655}
+  Cubo: {fileID: 1146845264}
+--- !u!114 &1540166560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540166550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eab226e6a53cf24b9929ea9c6b964b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubes:
+  - {fileID: 1182846541}
+  - {fileID: 937872095}
+  - {fileID: 1780323342}
+  - {fileID: 466590379}
+  - {fileID: 2058866891}
+  - {fileID: 1432114668}
+  - {fileID: 1031394541}
+  - {fileID: 1661721725}
+  - {fileID: 217006992}
+  - {fileID: 833799238}
+  - {fileID: 1369110746}
+  - {fileID: 808067174}
+  - {fileID: 57278437}
+  - {fileID: 645755291}
+  - {fileID: 303309321}
+  - {fileID: 1594329731}
+  - {fileID: 930668011}
+  - {fileID: 927817079}
+  - {fileID: 1423228658}
+  - {fileID: 1862824565}
+  - {fileID: 1549689687}
+  - {fileID: 1540780917}
+  - {fileID: 766402649}
+  - {fileID: 1985554047}
+  - {fileID: 1512896913}
+  - {fileID: 863663697}
+  - {fileID: 606646054}
+  - {fileID: 136072732}
+  - {fileID: 2037206370}
+  - {fileID: 1010033014}
+  - {fileID: 1263815348}
+  - {fileID: 1961510088}
+  - {fileID: 1546355654}
+  - {fileID: 1885500172}
+  - {fileID: 315958848}
+  - {fileID: 54921948}
+  - {fileID: 1747838044}
+  - {fileID: 571113617}
+  - {fileID: 978074649}
+  - {fileID: 788934035}
+  - {fileID: 910950041}
+  - {fileID: 16963834}
+  - {fileID: 1595826385}
+  - {fileID: 282449795}
+  - {fileID: 807317682}
+  - {fileID: 1887498762}
+  - {fileID: 1862930800}
+  - {fileID: 1826953915}
+  - {fileID: 1476359005}
+  - {fileID: 1271214596}
+  - {fileID: 922025690}
+  - {fileID: 538873456}
+  - {fileID: 1724220673}
+  - {fileID: 645383460}
+  - {fileID: 658916129}
+  - {fileID: 570236660}
+  - {fileID: 1207832587}
+  - {fileID: 51095849}
+  - {fileID: 886008169}
+  - {fileID: 1197605844}
+  - {fileID: 986661434}
+  - {fileID: 1279949792}
+  - {fileID: 1811747373}
+  - {fileID: 1831304059}
+  ignoreColor: {r: 1, g: 1, b: 1, a: 1}
+  winDetected: 0
+  FinalScene: 
+  winner: 0
+  humanColor: {r: 0.9960785, g: 0.7294118, b: 0.003921569, a: 1}
+  aiColor: {r: 0.21176472, g: 0.007843138, b: 0.4431373, a: 1}
+  ai2Color: {r: 1, g: 0, b: 0, a: 1}
+  ai3Color: {r: 1, g: 0, b: 0, a: 1}
+  painelVitoria: {fileID: 1388564478}
+  painelDerrota: {fileID: 1206093059}
+  painelEmpate: {fileID: 1282041656}
+  Sinalizacao: {fileID: 1412080156}
 --- !u!1 &1540780917
 GameObject:
   m_ObjectHideFlags: 0
@@ -20043,8 +20036,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
         m_MethodName: onRevanche
         m_Mode: 1
         m_Arguments:
@@ -23202,9 +23195,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540166557}
-        m_TargetAssemblyTypeName: FinalMenu, Assembly-CSharp
-        m_MethodName: onOlharWin1
+      - m_Target: {fileID: 1540166559}
+        m_TargetAssemblyTypeName: FinalMenuAI, Assembly-CSharp
+        m_MethodName: onOlharVitoria
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

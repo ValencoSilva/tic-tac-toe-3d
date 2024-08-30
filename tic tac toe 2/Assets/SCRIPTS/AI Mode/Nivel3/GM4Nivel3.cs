@@ -8,7 +8,7 @@ public class GM4Nivel3 : MonoBehaviour
 {
     public enum PlayerType { Human, AI, AI2, AI3 }
     public PlayerType currentTurn = PlayerType.Human;
-    public VictoryCheck ScriptA;
+    public VictoryCheckAI ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject Quadrados;
@@ -23,7 +23,7 @@ public class GM4Nivel3 : MonoBehaviour
 
     public void Start()
     {
-       ScriptA = GameObject.FindObjectOfType<VictoryCheck>();
+       ScriptA = GameObject.FindObjectOfType<VictoryCheckAI>();
     }
     
 
@@ -166,7 +166,7 @@ public class GM4Nivel3 : MonoBehaviour
         ScriptA.CheckForDraw();
 
         ScriptA.CheckAllWinningConditions();
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
             //Debug.Log("Game over. No more moves allowed.");
             return;  // Exit the method to prevent further interaction
@@ -216,7 +216,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
 
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
         //Debug.Log("Game over. No AI moves allowed.");
         return;  // Exit the method to prevent further AI interaction
@@ -245,7 +245,7 @@ public class GM4Nivel3 : MonoBehaviour
             }
         }
 
-        if (bestMove != null && ScriptA.winner == VictoryCheck.Winner.None)
+        if (bestMove != null && ScriptA.winner == VictoryCheckAI.Winner.None)
         {
             bestMove.GetComponent<Renderer>().material.color = ScriptA.aiColor;
             LogMove(currentTurn, bestMove);
@@ -272,7 +272,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
 
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
         //Debug.Log("Game over. No AI moves allowed.");
         return;  // Exit the method to prevent further AI interaction
@@ -301,7 +301,7 @@ public class GM4Nivel3 : MonoBehaviour
             }
         }
 
-        if (bestMove2 != null && ScriptA.winner == VictoryCheck.Winner.None)
+        if (bestMove2 != null && ScriptA.winner == VictoryCheckAI.Winner.None)
         {
             bestMove2.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
             LogMove(currentTurn, bestMove2);
@@ -329,7 +329,7 @@ public class GM4Nivel3 : MonoBehaviour
         }
 
 
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
         //Debug.Log("Game over. No AI moves allowed.");
         return;  // Exit the method to prevent further AI interaction
@@ -358,7 +358,7 @@ public class GM4Nivel3 : MonoBehaviour
             }
         }
 
-        if (bestMove3 != null && ScriptA.winner == VictoryCheck.Winner.None)
+        if (bestMove3 != null && ScriptA.winner == VictoryCheckAI.Winner.None)
         {
             bestMove3.GetComponent<Renderer>().material.color = ScriptA.ai3Color;
             LogMove(currentTurn, bestMove3);

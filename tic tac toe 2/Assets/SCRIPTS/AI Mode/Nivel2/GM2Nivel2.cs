@@ -4,11 +4,11 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class GM3Nivel2 : MonoBehaviour
+public class GM2Nivel2 : MonoBehaviour
 {
-    public enum PlayerType { Human, AI, AI2 }
+    public enum PlayerType { Human, AI }
     public PlayerType currentTurn = PlayerType.Human;
-    public VictoryCheck ScriptA;
+    public VictoryCheckAI ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject Quadrados;
@@ -20,16 +20,13 @@ public class GM3Nivel2 : MonoBehaviour
     private List<string> moveLog = new List<string>(); // List to store the log of moves
     [SerializeField] private GameObject panelLog;
 
-    private bool isFirstMove = true;
-    private bool isFirstMove2 = true; // To track if it's the first move
+    private bool isFirstMove = true; // To track if it's the first move
     private bool isProcessingAI = false;
-    private bool isProcessingAI2 = false;
-    private bool isEasyMode = false;
-    private bool isEasyMode2 = false; // To track if the AI should use Easy mode
+    private bool isEasyMode = false; // To track if the AI should use Easy mode
 
     public void Start()
     {
-        ScriptA = GameObject.FindObjectOfType<VictoryCheck>();
+        ScriptA = GameObject.FindObjectOfType<VictoryCheckAI>();
     }
 
     private void Update()
@@ -42,11 +39,6 @@ public class GM3Nivel2 : MonoBehaviour
         if (currentTurn == PlayerType.AI && !isProcessingAI && !ScriptA.IsGameOver())
         {
             StartCoroutine(AIDelayedTurn());
-        }
-
-        if (currentTurn == PlayerType.AI2 && !isProcessingAI2 && !ScriptA.IsGameOver())
-        {
-            StartCoroutine(AIDelayedTurn2());
         }
     }
 
@@ -87,48 +79,10 @@ public class GM3Nivel2 : MonoBehaviour
         isProcessingAI = false;
     }
 
-
-    IEnumerator AIDelayedTurn2()
-    {
-        isProcessingAI2 = true;
-        yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1.5 seconds
-
-        if (ScriptA.IsGameOver())
-        {
-            isProcessingAI2 = false;
-            Debug.Log("Game over. No AI moves allowed.");
-            yield break;  // Exit the coroutine early if the game is over
-        }
-
-        if (isFirstMove2)
-        {
-            AI_HardTurn2();
-            Debug.Log("HardturnstrategicAI2");
-            isFirstMove2 = false;
-            isEasyMode2 = !isEasyMode2;
-        }
-        else
-        {
-            if (isEasyMode2)
-            {
-                AI_EasyTurn2();
-                Debug.Log("EasyturnAI2");
-            }
-            else
-            {
-                AI_HardTurn2();
-                Debug.Log("HardturnAI2");
-            }
-        isEasyMode2 = !isEasyMode2; // Toggle mode for next turn
-        }
-
-        isProcessingAI2 = false;
-    }
-
     void CheckForObjectClick()
     {
         ScriptA.CheckAllWinningConditions();
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further interaction
         }
@@ -170,7 +124,7 @@ public class GM3Nivel2 : MonoBehaviour
             return;
         }
 
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckAI.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further AI interaction
         }
@@ -195,7 +149,7 @@ public class GM3Nivel2 : MonoBehaviour
             }
         }
 
-        if (bestMove != null && ScriptA.winner == VictoryCheck.Winner.None)
+        if (bestMove != null && ScriptA.winner == VictoryCheckAI.Winner.None)
         {
             bestMove.GetComponent<Renderer>().material.color = ScriptA.aiColor;
             LogMove(currentTurn, bestMove);
@@ -216,68 +170,6 @@ public class GM3Nivel2 : MonoBehaviour
         }
     }
 
-
-
-    void AI_HardTurn2()
-    {
-        if (ScriptA.IsGameOver())
-        {
-            Debug.Log("Game over. Exiting AI turn.");
-            return;  // Do not proceed if the game is over
-        }
-
-        if (IsFirstMove())
-        {
-            PlayStrategicMove2();
-            return;
-        }
-
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
-        {
-            return;  // Exit the method to prevent further AI interaction
-        }
-
-        ScriptA.CheckAllWinningConditions();
-        int bestScore = int.MinValue;
-        GameObject bestMove = null;
-
-        foreach (GameObject spot in clickableObjects)
-        {
-            if (spot.GetComponent<Renderer>().material.color == Color.white) // Check only unoccupied spots
-            {
-                spot.GetComponent<Renderer>().material.color = ScriptA.ai2Color; // AI's color
-                int score = EvaluateBoard();
-                spot.GetComponent<Renderer>().material.color = Color.white; // Undo move
-
-                if (score > bestScore)
-                {
-                    bestScore = score;
-                    bestMove = spot;
-                }
-            }
-        }
-
-        if (bestMove != null && ScriptA.winner == VictoryCheck.Winner.None)
-        {
-            bestMove.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
-            LogMove(currentTurn, bestMove);
-            ChangeTurn();
-            ScriptA.CheckAllWinningConditions();
-        }
-    }
-
-    void AI_EasyTurn2()
-    {
-        List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
-        if (availableSpots.Count > 0)
-        {
-            GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
-            randomSpot.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
-            LogMove(currentTurn, randomSpot);
-            ChangeTurn();
-        }
-    }
-
     bool IsFirstMove()
     {
         return clickableObjects.All(obj => obj.GetComponent<Renderer>().material.color == Color.white);
@@ -290,17 +182,6 @@ public class GM3Nivel2 : MonoBehaviour
         {
             GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
             randomSpot.GetComponent<Renderer>().material.color = ScriptA.aiColor;
-            LogMove(currentTurn, randomSpot); // Log the AI's random move
-        }
-    }
-
-    void PlayRandomMove2()
-    {
-        List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
-        if (availableSpots.Count > 0)
-        {
-            GameObject randomSpot = availableSpots[Random.Range(0, availableSpots.Count)];
-            randomSpot.GetComponent<Renderer>().material.color = ScriptA.ai2Color;
             LogMove(currentTurn, randomSpot); // Log the AI's random move
         }
     }
@@ -329,31 +210,6 @@ public class GM3Nivel2 : MonoBehaviour
         else
         {
             PlayRandomMove();
-        }
-    }
-
-    void PlayStrategicMove2()
-    {
-        List<GameObject> strategicSpots = new List<GameObject>();
-
-        foreach (int pos in strategicPositions)
-        {
-            if (clickableObjects[pos].GetComponent<Renderer>().material.color == Color.white)
-            {
-                strategicSpots.Add(clickableObjects[pos]);
-            }
-        }
-
-        if (strategicSpots.Count > 0)
-        {
-            GameObject strategicSpot = strategicSpots[Random.Range(0, strategicSpots.Count)];
-            strategicSpot.GetComponent<Renderer>().material.color = ScriptA.ai2Color;  // AI's color
-            LogMove(currentTurn, strategicSpot);
-            ChangeTurn();
-        }
-        else
-        {
-            PlayRandomMove2();
         }
     }
 
@@ -396,7 +252,6 @@ public class GM3Nivel2 : MonoBehaviour
     {
         int aiCount = 0;
         int humanCount = 0;
-        int ai2Count = 0;
 
         foreach (int index in indices)
         {
@@ -405,13 +260,9 @@ public class GM3Nivel2 : MonoBehaviour
                 aiCount++;
             else if (color == ScriptA.humanColor) // Human's color
                 humanCount++;
-            else if (color == ScriptA.ai2Color) // Human's color
-                ai2Count++;
         }
 
-        if (aiCount > 0 && humanCount > 0) return 0;
-        if (ai2Count > 0 && humanCount > 0) return 0;
-        if (ai2Count > 0 && aiCount > 0) return 0; // Mixed line, no potential
+        if (aiCount > 0 && humanCount > 0) return 0; // Mixed line, no potential
         if (aiCount == 4) return 1000; // AI wins
         if (humanCount == 4) return -900; // Human wins
         if (aiCount == 3) return 50; // AI is one move away from winning
@@ -425,21 +276,7 @@ public class GM3Nivel2 : MonoBehaviour
     void ChangeTurn()
     {
         ScriptA.CheckAllWinningConditions();
-        if (currentTurn == PlayerType.Human)
-        {
-            currentTurn = PlayerType.AI;
-            Debug.Log("It's the AI's turn now!");
-        }
-        else if (currentTurn == PlayerType.AI)
-        {
-            currentTurn = PlayerType.AI2;
-            Debug.Log("It's the AI2's turn now!");
-        }
-        else if (currentTurn == PlayerType.AI2)
-        {
-            currentTurn = PlayerType.Human;
-            Debug.Log("It's the Human's turn now!");
-        }
+        currentTurn = currentTurn == PlayerType.Human ? PlayerType.AI : PlayerType.Human;
         ScriptA.CheckAllWinningConditions();
     }
 
