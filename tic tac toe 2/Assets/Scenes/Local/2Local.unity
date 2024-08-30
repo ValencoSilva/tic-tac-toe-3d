@@ -12908,7 +12908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -674.99786, y: -0.00018310547}
+  m_AnchoredPosition: {x: -674.9979, y: -0.00018310547}
   m_SizeDelta: {x: -1350.0045, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063967379
@@ -19421,8 +19421,8 @@ MonoBehaviour:
   winDetected: 0
   FinalScene: FinalScene
   winner: 0
-  humanColor: {r: 1, g: 0.7294118, b: 0, a: 1}
-  aiColor: {r: 0.20784315, g: 0, b: 0.4431373, a: 1}
+  humanColor: {r: 0.99607843, g: 0.7294118, b: 0.003921569, a: 1}
+  aiColor: {r: 0.21176471, g: 0.007843138, b: 0.4431373, a: 1}
   ai2Color: {r: 1, g: 0, b: 0, a: 1}
   ai3Color: {r: 1, g: 0, b: 0, a: 1}
   painelVitoria: {fileID: 1388564478}
@@ -23362,7 +23362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -672.58514, y: -0.5410156}
+  m_AnchoredPosition: {x: -672.5852, y: -0.5410156}
   m_SizeDelta: {x: -1437.458, y: -57.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825740464
