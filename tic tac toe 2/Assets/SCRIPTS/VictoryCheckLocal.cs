@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VictoryCheck : MonoBehaviour
+public class VictoryCheckLocal : MonoBehaviour
 {
     public GameObject[] cubes; // Should be an array of 64 GameObjects (4x4x4)
     public Color ignoreColor = Color.white; // Set this to the color you want to ignore

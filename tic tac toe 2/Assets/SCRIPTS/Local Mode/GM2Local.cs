@@ -8,7 +8,7 @@ public class GM2Local : MonoBehaviour
 {
     public enum PlayerType { Human, Human2 }
     public PlayerType currentTurn = PlayerType.Human;
-    public VictoryCheck ScriptA;
+    public VictoryCheckLocal ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject painelTurno;
@@ -43,7 +43,7 @@ public class GM2Local : MonoBehaviour
 
     public void Start()
     {
-        ScriptA = GameObject.FindObjectOfType<VictoryCheck>();
+        ScriptA = GameObject.FindObjectOfType<VictoryCheckLocal>();
         UpdateTurnIndicator();
     }
 
@@ -112,7 +112,7 @@ public class GM2Local : MonoBehaviour
     void CheckForObjectClick()
     {
         ScriptA.CheckAllWinningConditions();
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckLocal.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further interaction
         }
@@ -143,7 +143,7 @@ public class GM2Local : MonoBehaviour
     void CheckForObjectClick2()
     {
         ScriptA.CheckAllWinningConditions();
-        if (ScriptA.winner != VictoryCheck.Winner.None || ScriptA.IsDraw())
+        if (ScriptA.winner != VictoryCheckLocal.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further interaction
         }

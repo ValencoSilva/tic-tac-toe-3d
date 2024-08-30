@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Required for managing scenes
 
-public class FinalMenu : MonoBehaviour
+public class FinalMenuLocal : MonoBehaviour
 {
     public string MenuPrincipal;
     public string Revanche;
