@@ -79,7 +79,12 @@ public class VictoryCheckAI : MonoBehaviour
 
     public bool IsGameOver()
     {
-    return winDetected || IsDraw();
+    // Check if a winner is detected or if the game is a draw
+    if (winDetected || IsDraw())
+    {
+        return true;
+    }
+    return false;
     }
 
     
@@ -148,6 +153,8 @@ public class VictoryCheckAI : MonoBehaviour
                 Debug.Log($"Winning condition met for Human on {description}.");
                 winner = Winner.Human;
                 winDetected = true;
+                Debug.Log("teste");
+                IsGameOver();
                 painelVitoria.SetActive(true);
                 Sinalizacao.SetActive(false);
             }

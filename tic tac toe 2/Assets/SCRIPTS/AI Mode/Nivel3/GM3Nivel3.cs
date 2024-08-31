@@ -139,7 +139,6 @@ public class GM3Nivel3 : MonoBehaviour
                         LogMove(currentTurn, obj);
                         ChangeTurn();
                         break;
-                        ScriptA.CheckAllWinningConditions();
                     }
                 }
             }

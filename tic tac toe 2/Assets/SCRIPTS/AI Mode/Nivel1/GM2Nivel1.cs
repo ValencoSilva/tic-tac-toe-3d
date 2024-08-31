@@ -28,6 +28,11 @@ public class GM2Nivel1 : MonoBehaviour
 
     private void Update()
     {
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
+
         if (currentTurn == PlayerType.Human && !ScriptA.IsGameOver())
         {
             CheckForObjectClick();
@@ -41,8 +46,11 @@ public class GM2Nivel1 : MonoBehaviour
 
     IEnumerator AIDelayedTurn()
     {
+        
+        ScriptA.CheckAllWinningConditions();
         isProcessingAI = true;
         yield return new WaitForSeconds(1.5f);  // Delay AI turn by 1.5 seconds
+        
 
         if (ScriptA.IsGameOver())
         {
@@ -89,6 +97,11 @@ public class GM2Nivel1 : MonoBehaviour
 
     void AI_EasyTurn()
     {
+        ScriptA.CheckAllWinningConditions();
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
         List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
         if (availableSpots.Count > 0)
         {

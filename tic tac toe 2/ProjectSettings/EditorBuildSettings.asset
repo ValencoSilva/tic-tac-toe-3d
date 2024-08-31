@@ -28,13 +28,22 @@ EditorBuildSettings:
     guid: 082499780fd11c64bb83b5450dc90ebb
   - enabled: 1
     path: Assets/Scenes/IAGames/Nivel2/2Medium.unity
-    guid: 98ac99b8b31703740bc2f01323547789
+    guid: d9b0d820028cac34691544f33e689043
   - enabled: 1
     path: Assets/Scenes/IAGames/Nivel2/3Medium.unity
-    guid: 9abd742200f66064a8cadc99c8342ef7
+    guid: 8aae628eb52dd004fa7ce255dcd8c8f2
   - enabled: 1
     path: Assets/Scenes/IAGames/Nivel2/4Medium.unity
-    guid: 960fdd01e6a19a04588f0c2a96ddf155
+    guid: 7bfbafacd91bce54c8db2b19f2d9faff
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel3/2Hard.unity
+    guid: addd1087c7293244ba6d0ba1e86a31a1
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel3/3Hard.unity
+    guid: 4b09205ae03672c4ba7d809957f26cab
+  - enabled: 1
+    path: Assets/Scenes/IAGames/Nivel3/4Hard.unity
+    guid: 32f811443692f2043abfc9edb6d41f22
   - enabled: 1
     path: Assets/Scenes/Local/2Local.unity
     guid: 46eb52f316e38f94ea8ea89af791a919

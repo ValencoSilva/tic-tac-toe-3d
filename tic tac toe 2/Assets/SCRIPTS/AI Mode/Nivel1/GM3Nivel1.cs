@@ -112,6 +112,11 @@ public class GM3Nivel1 : MonoBehaviour
 
     void AI_EasyTurn()
     {
+        ScriptA.CheckAllWinningConditions();
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
         List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
         if (availableSpots.Count > 0)
         {
@@ -124,6 +129,11 @@ public class GM3Nivel1 : MonoBehaviour
 
     void AI_EasyTurn2()
     {
+        ScriptA.CheckAllWinningConditions();
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
         List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
         if (availableSpots.Count > 0)
         {

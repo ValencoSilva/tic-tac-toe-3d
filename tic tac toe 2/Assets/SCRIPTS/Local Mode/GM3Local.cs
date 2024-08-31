@@ -37,7 +37,6 @@ public class GM3Local : MonoBehaviour
     public Text logText; // Reference to the UI text element to display the log
     private List<string> moveLog = new List<string>(); // List to store the log of moves
     [SerializeField] private GameObject panelLog;
-    private bool isProcessingAI = false;
 
     private float turnDuration = 20f; // Duration of each turn in seconds
     private float remainingTime;

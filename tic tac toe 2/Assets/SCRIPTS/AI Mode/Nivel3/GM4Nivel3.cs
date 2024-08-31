@@ -188,8 +188,6 @@ public class GM4Nivel3 : MonoBehaviour
                         LogMove(currentTurn, obj);
                         ChangeTurn();
                         break;
-                        ScriptA.CheckForDraw();
-                        ScriptA.CheckAllWinningConditions();
                     }
                 }
             }

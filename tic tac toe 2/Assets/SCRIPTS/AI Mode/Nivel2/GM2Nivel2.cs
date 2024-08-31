@@ -112,6 +112,11 @@ public class GM2Nivel2 : MonoBehaviour
 
     void AI_HardTurn()
     {
+        ScriptA.CheckAllWinningConditions();
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
         if (ScriptA.IsGameOver())
         {
             Debug.Log("Game over. Exiting AI turn.");
@@ -160,6 +165,11 @@ public class GM2Nivel2 : MonoBehaviour
 
     void AI_EasyTurn()
     {
+        ScriptA.CheckAllWinningConditions();
+        if (ScriptA.IsGameOver())
+        {
+        return;
+        }
         List<GameObject> availableSpots = clickableObjects.Where(obj => obj.GetComponent<Renderer>().material.color == Color.white).ToList();
         if (availableSpots.Count > 0)
         {
