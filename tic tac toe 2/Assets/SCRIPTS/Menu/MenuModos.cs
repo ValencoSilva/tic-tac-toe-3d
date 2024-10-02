@@ -6,6 +6,8 @@ public class MenuModos : MonoBehaviour
     public string MenuIA;
     public string MenuLocal;
     public string MenuPrincipal;
+    public string MenuOnline;
+    public string Teste;
     public void OnJogarContraIA()
     {
         SceneManager.LoadScene(MenuIA);
@@ -18,12 +20,17 @@ public class MenuModos : MonoBehaviour
 
     public void OnJogarOnline()
     {
-        Debug.Log("ainda em desenvolvimento");
+        //SceneManager.LoadScene(MenuOnline);
     }
 
     public void OnVoltar()
     {
         SceneManager.LoadScene(MenuPrincipal);
+    }
+
+    public void OnTeste()
+    {
+        SceneManager.LoadScene(Teste);
     }
 
 }

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/MenuLocal.unity
     guid: bedafdae36b8d8b4cb9724ac980a389b
   - enabled: 1
+    path: Assets/Scenes/Menu/MenuOnline.unity
+    guid: 805782baeb6d2f04693b0ee8d76feaae
+  - enabled: 1
     path: Assets/Scenes/IAGames/Nivel1/2Easy.unity
     guid: 43ebcb846d0b72f45949ef0b290faf9a
   - enabled: 1
@@ -53,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Local/4Local.unity
     guid: 7e380c9483e4543499a2046cb7bc3d2a
+  - enabled: 1
+    path: Assets/Scenes/Online/2Online.unity
+    guid: 22265fb6995c62b4493893b9d510031f
+  - enabled: 1
+    path: Assets/Scenes/Online/2Teste.unity
+    guid: f0b03985f2359c2409c2df1999272186
   m_configObjects: {}

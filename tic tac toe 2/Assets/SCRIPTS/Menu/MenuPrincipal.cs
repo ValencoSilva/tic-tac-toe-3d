@@ -15,7 +15,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Opcoes()
     {
-        painelOpcoes.SetActive(true);
+        Debug.Log("ainda nao");
     }
 
     public void Creditos()
