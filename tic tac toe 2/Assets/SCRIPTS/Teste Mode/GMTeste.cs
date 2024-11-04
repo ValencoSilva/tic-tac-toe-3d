@@ -36,7 +36,7 @@ public class GMTeste : MonoBehaviour
     private List<string> moveLog = new List<string>(); // List to store the log of moves
     [SerializeField] private GameObject panelLog;
 
-    private float turnDuration = 20f; // Duration of each turn in seconds
+    public float turnDuration = 20f; // Duration of each turn in seconds
     private float remainingTime;
 
     private string player1Name = "Jogador 1"; // Default name for player 1
@@ -184,7 +184,7 @@ public class GMTeste : MonoBehaviour
     }
 
 
-    void ChangeTurn()
+    public void ChangeTurn()
     {
         ScriptA.CheckAllWinningConditions();
         currentTurn = currentTurn == PlayerType.Human ? PlayerType.Human2 : PlayerType.Human;

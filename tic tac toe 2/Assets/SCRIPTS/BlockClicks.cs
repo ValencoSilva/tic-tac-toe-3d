@@ -31,7 +31,7 @@ public class BlockClicks : MonoBehaviour
         // Handle other input, like mouse clicks or key presses, if input is not disabled
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Screen clicked!");
+            //Debug.Log("Screen clicked!");
         }
     }
 }
