@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class VictoryCheckTeste : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class VictoryCheckTeste : MonoBehaviour
     public Color aiColor = new Color(0.5f, 0f, 0.5f);
     public Color ai2Color = Color.red;
     public Color ai3Color = Color.red;
+
+    private HashSet<GameObject> destroyedCubes = new HashSet<GameObject>();  // Set to track destroyed cubes
+
     
     [SerializeField] private GameObject painelVitoria;
     [SerializeField] private GameObject painelDerrota;
@@ -39,6 +43,16 @@ public class VictoryCheckTeste : MonoBehaviour
             Debug.Log("upd teste");
             painelContagem.SetActive(false);
             i += 1;
+        }
+    }
+
+    public void MarkCubeAsDestroyed(GameObject cube)
+    {
+        if (!destroyedCubes.Contains(cube))
+        {
+            destroyedCubes.Add(cube);             // Add cube to the destroyed list
+            cube.GetComponent<Renderer>().material.color = ignoreColor;  // Set color to white
+            Debug.Log($"Cube {System.Array.IndexOf(cubes, cube)} has been destroyed and color set to white.");
         }
     }
 
@@ -111,6 +125,11 @@ public class VictoryCheckTeste : MonoBehaviour
 
     public void CheckCondition(int a, int b, int c, int d, string description)
     {
+        if (destroyedCubes.Contains(cubes[a]) || destroyedCubes.Contains(cubes[b]) || 
+            destroyedCubes.Contains(cubes[c]) || destroyedCubes.Contains(cubes[d]))
+        {
+            return;  // Skip this condition if any cube is destroyed
+        }
         int nearWins = AreColorsAlmostSame(a, b, c, d);
         if (nearWins == 4)
         {
@@ -159,18 +178,19 @@ public class VictoryCheckTeste : MonoBehaviour
 
     private int AreColorsAlmostSame(int a, int b, int c, int d)
     {
-        int[] indices = {a, b, c, d};
+        int[] indices = { a, b, c, d };
         Color firstColor = GetNonIgnoredColor(indices);
         if (firstColor == Color.clear) return 0; // No valid color found
 
         int matchCount = 0;
         foreach (int index in indices)
         {
-            Color currentColor = cubes[index].GetComponent<Renderer>().material.color;
-            if (currentColor != ignoreColor && currentColor == firstColor)
+            if (!destroyedCubes.Contains(cubes[index]) && // Ignore destroyed cubes
+                cubes[index].GetComponent<Renderer>().material.color == firstColor)
+            {
                 matchCount++;
+            }
         }
-
         return matchCount;
     }
 

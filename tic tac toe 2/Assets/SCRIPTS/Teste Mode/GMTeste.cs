@@ -11,6 +11,8 @@ public class GMTeste : MonoBehaviour
     public VictoryCheckTeste ScriptA;
     public GameObject[] clickableObjects; // Array of game objects that can be clicked on.
     public JogadaAleatoria jogadaAleatoria; // Reference to JogadaAleatoria script
+    public ZeroTimePower zeroTimePower;  // Reference to the ZeroTimePower script
+
 
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject painelTurno;
@@ -37,7 +39,7 @@ public class GMTeste : MonoBehaviour
     [SerializeField] private GameObject panelLog;
 
     public float turnDuration = 20f; // Duration of each turn in seconds
-    private float remainingTime;
+    public float remainingTime;
 
     private string player1Name = "Jogador 1"; // Default name for player 1
     private string player2Name = "Jogador 2"; // Default name for player 2
@@ -187,6 +189,15 @@ public class GMTeste : MonoBehaviour
     public void ChangeTurn()
     {
         ScriptA.CheckAllWinningConditions();
+         // Check if ZeroTimePower's skipNextTurn is true
+        if (zeroTimePower != null && zeroTimePower.skipNextTurn)
+        {
+            zeroTimePower.skipNextTurn = false; // Reset the flag after use
+            remainingTime = turnDuration;  // Reset the timer for the extra turn
+            UpdateTurnIndicator();
+            return;  // Skip changing the turn
+        }
+        // Normal turn change
         currentTurn = currentTurn == PlayerType.Human ? PlayerType.Human2 : PlayerType.Human;
         remainingTime = turnDuration; // Reset the timer
         UpdateTurnIndicator();
