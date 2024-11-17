@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject painelPoderes;
+    [SerializeField] private GameObject painelPoderes2;
     [SerializeField] public GameObject painelFaces;
     [SerializeField] public Collider[] collidersToDisable; // Array of colliders you want to disable (like BoxColliders)
     [SerializeField] private GameObject parentGameObject;
@@ -40,6 +41,7 @@ public class UIManager : MonoBehaviour
     public void OnVoltar()
     {
         painelPoderes.SetActive(false);
+        painelPoderes2.SetActive(false);
         painelFaces.SetActive(false);
 
         // Re-enable all colliders in the list
@@ -53,6 +55,7 @@ public class UIManager : MonoBehaviour
     public void OnPoderes()
     {
         painelPoderes.SetActive(true);
+        painelPoderes2.SetActive(true);
 
         // Disable all colliders in the list
         foreach (Collider col in allCollidersToDisable)
@@ -65,11 +68,13 @@ public class UIManager : MonoBehaviour
     {
         painelFaces.SetActive(true);
         painelPoderes.SetActive(false);
+        painelPoderes2.SetActive(false);
     } 
 
     public void OnVoltarGirarFace()
     {
         painelFaces.SetActive(false);
         painelPoderes.SetActive(true);
+        painelPoderes2.SetActive(true);
     } 
 }
