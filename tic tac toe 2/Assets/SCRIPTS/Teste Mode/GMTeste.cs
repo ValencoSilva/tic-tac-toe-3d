@@ -14,6 +14,7 @@ public class GMTeste : MonoBehaviour
     public ZeroTimePower zeroTimePower;  // Reference to the ZeroTimePower script
 
 
+
     [SerializeField] private GameObject painelGameStarter;
     [SerializeField] private GameObject painelTurno;
     [SerializeField] private GameObject Quadrados;
@@ -32,10 +33,12 @@ public class GMTeste : MonoBehaviour
     public Text gameStarterPlayer2Name;
     public Text VictoryPlayer1;
     public Text VictoryPlayer2;
+    public List<GameObject> lastPlayedCubes = new List<GameObject>();
+    private int currentRound = 1;  // Tracks the current round
 
 
     public Text logText; // Reference to the UI text element to display the log
-    private List<string> moveLog = new List<string>(); // List to store the log of moves
+    public List<string> moveLog = new List<string>(); // List to store the log of moves
     [SerializeField] private GameObject panelLog;
 
     public float turnDuration = 20f; // Duration of each turn in seconds
@@ -93,12 +96,12 @@ public class GMTeste : MonoBehaviour
             Debug.LogError("JogadaAleatoria reference is missing.");
         }
     }
-    void UpdateTimerDisplay()
+    public void UpdateTimerDisplay()
     {
         timerText.text = $"Tempo Restante: {remainingTime:F1}"; // Display time with one decimal place
     }
 
-    void UpdateTurnIndicator()
+    public void UpdateTurnIndicator()
     {
         if (turnIndicatorText != null)
         {
@@ -126,6 +129,7 @@ public class GMTeste : MonoBehaviour
     void CheckForObjectClick()
     {
         ScriptA.CheckAllWinningConditions();
+      
         if (ScriptA.winner != VictoryCheckTeste.Winner.None || ScriptA.IsDraw())
         {
             return;  // Exit the method to prevent further interaction
@@ -189,7 +193,14 @@ public class GMTeste : MonoBehaviour
     public void ChangeTurn()
     {
         ScriptA.CheckAllWinningConditions();
-         // Check if ZeroTimePower's skipNextTurn is true
+
+        // Increment the round at every turn change
+        if (currentTurn == PlayerType.Human2) // Only increment after both players have played
+        {
+            currentRound++;
+        }
+
+        // Check if ZeroTimePower's skipNextTurn is true
         if (zeroTimePower != null && zeroTimePower.skipNextTurn)
         {
             zeroTimePower.skipNextTurn = false; // Reset the flag after use
@@ -197,6 +208,7 @@ public class GMTeste : MonoBehaviour
             UpdateTurnIndicator();
             return;  // Skip changing the turn
         }
+
         // Normal turn change
         currentTurn = currentTurn == PlayerType.Human ? PlayerType.Human2 : PlayerType.Human;
         remainingTime = turnDuration; // Reset the timer
@@ -204,11 +216,32 @@ public class GMTeste : MonoBehaviour
         ScriptA.CheckAllWinningConditions();
     }
 
-    void LogMove(PlayerType player, GameObject obj)
+
+    public int GetCurrentRound()
+    {
+        return currentRound;
+    }
+
+
+    public void LogMove(PlayerType player, GameObject obj)
     {
         string position = System.Array.IndexOf(clickableObjects, obj).ToString();
         moveLog.Add($"{(player == PlayerType.Human ? player1Name : player2Name)} moveu para a posição {position}");
+
+        // Track the last played cubes
+        if (!lastPlayedCubes.Contains(obj)) // Avoid adding duplicates
+        {
+            lastPlayedCubes.Add(obj);
+        }
+
+        if (lastPlayedCubes.Count > 4)
+        {
+            lastPlayedCubes.RemoveAt(0); // Keep only the last 2 moves
+        }
+
+        Debug.Log($"Logged move for {player}: Cube at position {position}.");
     }
+
 
     public void DisplayLog()
     {
