@@ -11,10 +11,19 @@ public class SwapCubesPower : MonoBehaviour
     private bool player2PowerUsed = false;  // Track if Player 2 has used their swap power
 
     public VictoryCheckTeste victoryCheck;  // Reference to VictoryCheckTeste for colors
+    public ScoreManager scoreManager;       // Reference to ScoreManager for managing points
+    public int powerCost = 150;             // Cost for using the power
 
     // Method to activate the power that swaps Player 1 and Player 2 cubes
     public void ActivateSwapCubesPower()
     {
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning($"Player {gameManager.currentTurn} does not have enough points to use this power.");
+            return;
+        }
+
         // Check if Player 1 or Player 2 has exceeded the global power limit
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
@@ -47,6 +56,9 @@ public class SwapCubesPower : MonoBehaviour
             player2PowerUsed = true;  // Mark Player 2's power as used
             Debug.Log("Player 2 (Human2) has used the swap cubes power.");
         }
+
+        // Deduct points for using the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // After using the power, mark it in the global power limit system
         globalPowerLimit.UsePower(gameManager.currentTurn);

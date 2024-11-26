@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DoubleTurnPower : MonoBehaviour
 {
-    public GMTeste gameManager;  // Reference to your game manager script
-    public GlobalPowerLimit globalPowerLimit;  // Reference to the global power limit
-    private int roundLimit = 3;  // Restriction: Can only be used in the first 3 rounds
-    private bool powerUsed = false;  // Tracks if the power has already been used this round
+    public GMTeste gameManager;                 // Reference to your game manager script
+    public GlobalPowerLimit globalPowerLimit;   // Reference to the global power limit
+    public ScoreManager scoreManager;           // Reference to the scoring system
+
+    public int powerCost = 50;                  // Cost in points to activate this power
+    private int roundLimit = 3;                 // Restriction: Can only be used in the first 3 rounds
+    private bool powerUsed = false;             // Tracks if the power has already been used this round
 
     public void ActivateDoubleTurnPower()
     {
+        // Check if the player has enough points to use the power
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.Log("Not enough points to activate Double Turn Power.");
+            return;
+        }
+
         // Check global power limit
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
@@ -32,6 +42,9 @@ public class DoubleTurnPower : MonoBehaviour
             Debug.LogWarning("Double Turn Power has already been used this round.");
             return;
         }
+
+        // Deduct points for activating the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // Allow the current player to play twice in a row
         powerUsed = true;  // Mark the power as used

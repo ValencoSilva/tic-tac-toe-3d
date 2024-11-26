@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class IAPower : MonoBehaviour
 {
-    public GameObject[] allCubes;              // Array of all cubes in the game board
-    public GlobalPowerLimit globalPowerLimit;  // Reference to the global power limit
-    public GMTeste gameManager;               // Reference to the game manager
-    public VictoryCheckTeste victoryCheckScript; // Reference to the victory check script
+    public GameObject[] allCubes;                     // Array of all cubes in the game board
+    public GlobalPowerLimit globalPowerLimit;         // Reference to the global power limit
+    public GMTeste gameManager;                      // Reference to the game manager
+    public VictoryCheckTeste victoryCheckScript;     // Reference to the victory check script
+    public ScoreManager scoreManager;                // Reference to the scoring system
+
     public Color recommendationColor = new Color(0.5f, 0f, 0.5f); // Purple color for recommendation
-    private GameObject recommendedCube;       // Store the recommended cube
+    public int powerCost = 50;                       // Cost in points to activate the power
+    private GameObject recommendedCube;              // Store the recommended cube
 
     public void ActivateRecommendationPower()
     {
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning("Not enough points to activate AI Recommendation Power.");
+            return;
+        }
+
+        // Check if the current player can still use a power
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
             Debug.Log("Power limit reached for " + gameManager.currentTurn.ToString());
             globalPowerLimit.DisplayWarning();
             return;
         }
+
+        // Deduct the points for activating the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // Reset the previous recommendation if it exists
         if (recommendedCube != null)

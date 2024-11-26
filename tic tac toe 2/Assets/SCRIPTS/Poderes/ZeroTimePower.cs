@@ -3,20 +3,36 @@ using UnityEngine;
 public class ZeroTimePower : MonoBehaviour
 {
     public GMTeste gameManager;  // Reference to GMTeste script
-    private bool player1PowerUsed = false;  // Track if Player 1 has used the power
-    private bool player2PowerUsed = false;  // Track if Player 2 has used the power
-
-    public bool skipNextTurn = false;  // Flag to control turn skipping
+    public ScoreManager scoreManager;  // Reference to ScoreManager script
     public GlobalPowerLimit globalPowerLimit;  // Reference to the global power limit
 
+    private bool player1PowerUsed = false;  // Track if Player 1 has used the power
+    private bool player2PowerUsed = false;  // Track if Player 2 has used the power
+    public int powerCost = 20;  // Cost to activate this power
     private int maxRoundsToUse = 3;  // Restriction: Power can only be used in the first 3 rounds
+
+    public bool skipNextTurn = false;  // Flag to control turn skipping
 
     public void ActivateZeroTimePower()
     {
-        // Check if the power usage is within the allowed rounds
+        // Validate ScoreManager reference
+        if (scoreManager == null)
+        {
+            Debug.LogError("ScoreManager is not assigned!");
+            return;
+        }
+
+        // Restrict to first 3 rounds
         if (gameManager.GetCurrentRound() > maxRoundsToUse)
         {
             Debug.LogWarning("Zero Time Power can only be used during the first 3 rounds.");
+            return;
+        }
+
+        // Check if the power cost can be paid
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning("Not enough points to activate Zero Time Power!");
             return;
         }
 
@@ -50,7 +66,10 @@ public class ZeroTimePower : MonoBehaviour
             player2PowerUsed = true;
         }
 
-        // Set the flag to skip the next turn switch
+        // Deduct points for the power usage
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
+
+        // Activate the power
         skipNextTurn = true;
         gameManager.remainingTime = gameManager.turnDuration; // Reset the timer for the extra turn
         Debug.Log("Zero Time Power activated: Current player will play again.");

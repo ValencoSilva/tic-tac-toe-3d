@@ -6,8 +6,9 @@ public class OverwriteCubePower : MonoBehaviour
 {
     public GMTeste gameManager;  // Reference to the game manager script
     public int maxRounds = 3;    // Restriction to use the power within the first 3 rounds
-
+    public int powerCost = 100;  // Cost to use this power
     public GlobalPowerLimit globalPowerLimit; // Reference to the global power limit
+    public ScoreManager scoreManager;         // Reference to the ScoreManager for managing points
 
     public void ActivateOverridePower()
     {
@@ -18,6 +19,13 @@ public class OverwriteCubePower : MonoBehaviour
             return;
         }
 
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning("Player " + gameManager.currentTurn + " does not have enough points to activate this power.");
+            return;
+        }
+
         // Check if the player has exceeded the global power limit
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
@@ -25,6 +33,9 @@ public class OverwriteCubePower : MonoBehaviour
             globalPowerLimit.DisplayWarning();
             return;
         }
+
+        // Deduct points for using the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // Activate the power: Allow the player to choose an opponent's cube
         StartCoroutine(SelectAndOverrideCube());

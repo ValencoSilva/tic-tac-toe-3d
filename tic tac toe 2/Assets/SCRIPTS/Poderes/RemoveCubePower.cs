@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class RemoveCubePower : MonoBehaviour
 {
-    public GMTeste gameManager;  // Reference to your game manager script (GMTeste)
-    public GameObject[] allCubes; // Reference to all cubes in the game
-
-    public GlobalPowerLimit globalPowerLimit;  // Reference to the global power limit
+    public GMTeste gameManager;               // Reference to your game manager script (GMTeste)
+    public GameObject[] allCubes;             // Reference to all cubes in the game
+    public GlobalPowerLimit globalPowerLimit; // Reference to the global power limit
+    public ScoreManager scoreManager;         // Reference to the ScoreManager for managing points
+    public int powerCost = 50;                // Cost to activate this power
 
     // Method to activate the "remove cube" power
     public void ActivateRemoveOpponentCubePower()
     {
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning("Player " + gameManager.currentTurn + " does not have enough points to activate this power.");
+            return;
+        }
+
+        // Check if the global power limit allows using the power
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
             Debug.Log("Power limit reached for " + gameManager.currentTurn.ToString());
@@ -19,6 +28,10 @@ public class RemoveCubePower : MonoBehaviour
             return;
         }
 
+        // Deduct points for using the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
+
+        // Apply the power based on the current player
         if (gameManager.currentTurn == GMTeste.PlayerType.Human)
         {
             // Randomly remove a cube played by Player 2 (Human2)

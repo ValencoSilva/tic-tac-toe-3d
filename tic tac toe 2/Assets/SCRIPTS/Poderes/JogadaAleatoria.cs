@@ -9,7 +9,9 @@ public class JogadaAleatoria : MonoBehaviour
     public GameObject[] clickableObjects; // Assign clickableObjects in Unity Inspector
     public GMTeste gameManager;  // Reference to your game manager script (GMTeste)
     public GlobalPowerLimit globalPowerLimit;  // Reference to GlobalPowerLimit script
+    public ScoreManager scoreManager;  // Reference to the scoring system
 
+    public int powerCost = 50;  // Cost to use this power
     public GMTeste.PlayerType currentPlayer; // Reference to know whose turn it is
 
     void Start()
@@ -47,7 +49,7 @@ public class JogadaAleatoria : MonoBehaviour
                 randomSpot.GetComponent<Renderer>().material.color = ScriptA.aiColor; // Player 2's color
             }
 
-            Debug.Log("AI move made by power.");
+            Debug.Log($"AI move made by power: Cube at position {System.Array.IndexOf(clickableObjects, randomSpot)}.");
         }
         else
         {
@@ -57,6 +59,13 @@ public class JogadaAleatoria : MonoBehaviour
 
     public void OnPoder1(GMTeste.PlayerType player)
     {
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, player))
+        {
+            Debug.LogWarning($"Player {player} does not have enough points to activate this power.");
+            return;
+        }
+
         // Check if the player can use their power based on the global power limit
         if (!globalPowerLimit.CanUsePower(player))
         {
@@ -64,6 +73,9 @@ public class JogadaAleatoria : MonoBehaviour
             globalPowerLimit.DisplayWarning();
             return;  // Exit if the player has already used their power
         }
+
+        // Deduct points for using the power
+        scoreManager.DeductPoints(powerCost, player);
 
         // Check whose turn it is and if their power has been used
         if (player == GMTeste.PlayerType.Human)

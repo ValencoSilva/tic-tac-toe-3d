@@ -9,9 +9,20 @@ public class DestroyCube2 : MonoBehaviour
     public GameObject[] relatedSquares;         // Array of all related squares on the board
     public GlobalPowerLimit globalPowerLimit;   // Reference to the global power limit
     public GMTeste gameManager;                 // Reference to the game manager
+    public ScoreManager scoreManager;           // Reference to the score manager
+
+    public int powerCost = 30;                  // Cost of using the power
 
     public void ActivateDestroyPlayedCubePower()
     {
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.Log("Not enough points to activate Destroy Cube power.");
+            return;
+        }
+
+        // Check if the power can be used within the global power limit
         if (!globalPowerLimit.CanUsePower(gameManager.currentTurn))
         {
             Debug.Log("Power limit reached for " + gameManager.currentTurn.ToString());
@@ -77,6 +88,9 @@ public class DestroyCube2 : MonoBehaviour
             relatedSquare.SetActive(false);
             Debug.Log("Destroying related Square " + cubeIndex);
         }
+
+        // Deduct the cost of the power from the player's score
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // Mark the power as used for the current player
         globalPowerLimit.UsePower(gameManager.currentTurn);

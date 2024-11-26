@@ -6,7 +6,9 @@ public class NullifyLastMovePower : MonoBehaviour
 {
     public GMTeste gameManager;               // Reference to GMTeste
     public GlobalPowerLimit globalPowerLimit; // Reference to the global power limit
+    public ScoreManager scoreManager;         // Reference to the scoring system
 
+    public int powerCost = 50;                // Cost to use the power
     public int maxRounds = 3;                 // Maximum rounds during which the power can be used
 
     public void ActivateNullifyLastMovePower()
@@ -15,6 +17,13 @@ public class NullifyLastMovePower : MonoBehaviour
         if (gameManager.moveLog.Count / 2 >= maxRounds) // Divide by 2 since each round includes two moves
         {
             Debug.LogWarning("This power can only be used during the first " + maxRounds + " rounds.");
+            return;
+        }
+
+        // Check if the player has enough points
+        if (!scoreManager.CanAffordPower(powerCost, gameManager.currentTurn))
+        {
+            Debug.LogWarning("Player " + gameManager.currentTurn + " does not have enough points to activate this power.");
             return;
         }
 
@@ -32,6 +41,9 @@ public class NullifyLastMovePower : MonoBehaviour
             Debug.LogWarning("No moves to nullify. Queue is empty.");
             return;
         }
+
+        // Deduct points for using the power
+        scoreManager.DeductPoints(powerCost, gameManager.currentTurn);
 
         // Nullify the opponent's last move
         StartCoroutine(NullifyLastMove());
