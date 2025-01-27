@@ -1,0 +1,20 @@
+{
+    "languages": [
+        {
+            "languageCode": "en",
+            "entries": [
+                { "key": "play", "value": "Play" },
+                { "key": "settings", "value": "Settings" },
+                { "key": "exit", "value": "Exit" }
+            ]
+        },
+        {
+            "languageCode": "pt",
+            "entries": [
+                { "key": "play", "value": "Jogar" },
+                { "key": "settings", "value": "Configurações" },
+                { "key": "exit", "value": "Sair" }
+            ]
+        }
+    ]
+}

@@ -6,6 +6,7 @@ public class MenuPrincipal : MonoBehaviour
     public string MenuModos;
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject painelCreditos;
+    [SerializeField] private GameObject painelLanguage;
     [SerializeField] private GameObject Cubo;
 
     public void OnJogar()
@@ -15,7 +16,12 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Opcoes()
     {
-        Debug.Log("ainda nao");
+        painelOpcoes.SetActive(true);
+    }
+
+    public void Language()
+    {
+        painelLanguage.SetActive(true);
     }
 
     public void Creditos()
@@ -27,6 +33,11 @@ public class MenuPrincipal : MonoBehaviour
     public void VoltarOpcoes()
     {
         painelOpcoes.SetActive(false);
+    }
+
+    public void VoltarLanguage()
+    {
+        painelLanguage.SetActive(false);
     }
 
     public void VoltarCreditos()
