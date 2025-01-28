@@ -17,6 +17,7 @@ public class VictoryCheckAI : MonoBehaviour
     [SerializeField] private GameObject painelDerrota;
     [SerializeField] private GameObject painelEmpate;
     [SerializeField] private GameObject Sinalizacao;
+    [SerializeField] private GameObject DesistirButton;
     int i = 0;
     
 
@@ -157,6 +158,7 @@ public class VictoryCheckAI : MonoBehaviour
                 IsGameOver();
                 painelVitoria.SetActive(true);
                 Sinalizacao.SetActive(false);
+                DesistirButton.SetActive(false);
             }
             else if (cubes[a].GetComponent<Renderer>().material.color == aiColor)
             {
@@ -165,6 +167,7 @@ public class VictoryCheckAI : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                DesistirButton.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai2Color)
@@ -174,6 +177,7 @@ public class VictoryCheckAI : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                DesistirButton.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai3Color)
@@ -183,6 +187,7 @@ public class VictoryCheckAI : MonoBehaviour
                 winDetected = true;
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
+                DesistirButton.SetActive(false);
             }
         }
         else if (nearWins == 3)
@@ -235,7 +240,7 @@ public class VictoryCheckAI : MonoBehaviour
     public void CheckForDraw()
     {
         //Debug.Log("checkfordraw  usado");
-        Debug.Log(IsDraw());
+        //Debug.Log(IsDraw());
         if (IsDraw())
         {
             Debug.Log("Deu Velha.");

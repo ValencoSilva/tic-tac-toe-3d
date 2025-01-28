@@ -20,6 +20,7 @@ public class VictoryCheckLocal : MonoBehaviour
     [SerializeField] private GameObject painelEmpate;
     [SerializeField] private GameObject Sinalizacao;
     [SerializeField] private GameObject painelContagem;
+    [SerializeField] private GameObject DesistirButton;
     int i = 0;
     
 
@@ -155,6 +156,7 @@ public class VictoryCheckLocal : MonoBehaviour
                 painelVitoria.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
+                DesistirButton.SetActive(false);
             }
             else if (cubes[a].GetComponent<Renderer>().material.color == aiColor)
             {
@@ -164,6 +166,7 @@ public class VictoryCheckLocal : MonoBehaviour
                 painelDerrota.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
+                DesistirButton.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai2Color)
@@ -174,6 +177,7 @@ public class VictoryCheckLocal : MonoBehaviour
                 painelDerrotaAI2.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
+                DesistirButton.SetActive(false);
             }
 
             else if (cubes[a].GetComponent<Renderer>().material.color == ai3Color)
@@ -184,6 +188,7 @@ public class VictoryCheckLocal : MonoBehaviour
                 painelDerrotaAI3.SetActive(true);
                 Sinalizacao.SetActive(false);
                 painelContagem.SetActive(false);
+                DesistirButton.SetActive(false);
             }
         }
         else if (nearWins == 3)
