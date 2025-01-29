@@ -1,5 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;  // Make sure you have this if you're using UI elements like buttons
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;  // Make sure you have this if you're using UI elements like buttons
 
 public class MusicManager : MonoBehaviour
 {
@@ -11,15 +13,21 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         // Find the PersistentMusicManager in the current scene (since it's not destroyed)
-        musicManager = FindObjectOfType<PersistentMusicManager>();
-        
-        if (musicManager == null)
-        {
-            Debug.LogError("PersistentMusicManager not found in the scene!");
-        }
+        StartCoroutine(FindMusicManager());
 
         // Set the button text to "Stop Music" if it's playing, or "Play Music" if it's stopped
         UpdateButtonText();
+    }
+
+    IEnumerator FindMusicManager()
+    {
+        yield return new WaitForSeconds(0.2f); // Small delay to allow PersistentMusicManager to initialize
+        musicManager = PersistentMusicManager.instance;
+
+        if (musicManager == null)
+        {
+            Debug.LogError("PersistentMusicManager is STILL not found!");
+        }
     }
 
     // Method to toggle music
@@ -44,12 +52,22 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void VolumeMusical(float value)
+    {
+        if (musicManager == null)
+        {
+            Debug.LogError("MusicManager is NULL! Make sure PersistentMusicManager exists in the scene.");
+            return;
+        }
+        musicManager.Volume = value;
+    }
+
     // Update the button text depending on the music state
     private void UpdateButtonText()
     {
         if (buttonText != null)
         {
-            buttonText.text = isPlaying ? "Música off" : "Música on";
+            buttonText.text = isPlaying ? "Música on" : "Música off";
         }
     }
 }

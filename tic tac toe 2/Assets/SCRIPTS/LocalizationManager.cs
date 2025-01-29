@@ -14,12 +14,7 @@ public class LocalizationManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             LoadLocalizationData();
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 

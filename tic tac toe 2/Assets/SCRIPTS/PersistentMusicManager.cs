@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PersistentMusicManager : MonoBehaviour
 {
-    private static PersistentMusicManager instance = null;
+    public static PersistentMusicManager instance { get; private set; }
     private AudioSource audioSource;
 
     void Awake()
@@ -45,9 +45,25 @@ public class PersistentMusicManager : MonoBehaviour
 
     public void PauseMusic()
     {
-        if (audioSource != null && !audioSource.isPlaying)
+        if (audioSource != null && audioSource.isPlaying)
         {
             audioSource.Pause();
+        }
+    }
+
+    // **Add a volume control property**
+    public float Volume
+    {
+        get
+        {
+            return audioSource != null ? audioSource.volume : 0f;
+        }
+        set
+        {
+            if (audioSource != null)
+            {
+                audioSource.volume = Mathf.Clamp(value, 0f, 1f); // Ensure value is between 0 and 1
+            }
         }
     }
 }
